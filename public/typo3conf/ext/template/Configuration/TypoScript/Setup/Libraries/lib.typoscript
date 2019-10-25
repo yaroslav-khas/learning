@@ -1,0 +1,166 @@
+lib.header_top_left = TEXT
+lib.header_top_left.value = <a href="/"><img src="https://www.ims-education.net/fileadmin/_migrated/pics/TYPO3-Logo-8bit_04.png" alt="TYPO3Buddy" style="width:50%;height:100%; padding-bottom:20px; border:0px;" /></a>
+
+lib.header_top_right = TEXT
+lib.header_top_right.value = <!-- your own code -->
+
+lib.header_menu = COA
+lib.header_menu {
+    10 = HMENU
+    10 {
+        wrap = <div class="menu_header menu_ul">|</div>
+        entryLevel = 0
+        1 = TMENU
+        1 {
+            expAll = 1
+            noBlur = 1
+            wrap = <ul>|</ul>
+            target = _top
+            NO {
+                stdWrap.htmlSpecialChars = 1
+                wrapItemAndSub = <li>|</li>
+                allWrap = <div class="menu_header_no">|</div>
+            }
+            ACT < .NO
+            ACT = 1
+            ACT {
+                allWrap = <div class="menu_header_act">|</div>
+            }
+            IFSUB < .NO
+            IFSUB = 1
+            IFSUB {
+                allWrap = <div class="menu_header_ifsub">|</div>
+            }
+            ACTIFSUB < .IFSUB
+            ACTIFSUB = 1
+            ACTIFSUB {
+                allWrap = <div class="menu_header_actifsub">|</div>
+            }
+        }
+        2 = TMENU
+        2 {
+            noBlur = 1
+            wrap = <ul class="menu_sub">|</ul>
+            target = _top
+            NO {
+                stdWrap.htmlSpecialChars = 1
+                wrapItemAndSub = <li>|</li>
+                allWrap = <div class="menu_sub_no">|</div>
+            }
+            CUR < .NO
+            CUR = 1
+            CUR {
+                allWrap = <div class="menu_sub_act">|</div>
+            }
+            ACT < .CUR
+            ACT = 1
+        }
+    }
+}
+
+lib.breadcrumb=COA
+lib.breadcrumb {
+    10 = HMENU
+    10 {
+        special = rootline
+        #special.range = 0|-1
+        # "not in menu pages" should show up in the breadcrumbs menu
+        includeNotInMenu = 1
+        1 = TMENU
+        1 {
+            noBlur = 1
+            # Current item should be unlinked
+            target = _self
+            wrap = <div class="menu_breadcrumb menu_ul"><ul> | </ul></div>
+            NO {
+                stdWrap.field = title
+                ATagTitle.field = nav_title // title
+                linkWrap = <li>|</li><li>&gt;</li>|*|<li>|</li><li>&gt;</li>|*|<li>|</li>
+            }
+            # Current menu item is unlinked
+            CUR = 1
+            CUR < .NO
+        }
+    }
+}
+
+lib.content_menu = COA
+lib.content_menu {
+    10 = HMENU
+    10 {
+        wrap = <div class="menu_left menu_ul">|</div>
+        entryLevel = 0
+        1 = TMENU
+        1 {
+            wrap = <div class="menu_1"><ul>|</ul></div>
+            target = _top
+            NO {
+                wrapItemAndSub = <li>|</li>|*|<li>|</li>|*|<li class="last">|</li>
+            }
+            ACT < .NO
+            ACT = 1
+            CUR < .NO
+            CUR = 1
+            CUR {
+                allWrap = <div class="menu_act">|</div>
+            }
+        }
+        2 = TMENU
+        2 {
+            expAll = 0
+            wrap = <div class="menu_2"><ul>|</ul></div>
+            target = _top
+            NO {
+                wrapItemAndSub = <li>|</li>
+            }
+            ACT < .NO
+            ACT = 1
+            CUR < .NO
+            CUR = 1
+            CUR {
+                allWrap = <div class="menu_act">|</div>
+            }
+        }
+        3 = TMENU
+        3 {
+            expAll = 1
+            wrap = <div class="menu_3"><ul>|</ul></div>
+            target = _top
+            NO {
+                wrapItemAndSub = <li>|</li>
+            }
+            ACT < .NO
+            ACT = 1
+            CUR < .NO
+            CUR = 1
+            CUR {
+                allWrap = <div class="menu_act">|</div>
+            }
+        }
+    }
+}
+
+lib.footer_left = COA
+lib.footer_left {
+    wrap = <div class="menu_footer menu_ul"><ul>|</ul></div>
+    10 = TEXT
+    10 {
+        data = date:U
+        strftime = %Y
+        wrap = <li>&copy; 2011-|&nbsp;TYPO3Buddy</li><li>&#124;</li>
+    }
+    20 = HMENU
+    20 {
+        special = directory
+        # special.value will contain the page ID of the Footer menu page
+        special.value = 4
+        1 = TMENU
+        1 {
+            target = _self
+            NO {
+                allWrap = <li>|</li><li>&#124;</li>|*|<li>|</li><li>&#124;</li>|*|<li>|</li>
+                wrap = <div class="footer_no">|</div>
+            }
+        }
+    }
+}

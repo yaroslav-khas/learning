@@ -1,0 +1,35 @@
+apache:
+  image: centos/httpd
+  volumes:
+    - .:/var/www/localhost/www/html/
+    - ./etc/docker/www/apache.conf:/etc/httpd/conf.d/welcome.conf
+  links:
+    - php
+  ports:
+    - "80:80"
+  env_file:
+    - .env-docker
+
+mysql:
+  image: mariadb:10.1
+  volumes:
+    - ./etc/docker/db/config.cnf:/etc/mysql/conf.d/config.cnf
+    - ./etc/docker/mysql-data:/var/lib/mysql
+
+  environment:
+    MYSQL_ROOT_PASSWORD: root
+    MYSQL_DATABASE: typo3
+    MYSQL_USER: typo3
+    MYSQL_PASSWORD: typo3
+  ports:
+    - 3306:3306
+
+php:
+  build: ./etc/docker/php
+  volumes:
+    - .:/var/www/localhost/www/html/:cached
+    - ./etc/docker/php/php.ini:/usr/local/etc/php/php.ini
+  links:
+    - mysql
+  env_file:
+    - .env-docker

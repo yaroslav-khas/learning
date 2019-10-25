@@ -1,0 +1,31 @@
+<div id="container" xmlns:f="http://www.w3.org/1999/html">
+    <div id="container_header_bg">
+        <div id="container_header_top">
+            <f:render partial="Header_top" arguments="{_all}" />
+        </div><!-- container_header_top -->
+        <div id="header_mobile">
+            <img src="/fileadmin/templates/images/mobile-menu_white.png" id="mobile_menu" alt="menu" title="menu"/>
+        </div>
+        <div id="container_header_menu">
+            <div id="header_menu">
+                <f:cObject typoscriptObjectPath="lib.header_menu" />
+
+            </div><!-- header_menu -->
+        </div><!-- container_header_menu -->
+    </div><!-- container_header_bg -->
+
+    <div id="container_breadcrumb">
+        <div id="breadcrumb">
+            <f:cObject typoscriptObjectPath="lib.breadcrumb" />
+        </div><!-- breadcrumb -->
+    </div>
+    <div id="container_content">
+        <f:render section="content"/>
+        <!-- container_content -->
+    </div><!-- container_breadcrumb -->
+    <div id="container_footer">
+        <f:render partial="Footer" arguments="{_all}" />
+    </div><!-- container_footer -->
+
+
+</div><!-- container -->

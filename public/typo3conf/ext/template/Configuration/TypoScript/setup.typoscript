@@ -1,0 +1,5 @@
+@import 'EXT:news/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:template/Configuration/TypoScript/Setup/page.typoscript'
+@import 'EXT:template/Configuration/TypoScript/Setup/Libraries/lib.typoscript'
+
+

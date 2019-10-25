@@ -1,0 +1,27 @@
+<div id="container">
+    <div id="container_header_bg">
+        <div id="container_header_top">
+            <f:render partial="header_top" arguments="{_all}" />
+        </div><!-- container_header_top -->
+        <div id="header_mobile">
+            <img src="/fileadmin/templates/images/mobile-menu_white.png" id="mobile_menu" alt="menu" title="menu" />
+        </div>
+        <div id="container_header_menu">
+            <div id="header_menu">
+                <f:cObject typoscriptObjectPath="lib.header_menu" />
+            </div><!-- header_menu -->
+        </div><!-- container_header_menu -->
+    </div><!-- container_header_bg -->
+
+    <div id="container_breadcrumb">
+        <div id="breadcrumb">
+            <f:cObject typoscriptObjectPath="lib.breadcrumb" />
+        </div><!-- breadcrumb -->
+    </div><!-- container_breadcrumb -->
+    <div id="container_content">
+        <f:render section="content" />
+    </div><!-- container_content -->
+    <div id="container_footer">
+        <f:render partial="footer_top" arguments="{_all}" />
+    </div><!-- container_footer -->
+</div><!-- container -->

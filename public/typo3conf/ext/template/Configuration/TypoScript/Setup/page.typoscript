@@ -1,0 +1,59 @@
+page = PAGE
+    typeNum = 0
+
+page {
+    10 = FLUIDTEMPLATE
+    10 {
+        file = EXT:template/Resources/Private/Templates/Index.html
+        partialRootPaths {
+            0 = EXT:template/Resources/Private/Partials/
+        }
+
+        layoutRootPaths {
+            0 = EXT:template/Resources/Private/Layouts/
+        }
+        variables {
+            content_main < styles.content.get
+            content_main.select.where = colPos = 0
+        }
+    }
+
+    includeCSS {
+        bootstrapCss = https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css
+        bootstrapCss.external = 1
+        mainCss = EXT:template/Resources/Public/Css/main.css
+    }
+
+    includeJSFooter {
+        jquery = https://code.jquery.com/jquery-3.3.1.slim.min.js
+        jquery.external = 1
+        pooperJS = https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js
+        pooperJS.external = 1
+        bootstrapJS = https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js
+        bootstrapJS.external = 1
+    }
+}
+
+page.headerData.30 = COA
+
+# start tag for style sheet
+page.headerData.30.10 = TEXT
+page.headerData.30.10.value = <style type="text/css">
+
+# default header background image
+page.headerData.30.20 = TEXT
+page.headerData.30.20.value = div#container_header_image { background-image:url(/fileadmin/templates/images/bgtop.jpg);}
+
+[PIDinRootline = 3]
+    # background for the page with ID = 3
+    page.headerData.30.20.value = div#container_header_image { background-image:url(/fileadmin/templates/images/bgtop1.jpg);}
+[end]
+
+[PIDinRootline = 9]
+    # background for the page with ID = 9
+    page.headerData.30.20.value = div#container_header_image { background-image:url(/fileadmin/templates/images/bgtop2.jpg);}
+[end]
+
+# end tag for style sheet
+page.headerData.30.30 = TEXT
+page.headerData.30.30.value = </style>
