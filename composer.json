@@ -31,7 +31,22 @@
 		"typo3/cms-t3editor": "^9.5",
 		"typo3/cms-tstemplate": "^9.5",
 		"typo3/cms-viewpage": "^9.5",
-		"georgringer/news": "^7.3"
+		"georgringer/news": "^7.3",
+		"typo3-ter/vhs": "^5.2.0",
+		"typo3/cms-info-pagetsconfig": "^9.5",
+		"typo3/cms-core": "^9.5",
+		"typo3/cms-extbase": "^9.5",
+		"typo3/cms-filelist": "^9.5",
+		"typo3/cms-filemetadata": "^9.5",
+		"typo3/cms-fluid": "^9.5",
+		"typo3/cms-frontend": "^9.5",
+		"typo3/cms-indexed-search": "^9.5",
+		"typo3/cms-install": "^9.5",
+		"typo3/cms-lang": "^9.5",
+		"typo3/cms-linkvalidator": "^9.5",
+		"typo3/cms-lowlevel": "^9.5",
+		"typo3/cms-recordlist": "^9.5",
+		"typo3/cms-scheduler": "^9.5"
 	},
 	"scripts":{
 		"typo3-cms-scripts": [

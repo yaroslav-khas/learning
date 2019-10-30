@@ -175,17 +175,17 @@
     },
     {
         "name": "doctrine/cache",
-        "version": "v1.8.0",
-        "version_normalized": "1.8.0.0",
+        "version": "v1.8.1",
+        "version_normalized": "1.8.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/doctrine/cache.git",
-            "reference": "d768d58baee9a4862ca783840eca1b9add7a7f57"
+            "reference": "d4374ae95b36062d02ef310100ed33d78738d76c"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/doctrine/cache/zipball/d768d58baee9a4862ca783840eca1b9add7a7f57",
-            "reference": "d768d58baee9a4862ca783840eca1b9add7a7f57",
+            "url": "https://api.github.com/repos/doctrine/cache/zipball/d4374ae95b36062d02ef310100ed33d78738d76c",
+            "reference": "d4374ae95b36062d02ef310100ed33d78738d76c",
             "shasum": ""
         },
         "require": {
@@ -204,7 +204,7 @@
         "suggest": {
             "alcaeus/mongo-php-adapter": "Required to use legacy MongoDB driver"
         },
-        "time": "2018-08-21T18:01:43+00:00",
+        "time": "2019-10-28T09:31:32+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -223,16 +223,16 @@
         ],
         "authors": [
             {
+                "name": "Guilherme Blanco",
+                "email": "guilhermeblanco@gmail.com"
+            },
+            {
                 "name": "Roman Borschel",
                 "email": "roman@code-factory.org"
             },
             {
                 "name": "Benjamin Eberlei",
                 "email": "kontakt@beberlei.de"
-            },
-            {
-                "name": "Guilherme Blanco",
-                "email": "guilhermeblanco@gmail.com"
             },
             {
                 "name": "Jonathan Wage",
@@ -603,33 +603,34 @@
     },
     {
         "name": "guzzlehttp/guzzle",
-        "version": "6.3.3",
-        "version_normalized": "6.3.3.0",
+        "version": "6.4.1",
+        "version_normalized": "6.4.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/guzzle/guzzle.git",
-            "reference": "407b0cb880ace85c9b63c5f9551db498cb2d50ba"
+            "reference": "0895c932405407fd3a7368b6910c09a24d26db11"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/guzzle/guzzle/zipball/407b0cb880ace85c9b63c5f9551db498cb2d50ba",
-            "reference": "407b0cb880ace85c9b63c5f9551db498cb2d50ba",
+            "url": "https://api.github.com/repos/guzzle/guzzle/zipball/0895c932405407fd3a7368b6910c09a24d26db11",
+            "reference": "0895c932405407fd3a7368b6910c09a24d26db11",
             "shasum": ""
         },
         "require": {
+            "ext-json": "*",
             "guzzlehttp/promises": "^1.0",
-            "guzzlehttp/psr7": "^1.4",
+            "guzzlehttp/psr7": "^1.6.1",
             "php": ">=5.5"
         },
         "require-dev": {
             "ext-curl": "*",
             "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.4 || ^7.0",
-            "psr/log": "^1.0"
+            "psr/log": "^1.1"
         },
         "suggest": {
             "psr/log": "Required for using the Log middleware"
         },
-        "time": "2018-04-22T15:46:56+00:00",
+        "time": "2019-10-23T15:58:00+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -638,12 +639,12 @@
         },
         "installation-source": "dist",
         "autoload": {
-            "files": [
-                "src/functions_include.php"
-            ],
             "psr-4": {
                 "GuzzleHttp\\": "src/"
-            }
+            },
+            "files": [
+                "src/functions_include.php"
+            ]
         },
         "notification-url": "https://packagist.org/downloads/",
         "license": [
@@ -992,17 +993,17 @@
     },
     {
         "name": "nikic/php-parser",
-        "version": "v4.2.4",
-        "version_normalized": "4.2.4.0",
+        "version": "v4.2.5",
+        "version_normalized": "4.2.5.0",
         "source": {
             "type": "git",
             "url": "https://github.com/nikic/PHP-Parser.git",
-            "reference": "97e59c7a16464196a8b9c77c47df68e4a39a45c4"
+            "reference": "b76bbc3c51f22c570648de48e8c2d941ed5e2cf2"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/97e59c7a16464196a8b9c77c47df68e4a39a45c4",
-            "reference": "97e59c7a16464196a8b9c77c47df68e4a39a45c4",
+            "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/b76bbc3c51f22c570648de48e8c2d941ed5e2cf2",
+            "reference": "b76bbc3c51f22c570648de48e8c2d941ed5e2cf2",
             "shasum": ""
         },
         "require": {
@@ -1010,9 +1011,10 @@
             "php": ">=7.0"
         },
         "require-dev": {
+            "ircmaxell/php-yacc": "0.0.4",
             "phpunit/phpunit": "^6.5 || ^7.0 || ^8.0"
         },
-        "time": "2019-09-01T07:51:21+00:00",
+        "time": "2019-10-25T18:33:07+00:00",
         "bin": [
             "bin/php-parse"
         ],
@@ -2524,6 +2526,40 @@
         "homepage": "https://symfony.com"
     },
     {
+        "name": "typo3-ter/vhs",
+        "version": "5.2.0",
+        "version_normalized": "5.2.0.0",
+        "dist": {
+            "type": "zip",
+            "url": "https://extensions.typo3.org/extension/download/vhs/5.2.0/zip/"
+        },
+        "require": {
+            "php": ">= 7.0.0, <= 7.2.99",
+            "typo3/cms-core": ">= 8.7.0, <= 9.5.99"
+        },
+        "replace": {
+            "vhs": "self.version"
+        },
+        "time": "2019-04-01T14:18:09+00:00",
+        "type": "typo3-cms-extension",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "FluidTYPO3\\Vhs\\": "Classes/"
+            }
+        },
+        "authors": [
+            {
+                "name": "FluidTYPO3 Team",
+                "email": "claus@namelesscoder.net",
+                "company": "",
+                "username": "fluidtypo3"
+            }
+        ],
+        "description": "A collection of ViewHelpers to perform rendering tasks which are not natively supported by Fluid - for example: advanced formatters, math calculators, specialized conditions and Iterator/Array calculators and processors",
+        "homepage": "https://extensions.typo3.org/extension/vhs/"
+    },
+    {
         "name": "typo3/class-alias-loader",
         "version": "1.0.1",
         "version_normalized": "1.0.1.0",
@@ -3304,6 +3340,49 @@
         "homepage": "https://typo3.org"
     },
     {
+        "name": "typo3/cms-filemetadata",
+        "version": "v9.5.10",
+        "version_normalized": "9.5.10.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/TYPO3-CMS/filemetadata.git",
+            "reference": "ea9d3f467b28404a34f8939e79c8cbdf33f6aca1"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/TYPO3-CMS/filemetadata/zipball/ea9d3f467b28404a34f8939e79c8cbdf33f6aca1",
+            "reference": "ea9d3f467b28404a34f8939e79c8cbdf33f6aca1",
+            "shasum": ""
+        },
+        "require": {
+            "typo3/cms-core": "9.5.10"
+        },
+        "conflict": {
+            "typo3/cms": "*"
+        },
+        "time": "2019-10-15T07:29:55+00:00",
+        "type": "typo3-cms-framework",
+        "extra": {
+            "typo3/cms": {
+                "extension-key": "filemetadata"
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "TYPO3 Core Team",
+                "email": "typo3cms@typo3.org",
+                "role": "Developer"
+            }
+        ],
+        "description": "Add advanced metadata to File.",
+        "homepage": "https://typo3.org"
+    },
+    {
         "name": "typo3/cms-fluid",
         "version": "v9.5.10",
         "version_normalized": "9.5.10.0",
@@ -3581,6 +3660,57 @@
         "homepage": "https://typo3.org"
     },
     {
+        "name": "typo3/cms-indexed-search",
+        "version": "v9.5.10",
+        "version_normalized": "9.5.10.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/TYPO3-CMS/indexed_search.git",
+            "reference": "7f764da3fb8e4dba40d03912abfb9511b857b0f7"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/TYPO3-CMS/indexed_search/zipball/7f764da3fb8e4dba40d03912abfb9511b857b0f7",
+            "reference": "7f764da3fb8e4dba40d03912abfb9511b857b0f7",
+            "shasum": ""
+        },
+        "require": {
+            "typo3/cms-core": "9.5.10"
+        },
+        "conflict": {
+            "typo3/cms": "*"
+        },
+        "suggest": {
+            "typo3/cms-scheduler": "For garbage collection of search statistics"
+        },
+        "time": "2019-10-15T07:29:55+00:00",
+        "type": "typo3-cms-framework",
+        "extra": {
+            "typo3/cms": {
+                "extension-key": "indexed_search"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "TYPO3\\CMS\\IndexedSearch\\": "Classes/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "TYPO3 Core Team",
+                "email": "typo3cms@typo3.org",
+                "role": "Developer"
+            }
+        ],
+        "description": "Indexed Search Engine for TYPO3 pages, PDF-files, Word-files, HTML and text files. Provides a backend module for statistics of the indexer and a frontend plugin. Documentation can be found in the extension \"doc_indexed_search\".",
+        "homepage": "https://typo3.org"
+    },
+    {
         "name": "typo3/cms-info",
         "version": "v9.5.10",
         "version_normalized": "9.5.10.0",
@@ -3695,6 +3825,114 @@
             }
         ],
         "description": "The Install Tool mounted as the module Tools>Install in TYPO3.",
+        "homepage": "https://typo3.org"
+    },
+    {
+        "name": "typo3/cms-linkvalidator",
+        "version": "v9.5.10",
+        "version_normalized": "9.5.10.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/TYPO3-CMS/linkvalidator.git",
+            "reference": "ac3dcb4cc981e9f21353e499f6dd6f275ee33570"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/TYPO3-CMS/linkvalidator/zipball/ac3dcb4cc981e9f21353e499f6dd6f275ee33570",
+            "reference": "ac3dcb4cc981e9f21353e499f6dd6f275ee33570",
+            "shasum": ""
+        },
+        "require": {
+            "typo3/cms-core": "9.5.10",
+            "typo3/cms-info": "9.5.10"
+        },
+        "conflict": {
+            "typo3/cms": "*"
+        },
+        "suggest": {
+            "typo3/cms-scheduler": "Regular checks of links"
+        },
+        "time": "2019-10-15T07:29:55+00:00",
+        "type": "typo3-cms-framework",
+        "extra": {
+            "typo3/cms": {
+                "extension-key": "linkvalidator"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "TYPO3\\CMS\\Linkvalidator\\": "Classes/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "TYPO3 Core Team",
+                "email": "typo3cms@typo3.org",
+                "role": "Developer"
+            }
+        ],
+        "description": "Link Validator checks the links in your website for validity. It can validate all kinds of links: internal, external and file links. Scheduler is supported to run Link Validator via Cron including the option to send status mails, if broken links were detected.",
+        "homepage": "https://typo3.org"
+    },
+    {
+        "name": "typo3/cms-lowlevel",
+        "version": "v9.5.10",
+        "version_normalized": "9.5.10.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/TYPO3-CMS/lowlevel.git",
+            "reference": "34cd020102317c629c19ec61ce3f7df1b040bdf0"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/TYPO3-CMS/lowlevel/zipball/34cd020102317c629c19ec61ce3f7df1b040bdf0",
+            "reference": "34cd020102317c629c19ec61ce3f7df1b040bdf0",
+            "shasum": ""
+        },
+        "require": {
+            "typo3/cms-core": "9.5.10"
+        },
+        "conflict": {
+            "typo3/cms": "*"
+        },
+        "time": "2019-10-15T07:29:55+00:00",
+        "type": "typo3-cms-framework",
+        "extra": {
+            "typo3/cms": {
+                "Package": {
+                    "partOfFactoryDefault": true
+                },
+                "extension-key": "lowlevel"
+            },
+            "typo3/class-alias-loader": {
+                "class-alias-maps": [
+                    "Migrations/Code/ClassAliasMap.php"
+                ]
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "TYPO3\\CMS\\Lowlevel\\": "Classes/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "TYPO3 Core Team",
+                "email": "typo3cms@typo3.org",
+                "role": "Developer"
+            }
+        ],
+        "description": "Enables the 'Config' and 'DB Check' modules for technical analysis of the system. This includes raw database search, checking relations, counting pages and records etc.",
         "homepage": "https://typo3.org"
     },
     {

@@ -1,1 +1,27 @@
-#tx_news.plugin =
+plugin.tx_news {
+    view {
+        templateRootPaths >
+        templateRootPaths {
+            1 = EXT:template/Resources/Private/Templates/NewsTemplates/
+        }
+
+    }
+
+}
+plugin.tx_news {
+    persistence {
+        classes {
+            GeorgRinger\News\Domain\Model\News {
+                subclasses {
+                    0 = Khas\Template\Domain\Model\NewsDefault
+                }
+            }
+            Khas\Template\Domain\Model\NewsDefault {
+                mapping {
+                    recordType = 0
+                    tableName = tx_news_domain_model_news
+                }
+            }
+        }
+    }
+}

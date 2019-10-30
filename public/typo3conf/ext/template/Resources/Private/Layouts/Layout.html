@@ -1,19 +1,19 @@
-<div id="container" xmlns:f="http://www.w3.org/1999/html">
-    <div id="container_header_bg">
+<div id="container" xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+     v:schemaLocation="https://fluidtypo3.org/schemas/vhs-master.xsd">
+    <nav id="container_header_bg">
         <div id="container_header_top">
             <f:render partial="Header_top" arguments="{_all}" />
         </div><!-- container_header_top -->
         <div id="header_mobile">
             <img src="/fileadmin/templates/images/mobile-menu_white.png" id="mobile_menu" alt="menu" title="menu"/>
         </div>
-        <div id="container_header_menu">
-            <div id="header_menu">
-                <f:cObject typoscriptObjectPath="lib.header_menu" />
-
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <f:render partial="Header_menu" arguments="{_all}" />
             </div><!-- header_menu -->
-        </div><!-- container_header_menu -->
-    </div><!-- container_header_bg -->
-
+        </nav><!-- container_header_menu --><!-- container_header_bg -->
     <div id="container_breadcrumb">
         <div id="breadcrumb">
             <f:cObject typoscriptObjectPath="lib.breadcrumb" />
@@ -21,10 +21,11 @@
     </div>
     <div id="container_content">
         <f:render section="content"/>
-        <!-- container_content -->
     </div><!-- container_breadcrumb -->
     <div id="container_footer">
-        <f:render partial="Footer" arguments="{_all}" />
+        <footer>
+            <f:render partial="Footer" arguments="{_all}" />
+        </footer>
     </div><!-- container_footer -->
 
 

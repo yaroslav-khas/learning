@@ -12,10 +12,6 @@
  * The TYPO3 project - inspiring people to share!
  */
 
-if($_SERVER['SERVER_NAME'] == 'test.loc') {
-    putenv('TYPO3_CONTEXT=Development');
-}
-
 // Exit early if php requirement is not satisfied.
 if (PHP_VERSION_ID < 70200) {
     die('This version of TYPO3 CMS requires PHP 7.2 or above');

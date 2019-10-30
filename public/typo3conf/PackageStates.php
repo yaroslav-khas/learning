@@ -38,11 +38,20 @@ return [
         'install' => [
             'packagePath' => 'typo3/sysext/install/',
         ],
+        'info' => [
+            'packagePath' => 'typo3/sysext/info/',
+        ],
+        'linkvalidator' => [
+            'packagePath' => 'typo3/sysext/linkvalidator/',
+        ],
         'recordlist' => [
             'packagePath' => 'typo3/sysext/recordlist/',
         ],
         'backend' => [
             'packagePath' => 'typo3/sysext/backend/',
+        ],
+        'indexed_search' => [
+            'packagePath' => 'typo3/sysext/indexed_search/',
         ],
         'reports' => [
             'packagePath' => 'typo3/sysext/reports/',
@@ -71,8 +80,11 @@ return [
         'felogin' => [
             'packagePath' => 'typo3/sysext/felogin/',
         ],
-        'info' => [
-            'packagePath' => 'typo3/sysext/info/',
+        'filemetadata' => [
+            'packagePath' => 'typo3/sysext/filemetadata/',
+        ],
+        'lowlevel' => [
+            'packagePath' => 'typo3/sysext/lowlevel/',
         ],
         'redirects' => [
             'packagePath' => 'typo3/sysext/redirects/',
@@ -97,6 +109,9 @@ return [
         ],
         'template' => [
             'packagePath' => 'typo3conf/ext/template/',
+        ],
+        'vhs' => [
+            'packagePath' => 'typo3conf/ext/vhs/',
         ],
     ],
     'version' => 5,

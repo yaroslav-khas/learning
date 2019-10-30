@@ -1,0 +1,27 @@
+mod.web_layout.BackendLayouts {
+    exampleKey {
+        title = With Side
+        config {
+            backend_layout {
+                colCount = 6
+                rowCount = 1
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Side
+                                colPos = 1
+                                colspan = 1
+                            }
+                            2 {
+                                name = Content
+                                colPos = 2
+                                colspan = 5
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

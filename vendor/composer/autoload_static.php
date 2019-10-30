@@ -39,8 +39,11 @@ class ComposerStaticInit5a2b24d5e2be8144b901ec23d80d6d60
             'TYPO3\\CMS\\Reports\\' => 18,
             'TYPO3\\CMS\\Redirects\\' => 20,
             'TYPO3\\CMS\\Recordlist\\' => 21,
+            'TYPO3\\CMS\\Lowlevel\\' => 19,
+            'TYPO3\\CMS\\Linkvalidator\\' => 24,
             'TYPO3\\CMS\\Install\\' => 18,
             'TYPO3\\CMS\\Info\\' => 15,
+            'TYPO3\\CMS\\IndexedSearch\\' => 24,
             'TYPO3\\CMS\\Impexp\\' => 17,
             'TYPO3\\CMS\\Frontend\\' => 19,
             'TYPO3\\CMS\\Form\\' => 15,
@@ -103,6 +106,10 @@ class ComposerStaticInit5a2b24d5e2be8144b901ec23d80d6d60
             'GuzzleHttp\\Promise\\' => 19,
             'GuzzleHttp\\' => 11,
             'GeorgRinger\\News\\' => 17,
+        ),
+        'F' => 
+        array (
+            'FluidTYPO3\\Vhs\\' => 15,
         ),
         'D' => 
         array (
@@ -168,6 +175,14 @@ class ComposerStaticInit5a2b24d5e2be8144b901ec23d80d6d60
         array (
             0 => __DIR__ . '/../..' . '/public/typo3/sysext/recordlist/Classes',
         ),
+        'TYPO3\\CMS\\Lowlevel\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/public/typo3/sysext/lowlevel/Classes',
+        ),
+        'TYPO3\\CMS\\Linkvalidator\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/public/typo3/sysext/linkvalidator/Classes',
+        ),
         'TYPO3\\CMS\\Install\\' => 
         array (
             0 => __DIR__ . '/../..' . '/public/typo3/sysext/install/Classes',
@@ -175,6 +190,10 @@ class ComposerStaticInit5a2b24d5e2be8144b901ec23d80d6d60
         'TYPO3\\CMS\\Info\\' => 
         array (
             0 => __DIR__ . '/../..' . '/public/typo3/sysext/info/Classes',
+        ),
+        'TYPO3\\CMS\\IndexedSearch\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/public/typo3/sysext/indexed_search/Classes',
         ),
         'TYPO3\\CMS\\Impexp\\' => 
         array (
@@ -365,6 +384,10 @@ class ComposerStaticInit5a2b24d5e2be8144b901ec23d80d6d60
         'GeorgRinger\\News\\' => 
         array (
             0 => __DIR__ . '/../..' . '/public/typo3conf/ext/news/Classes',
+        ),
+        'FluidTYPO3\\Vhs\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/public/typo3conf/ext/vhs/Classes',
         ),
         'Doctrine\\Instantiator\\' => 
         array (

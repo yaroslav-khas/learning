@@ -92,6 +92,8 @@ return array (
     'typo3\\cms\\frontend\\controller\\pageinformationcontroller' => 'TYPO3\\CMS\\Info\\Controller\\PageInformationController',
     'typo3\\cms\\frontend\\controller\\translationstatuscontroller' => 'TYPO3\\CMS\\Info\\Controller\\TranslationStatusController',
     'typo3\\cms\\infopagetsconfig\\controller\\infopagetyposcriptconfigcontroller' => 'TYPO3\\CMS\\Info\\Controller\\InfoPageTyposcriptConfigController',
+    'typo3\\cms\\lowlevel\\view\\configurationview' => 'TYPO3\\CMS\\Lowlevel\\Controller\\ConfigurationController',
+    'typo3\\cms\\lowlevel\\view\\databaseintegrityview' => 'TYPO3\\CMS\\Lowlevel\\Controller\\DatabaseIntegrityController',
     'typo3\\cms\\recordlist\\recordlist' => 'TYPO3\\CMS\\Recordlist\\Controller\\RecordListController',
     'typo3\\cms\\sv\\report\\serviceslistreport' => 'TYPO3\\CMS\\Reports\\Report\\ServicesListReport',
     'typo3\\cms\\t3editor\\codecompletion' => 'TYPO3\\CMS\\T3editor\\Controller\\CodeCompletionController',
@@ -374,6 +376,14 @@ return array (
     'TYPO3\\CMS\\Info\\Controller\\InfoPageTyposcriptConfigController' => 
     array (
       'typo3\\cms\\infopagetsconfig\\controller\\infopagetyposcriptconfigcontroller' => 'typo3\\cms\\infopagetsconfig\\controller\\infopagetyposcriptconfigcontroller',
+    ),
+    'TYPO3\\CMS\\Lowlevel\\Controller\\ConfigurationController' => 
+    array (
+      'typo3\\cms\\lowlevel\\view\\configurationview' => 'typo3\\cms\\lowlevel\\view\\configurationview',
+    ),
+    'TYPO3\\CMS\\Lowlevel\\Controller\\DatabaseIntegrityController' => 
+    array (
+      'typo3\\cms\\lowlevel\\view\\databaseintegrityview' => 'typo3\\cms\\lowlevel\\view\\databaseintegrityview',
     ),
     'TYPO3\\CMS\\Recordlist\\Controller\\RecordListController' => 
     array (

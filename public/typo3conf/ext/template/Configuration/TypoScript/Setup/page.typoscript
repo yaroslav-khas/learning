@@ -16,6 +16,14 @@ page {
             content_main < styles.content.get
             content_main.select.where = colPos = 0
         }
+        dataProcessing {
+                   10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+                   10 {
+                      levels = 1
+                      includeSpacer = 1
+                      as = mainnavigation
+                   }
+                }
     }
 
     includeCSS {
@@ -31,7 +39,10 @@ page {
         pooperJS.external = 1
         bootstrapJS = https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js
         bootstrapJS.external = 1
+        mainJs = EXT:template/Resources/Public/Js/main.js
+        bootstrapJS.external = 1
     }
+
 }
 
 page.headerData.30 = COA
