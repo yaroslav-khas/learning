@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dfbe37fcabbfa4635a9fe3331fa47fec",
+    "content-hash": "60a3ff4b74171c03452f4ccf16d0111e",
     "packages": [
         {
             "name": "algo26-matthias/idna-convert",
@@ -967,6 +967,34 @@
                 "typo3 console"
             ],
             "time": "2018-12-09T12:06:13+00:00"
+        },
+        {
+            "name": "khas/template",
+            "version": "0.1",
+            "dist": {
+                "type": "path",
+                "url": "./public/typo3conf/ext/template",
+                "reference": "58164158a2972aa9a5c39332dbaa4b80f0e69d95"
+            },
+            "require": {
+                "typo3/cms-core": "^9.5"
+            },
+            "type": "typo3-cms-extension",
+            "autoload": {
+                "psr-4": {
+                    "Khas\\Template\\": "Classes"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Yaroslav",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Template for my site",
+            "keywords": [
+                "Template"
+            ]
         },
         {
             "name": "nikic/php-parser",

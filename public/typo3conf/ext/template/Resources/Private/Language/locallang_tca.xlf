@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0" xmlns:t3="http://typo3.org/schemas/xliff">
+    <file t3:id="1415814790" source-language="en" datatype="plaintext" original="donate" date="2019-10-31T12:00:00Z" product-name="template">
+        <header/>
+        <body>
+            <trans-unit id="pages.tabs.donate" resname="pages.tabs.donate">
+                <source>Donate</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

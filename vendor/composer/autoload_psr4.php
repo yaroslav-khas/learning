@@ -64,6 +64,7 @@ return array(
     'Psr\\Cache\\' => array($vendorDir . '/psr/cache/src'),
     'PhpParser\\' => array($vendorDir . '/nikic/php-parser/lib/PhpParser'),
     'Mso\\IdnaConvert\\' => array($vendorDir . '/algo26-matthias/idna-convert/src'),
+    'Khas\\Template\\' => array($baseDir . '/public/typo3conf/ext/template/Classes'),
     'Helhum\\Typo3Console\\' => array($vendorDir . '/helhum/typo3-console/Classes/Console', $vendorDir . '/helhum/typo3-console/Classes/Compatibility'),
     'Helhum\\Typo3ConsolePlugin\\' => array($vendorDir . '/helhum/typo3-console-plugin/src'),
     'Helhum\\ConfigLoader\\' => array($vendorDir . '/helhum/config-loader/src'),

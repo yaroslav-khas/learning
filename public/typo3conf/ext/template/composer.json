@@ -1,0 +1,23 @@
+{
+  "name": "khas/template",
+  "type": "typo3-cms-extension",
+  "description": "Template for my site",
+  "version": "0.1",
+  "keywords": [
+    "Template"
+  ],
+  "authors": [
+    {
+      "name": "Yaroslav",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "typo3/cms-core": "^9.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Khas\\Template\\": "Classes"
+    }
+  }
+}

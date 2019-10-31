@@ -29,6 +29,7 @@ page {
     includeCSS {
         bootstrapCss = https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css
         bootstrapCss.external = 1
+        fontAws= https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css
         mainCss = EXT:template/Resources/Public/Css/main.css
     }
 

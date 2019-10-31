@@ -1,6 +1,10 @@
 {
 	"repositories": [
-		{ "type": "composer", "url": "https://composer.typo3.org/" }
+		{ "type": "composer", "url": "https://composer.typo3.org/" },
+		{
+			"type": "path",
+			"url": "./public/typo3conf/ext/*"
+		}
 	],
 	"name": "typo3/cms-base-distribution",
 	"description" : "TYPO3 CMS Base Distribution",
@@ -46,7 +50,8 @@
 		"typo3/cms-linkvalidator": "^9.5",
 		"typo3/cms-lowlevel": "^9.5",
 		"typo3/cms-recordlist": "^9.5",
-		"typo3/cms-scheduler": "^9.5"
+		"typo3/cms-scheduler": "^9.5",
+		"khas/template": "^0.1"
 	},
 	"scripts":{
 		"typo3-cms-scripts": [

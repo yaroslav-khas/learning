@@ -992,6 +992,36 @@
         ]
     },
     {
+        "name": "khas/template",
+        "version": "0.1",
+        "version_normalized": "0.1.0.0",
+        "dist": {
+            "type": "path",
+            "url": "./public/typo3conf/ext/template",
+            "reference": "58164158a2972aa9a5c39332dbaa4b80f0e69d95"
+        },
+        "require": {
+            "typo3/cms-core": "^9.5"
+        },
+        "type": "typo3-cms-extension",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Khas\\Template\\": "Classes"
+            }
+        },
+        "authors": [
+            {
+                "name": "Yaroslav",
+                "role": "Developer"
+            }
+        ],
+        "description": "Template for my site",
+        "keywords": [
+            "Template"
+        ]
+    },
+    {
         "name": "nikic/php-parser",
         "version": "v4.2.5",
         "version_normalized": "4.2.5.0",

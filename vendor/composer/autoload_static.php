@@ -94,6 +94,10 @@ class ComposerStaticInit5a2b24d5e2be8144b901ec23d80d6d60
         array (
             'Mso\\IdnaConvert\\' => 16,
         ),
+        'K' => 
+        array (
+            'Khas\\Template\\' => 14,
+        ),
         'H' => 
         array (
             'Helhum\\Typo3Console\\' => 20,
@@ -355,6 +359,10 @@ class ComposerStaticInit5a2b24d5e2be8144b901ec23d80d6d60
         'Mso\\IdnaConvert\\' => 
         array (
             0 => __DIR__ . '/..' . '/algo26-matthias/idna-convert/src',
+        ),
+        'Khas\\Template\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/public/typo3conf/ext/template/Classes',
         ),
         'Helhum\\Typo3Console\\' => 
         array (
