@@ -104,6 +104,12 @@ return [
         'viewpage' => [
             'packagePath' => 'typo3/sysext/viewpage/',
         ],
+        'gridelements' => [
+            'packagePath' => 'typo3conf/ext/gridelements/',
+        ],
+        'mask' => [
+            'packagePath' => 'typo3conf/ext/mask/',
+        ],
         'news' => [
             'packagePath' => 'typo3conf/ext/news/',
         ],

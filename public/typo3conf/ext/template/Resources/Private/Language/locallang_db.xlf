@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2019-11-01T17:38:32Z"
+          product-name="template">
+        <header/>
+        <body>
+            <trans-unit id="extension.title">
+                <source>Template fields</source>
+            </trans-unit>
+            <trans-unit id="tx_template_domain_model_template">
+                <source>Fields</source>
+            </trans-unit>
+            <trans-unit id="tx_template_domain_model_template.item_label">
+                <source>Item Label</source>
+            </trans-unit>
+            <trans-unit id="tx_template_domain_model_template.item_description">
+                <source>Item Description</source>
+            </trans-unit>
+            <trans-unit id="tx_template_domain_model_template.stock_quantity">
+                <source>Stock Quantity</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

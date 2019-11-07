@@ -1,0 +1,95 @@
+{
+    "tt_content": {
+        "elements": {
+            "accordion": {
+                "color": "#000000",
+                "columns": [
+                    "tx_mask_inline"
+                ],
+                "description": "Accordion for test",
+                "icon": "fa-align-justify",
+                "key": "accordion",
+                "label": "Accordion",
+                "labels": [
+                    "Inline"
+                ],
+                "shortLabel": ""
+            },
+            "content_for_accordion": {
+                "color": "#000000",
+                "columns": [
+                    "header",
+                    "bodytext"
+                ],
+                "description": "",
+                "icon": "fa-align-left",
+                "key": "content_for_accordion",
+                "label": "Content for Accordion",
+                "labels": [
+                    "Title",
+                    "Text"
+                ],
+                "shortLabel": ""
+            },
+            "slider": {
+                "color": "#000000",
+                "columns": [
+                    "image"
+                ],
+                "description": "Slider",
+                "icon": "fa-image",
+                "key": "slider",
+                "label": "Slider",
+                "labels": [
+                    "Images"
+                ],
+                "shortLabel": ""
+            }
+        },
+        "sql": {
+            "tx_mask_inline": {
+                "tt_content": {
+                    "tx_mask_inline": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            }
+        },
+        "tca": {
+            "tx_mask_inline": {
+                "cTypes": [
+                    "mask_content_for_accordion"
+                ],
+                "config": {
+                    "appearance": {
+                        "collapseAll": "1",
+                        "enabledControls": {
+                            "dragdrop": "1"
+                        },
+                        "levelLinksPosition": "top",
+                        "newRecordLinkTitle": "",
+                        "showAllLocalizationLink": "1",
+                        "showPossibleLocalizationRecords": "1",
+                        "showSynchronizationLink": "1",
+                        "useSortable": "1"
+                    },
+                    "foreign_sortby": "sorting",
+                    "foreign_table": "tt_content",
+                    "maxitems": "",
+                    "minitems": "",
+                    "overrideChildTca": {
+                        "columns": {
+                            "colPos": {
+                                "config": {
+                                    "default": "999"
+                                }
+                            }
+                        }
+                    },
+                    "type": "inline"
+                },
+                "exclude": "1",
+                "key": "inline",
+                "l10n_mode": ""
+            }
+        }
+    }
+}

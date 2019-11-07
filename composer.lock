@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "60a3ff4b74171c03452f4ccf16d0111e",
+    "content-hash": "5091a600d35ab8959ae51989c981143d",
     "packages": [
         {
             "name": "algo26-matthias/idna-convert",
@@ -589,6 +589,48 @@
                 "typo3"
             ],
             "time": "2019-08-29T17:11:09+00:00"
+        },
+        {
+            "name": "gridelementsteam/gridelements",
+            "version": "9.3.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://gitlab.com/api/v4/projects/coderscare%2Fgridelements/repository/archive.zip?sha=06a7f541a30d985f7466d2b976eb0336848cff6e",
+                "reference": "06a7f541a30d985f7466d2b976eb0336848cff6e",
+                "shasum": ""
+            },
+            "require": {
+                "typo3/cms-backend": "^9.5.7",
+                "typo3/cms-core": "^9.5.7",
+                "typo3/cms-frontend": "^9.5.7",
+                "typo3/cms-recordlist": "^9.5.7"
+            },
+            "conflict": {
+                "jfmulticontent": "*",
+                "templavoila": "*"
+            },
+            "replace": {
+                "gridelements": "self.version",
+                "typo3-ter/gridelements": "self.version"
+            },
+            "type": "typo3-cms-extension",
+            "autoload": {
+                "psr-4": {
+                    "GridElementsTeam\\Gridelements\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "This extension integrates the grid layout concept also to regular content elements - the grid elements. It offers a lot of new features like advanced drag & drop or real references, that improve the usability of the page and list module to speed up the daily work with the backend.",
+            "homepage": "https://forge.typo3.org/projects/extension-gridelements2",
+            "keywords": [
+                "Gridelements",
+                "TYPO3 CMS",
+                "grids"
+            ],
+            "time": "2019-08-15T16:41:24+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -2477,6 +2519,40 @@
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
             "time": "2019-09-11T15:41:19+00:00"
+        },
+        {
+            "name": "typo3-ter/mask",
+            "version": "4.1.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://extensions.typo3.org/extension/download/mask/4.1.2/zip/"
+            },
+            "require": {
+                "typo3/cms-core": ">= 9.3.0, <= 9.5.99"
+            },
+            "replace": {
+                "mask": "self.version"
+            },
+            "suggest": {
+                "typo3-ter/gridelements": "*"
+            },
+            "type": "typo3-cms-extension",
+            "autoload": {
+                "psr-4": {
+                    "MASK\\Mask\\": "Classes/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "WEBprofil - Gernot Ploiner e.U.",
+                    "email": "office@webprofil.at",
+                    "company": "WEBprofil - Gernot Ploiner e.U.",
+                    "username": "gernott"
+                }
+            ],
+            "description": "Create your own content elements and page templates. Easy to use, even without programming skills because of the comfortable drag and drop system. Stored in structured database tables. Style your frontend with Fluid tags. Ideal, if you want to switch from Templavoila.",
+            "homepage": "https://extensions.typo3.org/extension/mask/",
+            "time": "2019-08-27T12:54:09+00:00"
         },
         {
             "name": "typo3-ter/vhs",

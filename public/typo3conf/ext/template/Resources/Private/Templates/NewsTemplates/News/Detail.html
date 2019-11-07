@@ -229,11 +229,7 @@
                         <div class="d-flex flex-row">
                             <f:if condition="{newsItem.typeCard}">
                                 <h5 class="">
-                                    <f:switch expression="{newsItem.typeCard}">
-                                        <f:case value="1"><i class="fab fa-cc-visa"></i></f:case>
-                                        <f:case value="2"><i class="fab fa-cc-mastercard"></i></f:case>
-                                        <f:case value="3"><i class="fab fa-cc-paypal"></i></f:case>
-                                    </f:switch>
+                                    {newsItem.typeCard}
                                 </h5>
                             </f:if>
                             <div style="font-size: 22px; padding-left: 10px">

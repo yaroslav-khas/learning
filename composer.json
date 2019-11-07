@@ -51,7 +51,9 @@
 		"typo3/cms-lowlevel": "^9.5",
 		"typo3/cms-recordlist": "^9.5",
 		"typo3/cms-scheduler": "^9.5",
-		"khas/template": "^0.1"
+		"khas/template": "^0.1",
+		"gridelementsteam/gridelements": "^9.3",
+		"typo3-ter/mask": "^4.1"
 	},
 	"scripts":{
 		"typo3-cms-scripts": [

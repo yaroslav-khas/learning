@@ -1,9 +1,12 @@
 @import 'EXT:template/Configuration/TypoScript/Setup/config.typoscript'
 
-@import 'EXT:news/Configuration/TypoScript/setup.txt'
-@import 'EXT:template/Configuration/TypoScript/Setup/page.typoscript'
-@import 'EXT:template/Configuration/TypoScript/Setup/Libraries/lib.typoscript'
-@import 'EXT:template/Configuration/TypoScript/Setup/Plugin/news.typoscript'
-@import 'EXT:template/Configuration/TypoScript/Setup/config.typoscript'
+
+@import 'EXT:news/Configuration/TypoScript/'
+@import 'EXT:gridelements/Configuration/TypoScript/setup.typoscript'
 
 
+
+@import 'EXT:template/Configuration/TypoScript/Setup/'
+@import 'EXT:template/Configuration/TypoScript/Setup/Libraries/'
+@import 'EXT:template/Configuration/TypoScript/Setup/Plugin/'
+@import 'EXT:template/Configuration/TypoScript/Setup/'

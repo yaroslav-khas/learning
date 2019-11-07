@@ -25,14 +25,12 @@ $addColumns = array(
         'label' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.doktype_formlabel',
         'config' => array(
             'type' => 'select',
-            'renderType' => 'selectSingle',
+            'renderType' => 'selectMultipleSideBySide',
             'items' => [
                 ['Visa', 1],
                 ['MasterCard', 2],
                 ['PayPal', 3],
             ],
-            'size' => 0,
-            'maxitems' => 1,
         )
 
     ),
@@ -43,6 +41,21 @@ $addColumns = array(
             'type' => 'input'),
         'l10n_mode' => 'prefixLangTitle',
         'label' => 'Card Holder'
+    ),
+    'extension_fields' => array(
+        'exclude' => true,
+        'label' => 'Extension fields',
+        'config' => array(
+            'type' => 'inline',
+            'foreign_table' => 'tx_template_domain_model_template',
+            'foreign_field' => 'tx_news_related_news',
+            'maxitems' => 2,
+            'appearance' => array(
+                'collapseAll' => true,
+                'expandSingle' => true,
+                'levelLinksPosition' => 'bottom',
+            )
+        )
     ),
 
 );
@@ -59,6 +72,10 @@ $GLOBALS['TCA']['tx_news_domain_model_news']['ctrl']['requestUpdate'] = 'check_u
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
     'tx_news_domain_model_news',
     '--div--;LLL:EXT:template/Resources/Private/Language/locallang_tca.xlf:pages.tabs.donate,--palette--;;userFunc', '', 'after:bodytext'
+);
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
+    'tx_news_domain_model_news',
+    'extension_fields', '', 'after:title'
 );
 
 /*$GLOBALS['TCA']['tx_news_domain_model_news']['columns']['test'] =

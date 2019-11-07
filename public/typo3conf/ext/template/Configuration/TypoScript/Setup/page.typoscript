@@ -4,18 +4,36 @@ page = PAGE
 page {
     10 = FLUIDTEMPLATE
     10 {
-        file = EXT:template/Resources/Private/Templates/Index.html
+        templateRootPaths{
+            0 = EXT:template/Resources/Private/Templates/Page/
+
+        }
         partialRootPaths {
             0 = EXT:template/Resources/Private/Partials/
+            1 = EXT:template/Resources/Private/Mask/Partials/
         }
 
         layoutRootPaths {
             0 = EXT:template/Resources/Private/Layouts/
+            1 = EXT:template/Resources/Private/Mask/Layouts/
+
         }
-        variables {
-            content_main < styles.content.get
-            content_main.select.where = colPos = 0
+
+        templateName {
+            cObject = TEXT
+            cObject {
+                data = pagelayout
+                required = 1
+                case = uppercamelcase
+                split {
+                    token = pagets__
+                    cObjNum = 1
+                    1.current = 1
+                }
+            }
+            ifEmpty = Clean
         }
+
         dataProcessing {
                    10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
                    10 {

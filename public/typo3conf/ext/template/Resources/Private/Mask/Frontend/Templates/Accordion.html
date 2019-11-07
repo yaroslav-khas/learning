@@ -1,0 +1,25 @@
+<f:if condition="{data.tx_mask_inline}">
+    <div class="accordion" id="accordionExample">
+        <f:for each="{data.tx_mask_inline}" as="data_item" key="key">
+            <div class="card">
+                <div class="card-header" id="heading{data_item.uid}">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse{data_item.uid}"
+                                aria-controls="collapse{data_item.uid}">
+                            {data_item.header}
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapse{data_item.uid}" class="collapse " aria-labelledby="heading{data_item.uid}"
+                     data-parent="#accordionExample">
+                    <div class="card-body">
+                        {data_item.bodytext}
+                    </div>
+                </div>
+            </div>
+        </f:for>
+    </div>
+    </br>
+</f:if>
+

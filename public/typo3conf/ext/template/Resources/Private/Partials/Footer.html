@@ -1,35 +1,23 @@
-<footer class="page-footer font-small mdb-color pt-4">
-    <div class="container text-center text-md-left">
-        <div class="row text-center text-md-left mt-3 pb-3">
-            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                <h6 class="text-uppercase mb-4 font-weight-bold">Company name</h6>
-                <f:cObject typoscriptObjectPath="lib.header_top_left"/>
-            </div>
-            <hr class="w-100 clearfix d-md-none">
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
-                <f:cObject typoscriptObjectPath="lib.footer_left"/>
-            </div>
-            <hr class="w-100 clearfix d-md-none">
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                <h6 class="text-uppercase mb-4 font-weight-bold">
-                    <v:content.info contentUid="10" field="header"/>
-                </h6>
-                <v:content.info contentUid="10" field="bodytext"/>
+<footer>
+    <div class="row d-flex justify-content-between ">
+        <div class="col-md-4 text-center footer-left">
+            <h6 class="text-uppercase">Company name</h6>
+            <div class="align-content-center">
+                <a class="logo" href="#">
+                    <img src="https://www.ims-education.net/fileadmin/_migrated/pics/TYPO3-Logo-8bit_04.png" alt="">
+                </a>
             </div>
         </div>
-        <hr>
-        <div class="row d-flex align-items-center">
-            <div class="col-md-7 col-lg-8">
-                <p class="text-center text-md-left">© 2018 Copyright:
-                    <a href="https://mdbootstrap.com/education/bootstrap/">
-                        <strong> MDBootstrap.com</strong>
-                    </a>
-                </p>
-            </div>
-
+        <div class="col-md-2  footer-tree-menu footer-center">
+            <h6 class="text-uppercase ">Products</h6>
+            <f:cObject typoscriptObjectPath="lib.footer_menu"/>
+        </div>
+        <div class="col-md-4 text-center footer-right">
+            <h6 class="text-uppercase ">
+                <v:content.info contentUid="10" field="header"/>
+            </h6>
+            <v:content.info contentUid="10" field="bodytext"/>
         </div>
     </div>
-</footer>
-<footer class="bd-footer text-muted p-3 p-md-5">
+
 </footer>

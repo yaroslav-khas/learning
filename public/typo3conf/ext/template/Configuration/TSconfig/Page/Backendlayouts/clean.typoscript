@@ -1,0 +1,21 @@
+mod.web_layout.BackendLayouts {
+    clean {
+        title = Clean
+        config {
+            backend_layout {
+                colCount = 1
+                rowCount = 1
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Main
+                                colPos = 1
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

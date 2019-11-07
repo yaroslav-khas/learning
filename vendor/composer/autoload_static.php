@@ -93,6 +93,7 @@ class ComposerStaticInit5a2b24d5e2be8144b901ec23d80d6d60
         'M' => 
         array (
             'Mso\\IdnaConvert\\' => 16,
+            'MASK\\Mask\\' => 10,
         ),
         'K' => 
         array (
@@ -109,6 +110,7 @@ class ComposerStaticInit5a2b24d5e2be8144b901ec23d80d6d60
             'GuzzleHttp\\Psr7\\' => 16,
             'GuzzleHttp\\Promise\\' => 19,
             'GuzzleHttp\\' => 11,
+            'GridElementsTeam\\Gridelements\\' => 30,
             'GeorgRinger\\News\\' => 17,
         ),
         'F' => 
@@ -360,6 +362,10 @@ class ComposerStaticInit5a2b24d5e2be8144b901ec23d80d6d60
         array (
             0 => __DIR__ . '/..' . '/algo26-matthias/idna-convert/src',
         ),
+        'MASK\\Mask\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/public/typo3conf/ext/mask/Classes',
+        ),
         'Khas\\Template\\' => 
         array (
             0 => __DIR__ . '/../..' . '/public/typo3conf/ext/template/Classes',
@@ -388,6 +394,10 @@ class ComposerStaticInit5a2b24d5e2be8144b901ec23d80d6d60
         'GuzzleHttp\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
+        ),
+        'GridElementsTeam\\Gridelements\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/public/typo3conf/ext/gridelements/Classes',
         ),
         'GeorgRinger\\News\\' => 
         array (

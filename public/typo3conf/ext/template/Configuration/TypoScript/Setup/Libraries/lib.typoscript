@@ -1,36 +1,30 @@
-lib.header_top_left = TEXT
-lib.header_top_left.value = <a href="/"><img src="https://www.ims-education.net/fileadmin/_migrated/pics/TYPO3-Logo-8bit_04.png" alt="TYPO3Buddy" class="logo" /></a>
 
-lib.header_top_right = TEXT
-lib.header_top_right.value = <!-- your own code -->
-
-lib.footer_left = COA
-lib.footer_left {
+lib.footer_menu = COA
+lib.footer_menu {
     10 = HMENU
     10 {
         entryLevel = 0
         1 = TMENU
         1 {
             expAll = 1
-            wrap = <ul id="myUL">|</ul>
+            wrap = <ul>|</ul>
             NO {
                 stdWrap.htmlSpecialChars = 1
-                wrapItemAndSub = <li><span class="caret">|</span></li>
-                ATagParams = class="nav-item"
+                wrapItemAndSub = <li>|</li>
             }
         }
         2 < .1
         2 {
-            wrap = <ul class="nested">|</ul>
+            wrap = <ul>|</ul>
             ACT {
-                wrapItemAndSub = <li><span class="caret">|</span></li>
+                wrapItemAndSub = <li>|</li>
             }
         }
         3 < .1
         3 {
-           wrap = <ul class="nested">|</ul>
+           wrap = <ul>|</ul>
            ACT {
-               wrapItemAndSub = <li><span class="caret">|</span></li>
+               wrapItemAndSub = <li>|</li>
             }
          }
     }
@@ -96,23 +90,20 @@ lib.breadcrumb {
     10 = HMENU
     10 {
         special = rootline
-        #special.range = 0|-1
-        # "not in menu pages" should show up in the breadcrumbs menu
         includeNotInMenu = 1
         1 = TMENU
         1 {
             noBlur = 1
-            # Current item should be unlinked
-            target = _self
-            wrap = <div class="menu_breadcrumb menu_ul"><ul> | </ul></div>
+            wrap = <ol class="breadcrumb"> | </ol>
             NO {
-                stdWrap.field = title
-                ATagTitle.field = nav_title // title
-                linkWrap = <li>|</li><li>&gt;</li>|*|<li>|</li><li>&gt;</li>|*|<li>|</li>
+                linkWrap = <li class="breadcrumb-item">|</li>
             }
-            # Current menu item is unlinked
-            CUR = 1
             CUR < .NO
+            CUR = 1
+            CUR {
+                linkWrap = <li class="breadcrumb-item active" aria-current="page">|</li>
+                doNotLinkIt = 1
+            }
         }
     }
 }

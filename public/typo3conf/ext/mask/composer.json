@@ -1,0 +1,43 @@
+{
+	"name": "mask/mask",
+	"type": "typo3-cms-extension",
+	"description": "Create your own content elements and page templates. Easy to use, even without programming skills because of the comfortable drag and drop user interface. Stored in structured database tables. Style your frontend with Fluid tags. Ideal, if you want to switch from Templavoila.",
+	"homepage": "https://mask.webprofil.at/",
+	"support": {
+		"source": "https://github.com/Gernott/mask",
+		"docs": "https://docs.typo3.org/typo3cms/extensions/mask/",
+		"issues": "https://github.com/Gernott/mask/issues/"
+	},
+	"keywords": [
+		"TYPO3 CMS",
+		"Mask",
+		"Contentelements",
+		"Wizard"
+	],
+	"authors": [
+		{
+			"name": "WEBprofil - Gernot Ploiner e.U.",
+			"email": "office@webprofil.at",
+			"role": "Developer",
+			"homepage": "https://www.webprofil.at"
+		}
+	],
+	"license": "GPL-2.0-or-later",
+	"require": {
+		"php": "^7.2",
+		"ext-json": "*",
+		"typo3/cms-core": "^9.5",
+		"typo3/cms-backend": "^9.5",
+		"typo3/cms-fluid": "^9.5",
+		"typo3/cms-extbase": "^9.5"
+	},
+	"replace": {
+		"mask": "self.version",
+		"typo3-ter/mask": "self.version"
+	},
+	"autoload": {
+		"psr-4": {
+			"MASK\\Mask\\": "Classes/"
+		}
+	}
+}

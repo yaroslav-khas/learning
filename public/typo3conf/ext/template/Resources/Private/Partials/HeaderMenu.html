@@ -1,0 +1,36 @@
+<v:page.menu>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <f:for each="{menu}" as="item">
+                    <f:if condition="{item.hasSubPages}">
+                        <f:then>
+                            <li class="nav-item dropdown ">
+                                <f:link.page class="nav-link dropdown-toggle" id="navbarDropdown"
+                                             additionalAttributes="{role:'button', data-toggle:'dropdown',  aria-haspopup:'true', aria-expanded:'false'}">
+                                    {item.linktext}
+                                </f:link.page>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <v:page.menu pageUid="{item.uid}">
+                                        <f:for each="{menu}" as="subItem">
+                                            <f:link.page class="dropdown-item" pageUid="{subItem.uid}"
+                                                         title="{subItem.linktext}">{subItem.linktext}
+                                            </f:link.page>
+                                        </f:for>
+                                    </v:page.menu>
+                                </div>
+                            </li>
+                        </f:then>
+                        <f:else>
+                            <li class="nav-item">
+                                <f:link.page pageUid="{item.uid}" class="nav-link" title="{item.linktext}">
+                                    {item.linktext}
+                                </f:link.page>
+                            </li>
+                        </f:else>
+                    </f:if>
+                </f:for>
+            </ul>
+        </div>
+    </nav>
+</v:page.menu>
