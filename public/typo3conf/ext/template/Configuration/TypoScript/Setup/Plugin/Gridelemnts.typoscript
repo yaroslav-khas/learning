@@ -4,10 +4,10 @@ tt_content.gridelements_pi1.20.10.setup {
         cObject = FLUIDTEMPLATE
         cObject {
             templateRootPaths {
-                10 = EXT:template/Resources/Private/Templates/Gridelements/
+                10 = EXT:template/Resources/Private/Templates/GridElements/
             }
             partialRootPaths {
-                10 = EXT:template/Resources/Private/Partials/Gridelements/
+                10 = EXT:template/Resources/Private/Partials/
             }
             templateName = 2columns
         }

@@ -9,6 +9,8 @@ apache:
     - "80:80"
   env_file:
     - .env-docker
+  extra_hosts:
+    - "test.loc:127.0.0.1"
 
 mysql:
   image: mariadb:10.1

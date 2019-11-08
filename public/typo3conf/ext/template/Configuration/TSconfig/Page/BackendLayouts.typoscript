@@ -1,1 +1,2 @@
 @import 'EXT:template/Configuration/TSconfig/Page/Backendlayouts/'
+@import 'EXT:template/Configuration/TSconfig/Page/GridElements/'

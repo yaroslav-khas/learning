@@ -1,8 +1,13 @@
 <div class="row">
+    <f:debug>{_all}</f:debug>
     <div class="sidebar col-3">
-        <v:content.render column="1"/>
+        <f:format.raw>
+            {data.tx_gridelements_view_column_1}
+        </f:format.raw>
     </div>
     <div class="content col-9">
-        <v:content.render column="2"/>
+        <f:format.raw>
+            {data.tx_gridelements_view_column_2}
+        </f:format.raw>
     </div>
 </div>

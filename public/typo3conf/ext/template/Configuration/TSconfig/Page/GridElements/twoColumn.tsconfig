@@ -1,0 +1,26 @@
+tx_gridelements.setup {
+    # ID of Element
+    twoColumns {
+        title = Two Columns
+        config {
+            colCount = 6
+            rowCount = 1
+            rows {
+                1 {
+                    columns {
+                        1 {
+                            name = Left
+                            colPos = 1
+                            colspan = 1
+                        }
+                        2 {
+                            name = Right
+                            colPos = 2
+                            colspan = 5
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
