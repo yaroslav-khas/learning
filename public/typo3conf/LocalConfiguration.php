@@ -3,7 +3,7 @@ return [
     'BE' => [
         'debug' => true,
         'explicitADmode' => 'explicitAllow',
-        'installToolPassword' => '$argon2i$v=19$m=65536,t=16,p=2$VjloZlA0cnVmQXBFc05Faw$OrrN2rE6bDNcvdChLd1T5VGDiIfDuIA+PJlJS2i/8lw',
+        'installToolPassword' => '$argon2i$v=19$m=65536,t=16,p=2$M1IvZ2xTaWo1UnhsWlpVYw$KjbGVrFovNL64vo3lPvJVuPgUYEcX/ul7tshNd54HSk',
         'loginSecurityLevel' => 'normal',
         'passwordHashing' => [
             'className' => 'TYPO3\\CMS\\Core\\Crypto\\PasswordHashing\\Argon2iPasswordHash',
@@ -14,7 +14,7 @@ return [
         'Connections' => [
             'Default' => [
                 'charset' => 'utf8mb4',
-                'dbname' => 'typo3test',
+                'dbname' => 'typo3',
                 'driver' => 'mysqli',
                 'host' => 'mysql',
                 'password' => 'root',
@@ -153,7 +153,7 @@ return [
         'features' => [
             'unifiedPageTranslationHandling' => true,
         ],
-        'sitename' => 'TYPO3',
+        'sitename' => 'Learning',
         'systemLogLevel' => 0,
         'systemMaintainers' => [
             1,

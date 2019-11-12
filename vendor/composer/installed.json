@@ -1036,6 +1036,36 @@
         ]
     },
     {
+        "name": "khas/paintings",
+        "version": "0.1",
+        "version_normalized": "0.1.0.0",
+        "dist": {
+            "type": "path",
+            "url": "./public/typo3conf/ext/paintings",
+            "reference": "08e3164ca38ff5f895d2301029bd3d2c0c70db9c"
+        },
+        "require": {
+            "typo3/cms-core": "^9.5"
+        },
+        "type": "typo3-cms-extension",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Khas\\Paintings\\": "Classes"
+            }
+        },
+        "authors": [
+            {
+                "name": "Yaroslav Khas",
+                "role": "Developer"
+            }
+        ],
+        "description": "Paintings",
+        "keywords": [
+            "Paintings"
+        ]
+    },
+    {
         "name": "khas/template",
         "version": "0.1",
         "version_normalized": "0.1.0.0",

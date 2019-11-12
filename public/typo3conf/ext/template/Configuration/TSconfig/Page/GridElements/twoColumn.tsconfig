@@ -1,5 +1,4 @@
 tx_gridelements.setup {
-    # ID of Element
     twoColumns {
         title = Two Columns
         config {
@@ -13,6 +12,7 @@ tx_gridelements.setup {
                             colPos = 1
                             colspan = 1
                         }
+
                         2 {
                             name = Right
                             colPos = 2
@@ -23,4 +23,6 @@ tx_gridelements.setup {
             }
         }
     }
+
+
 }

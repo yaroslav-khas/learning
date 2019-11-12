@@ -98,6 +98,7 @@ class ComposerStaticInit5a2b24d5e2be8144b901ec23d80d6d60
         'K' => 
         array (
             'Khas\\Template\\' => 14,
+            'Khas\\Paintings\\' => 15,
         ),
         'H' => 
         array (
@@ -369,6 +370,10 @@ class ComposerStaticInit5a2b24d5e2be8144b901ec23d80d6d60
         'Khas\\Template\\' => 
         array (
             0 => __DIR__ . '/../..' . '/public/typo3conf/ext/template/Classes',
+        ),
+        'Khas\\Paintings\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/public/typo3conf/ext/paintings/Classes',
         ),
         'Helhum\\Typo3Console\\' => 
         array (

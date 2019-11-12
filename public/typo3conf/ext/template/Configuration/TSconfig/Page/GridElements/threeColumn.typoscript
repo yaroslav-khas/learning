@@ -1,0 +1,32 @@
+tx_gridelements.setup {
+    threeColumns {
+        title = Three Columns
+        config {
+            colCount = 6
+            rowCount = 1
+            rows {
+                1 {
+                    columns {
+                        1 {
+                            name = Left
+                            colPos = 1
+                            colSpan = 1
+                        }
+
+                        2 {
+                            name = Center
+                            colPos = 2
+                            colSpan = 4
+                        }
+
+                        3 {
+                            name = Right
+                            colPos = 3
+                            colSpan = 1
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

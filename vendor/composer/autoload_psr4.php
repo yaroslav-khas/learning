@@ -66,6 +66,7 @@ return array(
     'Mso\\IdnaConvert\\' => array($vendorDir . '/algo26-matthias/idna-convert/src'),
     'MASK\\Mask\\' => array($baseDir . '/public/typo3conf/ext/mask/Classes'),
     'Khas\\Template\\' => array($baseDir . '/public/typo3conf/ext/template/Classes'),
+    'Khas\\Paintings\\' => array($baseDir . '/public/typo3conf/ext/paintings/Classes'),
     'Helhum\\Typo3Console\\' => array($vendorDir . '/helhum/typo3-console/Classes/Console', $vendorDir . '/helhum/typo3-console/Classes/Compatibility'),
     'Helhum\\Typo3ConsolePlugin\\' => array($vendorDir . '/helhum/typo3-console-plugin/src'),
     'Helhum\\ConfigLoader\\' => array($vendorDir . '/helhum/config-loader/src'),

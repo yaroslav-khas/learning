@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5091a600d35ab8959ae51989c981143d",
+    "content-hash": "5704fa46364317df9464520185d614b1",
     "packages": [
         {
             "name": "algo26-matthias/idna-convert",
@@ -1009,6 +1009,34 @@
                 "typo3 console"
             ],
             "time": "2018-12-09T12:06:13+00:00"
+        },
+        {
+            "name": "khas/paintings",
+            "version": "0.1",
+            "dist": {
+                "type": "path",
+                "url": "./public/typo3conf/ext/paintings",
+                "reference": "08e3164ca38ff5f895d2301029bd3d2c0c70db9c"
+            },
+            "require": {
+                "typo3/cms-core": "^9.5"
+            },
+            "type": "typo3-cms-extension",
+            "autoload": {
+                "psr-4": {
+                    "Khas\\Paintings\\": "Classes"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Yaroslav Khas",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Paintings",
+            "keywords": [
+                "Paintings"
+            ]
         },
         {
             "name": "khas/template",

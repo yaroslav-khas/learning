@@ -4,30 +4,14 @@
             "accordion": {
                 "color": "#000000",
                 "columns": [
-                    "tx_mask_inline"
+                    "tx_mask_inline_accordion"
                 ],
                 "description": "Accordion for test",
                 "icon": "fa-align-justify",
                 "key": "accordion",
-                "label": "Accordion",
+                "label": "Accordion ",
                 "labels": [
-                    "Inline"
-                ],
-                "shortLabel": ""
-            },
-            "content_for_accordion": {
-                "color": "#000000",
-                "columns": [
-                    "header",
-                    "bodytext"
-                ],
-                "description": "",
-                "icon": "fa-align-left",
-                "key": "content_for_accordion",
-                "label": "Content for Accordion",
-                "labels": [
-                    "Title",
-                    "Text"
+                    "Accordion"
                 ],
                 "shortLabel": ""
             },
@@ -47,48 +31,86 @@
             }
         },
         "sql": {
-            "tx_mask_inline": {
+            "tx_mask_inline_accordion": {
                 "tt_content": {
-                    "tx_mask_inline": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    "tx_mask_inline_accordion": "int(11) unsigned DEFAULT '0' NOT NULL"
                 }
             }
         },
         "tca": {
-            "tx_mask_inline": {
-                "cTypes": [
-                    "mask_content_for_accordion"
-                ],
+            "tx_mask_inline_accordion": {
                 "config": {
                     "appearance": {
-                        "collapseAll": "1",
                         "enabledControls": {
                             "dragdrop": "1"
                         },
                         "levelLinksPosition": "top",
-                        "newRecordLinkTitle": "",
-                        "showAllLocalizationLink": "1",
-                        "showPossibleLocalizationRecords": "1",
-                        "showSynchronizationLink": "1",
-                        "useSortable": "1"
+                        "newRecordLinkTitle": ""
                     },
+                    "foreign_field": "parentid",
                     "foreign_sortby": "sorting",
-                    "foreign_table": "tt_content",
+                    "foreign_table": "--inlinetable--",
+                    "foreign_table_field": "parenttable",
                     "maxitems": "",
                     "minitems": "",
-                    "overrideChildTca": {
-                        "columns": {
-                            "colPos": {
-                                "config": {
-                                    "default": "999"
-                                }
-                            }
-                        }
-                    },
                     "type": "inline"
                 },
                 "exclude": "1",
-                "key": "inline",
+                "inlineIcon": "",
+                "inlineLabel": "",
+                "key": "inline_accordion",
                 "l10n_mode": ""
+            }
+        }
+    },
+    "tx_mask_inline_accordion": {
+        "sql": {
+            "tx_mask_accordion_header": {
+                "tx_mask_inline_accordion": {
+                    "tx_mask_accordion_header": "tinytext"
+                }
+            },
+            "tx_mask_accordion_text": {
+                "tx_mask_inline_accordion": {
+                    "tx_mask_accordion_text": "mediumtext"
+                }
+            }
+        },
+        "tca": {
+            "tx_mask_accordion_header": {
+                "config": {
+                    "default": "",
+                    "eval": "",
+                    "is_in": "",
+                    "max": "",
+                    "placeholder": "",
+                    "size": "",
+                    "type": "input"
+                },
+                "exclude": "1",
+                "inlineParent": "tx_mask_inline_accordion",
+                "key": "accordion_header",
+                "l10n_mode": "",
+                "label": "Title",
+                "order": 1
+            },
+            "tx_mask_accordion_text": {
+                "config": {
+                    "cols": "",
+                    "default": "",
+                    "eval": "",
+                    "format": "",
+                    "max": "",
+                    "placeholder": "",
+                    "rows": "",
+                    "type": "text"
+                },
+                "exclude": "1",
+                "inlineParent": "tx_mask_inline_accordion",
+                "key": "accordion_text",
+                "l10n_mode": "",
+                "label": "Text",
+                "order": 2
             }
         }
     }
