@@ -1,14 +1,10 @@
 <f:layout name="Layout"/>
 <f:section name="content">
-    <f:debug>{_all}</f:debug>
     <main>
         <div class="row">
             <div class="content col">
-                <v:content.render column="1"/>
+                <v:content.render column="0"/>
             </div>
-            <f:for each="{lists}" as="lists">
-                {list.name}
-            </f:for>
         </div>
         <br>
     </main>

@@ -19,6 +19,14 @@ class Paintings extends AbstractEntity{
     protected $price;
 
     /**
+     * Image items
+     *
+     * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
+     *
+     */
+    protected $image;
+
+    /**
      * @return string
      */
     public function getName()
@@ -64,6 +72,22 @@ class Paintings extends AbstractEntity{
     public function setPrice($price)
     {
         $this->price = $price;
+    }
+
+    /**
+     * @return \TYPO3\CMS\Extbase\Domain\Model\FileReference
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    /**
+     * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $image
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
     }
 
 

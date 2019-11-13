@@ -1,0 +1,22 @@
+<f:layout name="default"/>
+<f:section name="content">
+    <div class="row">
+        <f:debug>{_all}</f:debug>
+        <f:for each="{items}" as="item">
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <f:uri.image image="{item.image}" />
+                    <div class="card-body">
+                        <h5 class="card-title">{item.name}</h5>
+                        <p class="card-text">
+                            <f:format.crop maxCharacters="125">
+                                <f:format.html>{item.description}</f:format.html>
+                            </f:format.crop>
+                        </p>
+                        <a href="#" class="btn btn-primary">{item.price}</a>
+                    </div>
+                </div>
+            </div>
+        </f:for>
+    </div>
+</f:section>
