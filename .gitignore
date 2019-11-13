@@ -1,2 +1,8 @@
 .idea/
 var/
+etc/docker/mysql-data/
+vendor/
+public/fileadmin/
+public/typo3/
+public/typo3temp/
+public/uploads/

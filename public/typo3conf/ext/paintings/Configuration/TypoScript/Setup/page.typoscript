@@ -17,4 +17,21 @@ page {
         }
 
     }
+    includeCSS {
+        bootstrapCss = https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css
+        bootstrapCss.external = 1
+        fontAws= https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css
+        mainCss = EXT:paintings/Resources/Public/Css/main.css
+    }
+
+    includeJSFooter {
+        jquery = https://code.jquery.com/jquery-3.3.1.slim.min.js
+        jquery.external = 1
+        pooperJS = https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js
+        pooperJS.external = 1
+        bootstrapJS = https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js
+        bootstrapJS.external = 1
+        mainJs = EXT:paintings/Resources/Public/Js/main.js
+        bootstrapJS.external = 1
+    }
 }
