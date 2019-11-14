@@ -5,9 +5,9 @@ defined('TYPO3_MODE') || die('Access denied.');
     'Khas.paintings',
     'Showcase',
     [
-        'Paintings'=>'list'
+        'Paintings'=>'list,detail, update, delete'
     ],
     [
-        'Paintings'=>'list'
+        'Paintings'=>'list,detail, update, delete'
     ]
 );

@@ -1,1 +1,5 @@
-plugin.tx_paintings.persistence.storagePid = 20
+plugin.tx_paintings {
+    settings {
+        cssFile = EXT:paintings/Resources/Public/Css/main.css
+    }
+}

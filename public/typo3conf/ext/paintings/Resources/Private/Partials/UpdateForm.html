@@ -1,0 +1,14 @@
+<div class="col">
+    <h1>Edit Blog</h1>
+    <f:form action="update" object="{item}" name="item" additionalAttributes="{role:'form'}">
+        <div class="form-group">
+            <label>Item Title</label>
+            <f:form.textfield property="name" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Blog Description</label>
+            <f:form.textarea property="description" class="form-control" />
+        </div>
+        <f:form.submit value="Update Item!" class="btn btn-primary" />
+    </f:form>
+</div>

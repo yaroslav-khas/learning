@@ -21,7 +21,8 @@ class Paintings extends AbstractEntity{
     /**
      * Image items
      *
-     * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
+     * @lazy
      *
      */
     protected $image;
@@ -75,7 +76,7 @@ class Paintings extends AbstractEntity{
     }
 
     /**
-     * @return \TYPO3\CMS\Extbase\Domain\Model\FileReference
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
      */
     public function getImage()
     {
@@ -83,7 +84,7 @@ class Paintings extends AbstractEntity{
     }
 
     /**
-     * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $image
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $image
      */
     public function setImage($image)
     {
