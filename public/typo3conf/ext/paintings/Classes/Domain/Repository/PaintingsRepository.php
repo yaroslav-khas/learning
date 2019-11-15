@@ -19,10 +19,8 @@ class PaintingsRepository extends Repository
         $query = $this->createQuery();
         $query->matching(
             $query->like('name', '%' . $search . '%')
-        );
+        )->count();
         $query = $query->execute();
-        $queryCount = $query->count();
         return $query;
-        //return [$query,$queryCount];
     }
 }

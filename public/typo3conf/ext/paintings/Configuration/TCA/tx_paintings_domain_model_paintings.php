@@ -5,7 +5,7 @@ return array(
     'ctrl' => array(
         'title' => 'LLL:EXT:paintings/Resources/Private/Language/locallang_db.xlf:tx_paintings_domain_model_paintings',
         'label' => 'name',
-        'iconfile' => 'EXT:paintings/Resources/Public/Icons/Extension.svg'
+        'iconfile' => 'EXT:paintings/Resources/Public/Icons/paintings_domain_model_paintings.svg'
     ),
     'interface' => array(),
     'types' => array(

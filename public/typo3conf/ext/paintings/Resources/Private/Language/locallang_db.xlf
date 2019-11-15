@@ -10,8 +10,8 @@
             <trans-unit id="tx_paintings_domain_model_paintings">
                 <source>Article</source>
             </trans-unit>
-            <trans-unit id="tx_paintings_domain_model_paintings.item_label">
-                <source>Item Label</source>
+            <trans-unit id="tx_paintings_domain_model_paintings.tag_label">
+                <source>Add Tags</source>
             </trans-unit>
         </body>
     </file>

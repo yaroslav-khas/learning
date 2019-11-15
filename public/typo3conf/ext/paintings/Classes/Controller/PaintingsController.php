@@ -2,6 +2,7 @@
 
 namespace Khas\Paintings\Controller;
 
+use GeorgRinger\News\Domain\Model\Dto\Search;
 use Khas\Paintings\Domain\Model\Paintings;
 use Khas\Paintings\Domain\Repository\PaintingsRepository;
 
@@ -38,11 +39,12 @@ class PaintingsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
 
         if ($search) {
             $search = $this->paintingsRepository->findSearchForm($search);
-            $items=$search;
+            $items=$search->toArray();
         } else {
             $items = $this->paintingsRepository->findAll();
             $items = $items->toArray();
         }
+        \TYPO3\CMS\Core\Utility\DebugUtility::debug($items);
         $this->view->assign('items', $items);
     }
 
