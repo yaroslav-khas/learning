@@ -16,8 +16,8 @@ return array(
             'config' => array(
                 'size' => 60,
                 'type' => 'input',
-                'eval' => 'required',
-            ),
+                'eval' => 'required,unique,trim',
+                ),
             'label' => 'Tag title'
         ),
     )
