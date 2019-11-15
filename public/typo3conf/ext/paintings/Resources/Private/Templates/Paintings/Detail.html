@@ -1,9 +1,9 @@
 <f:layout name="default"/>
 <f:section name="content">
+    <f:debug>{_all}</f:debug>
     <div class="row">
         <div class="col-6 image-article">
             <f:if condition="item.image">
-
                 <div id="carouselExampleIndicators" class="carousel slide" data-interval="false" data-ride="carousel">
                     <div class="carousel-inner ">
                         <f:for each="{item.image}" as="image" key="key" iteration="iter">
@@ -28,6 +28,10 @@
             <div class="row">
                 <div class="col">
                     <h1>{item.name}</h1>
+                    <hr>
+                    <div class="btn btn-secondary">Tags: <f:for each="{item.tags}" as="tags">{tags.title}</f:for></div>
+                    <div class="btn btn-info">Style: <f:for each="{item.style}" as="style">{style.title}</f:for></div>
+                    <hr>
                 </div>
             </div>
             <div class="row">

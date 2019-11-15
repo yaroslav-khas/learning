@@ -26,6 +26,22 @@ class Paintings extends AbstractEntity{
      *
      */
     protected $image;
+    /**
+     * Tags items
+     *
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Khas\Paintings\Domain\Model\Tag>
+     * @lazy
+     *
+     */
+    protected $tags;
+    /**
+     * Style items
+     *
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Khas\Paintings\Domain\Model\Style>
+     * @lazy
+     *
+     */
+    protected $style;
 
     /**
      * @return string
@@ -89,6 +105,39 @@ class Paintings extends AbstractEntity{
     public function setImage($image)
     {
         $this->image = $image;
+    }
+
+
+    /**
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+     */
+    public function getStyle()
+    {
+        return $this->style;
+    }
+
+    /**
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $style
+     */
+    public function setStyle($style)
+    {
+        $this->style = $style;
+    }
+
+    /**
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+     */
+    public function getTags()
+    {
+        return $this->tags;
+    }
+
+    /**
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $tags
+     */
+    public function setTags($tags)
+    {
+        $this->tags = $tags;
     }
 
 
