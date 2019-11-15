@@ -13,6 +13,9 @@
             <trans-unit id="tx_paintings_domain_model_paintings.tag_label">
                 <source>Add Tags</source>
             </trans-unit>
+            <trans-unit id="tx_paintings_domain_model_paintings.style_label">
+                <source>Add Style</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

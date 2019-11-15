@@ -9,7 +9,7 @@ return array(
     ),
     'interface' => array(),
     'types' => array(
-        '0' => ['showitem' => 'name, description, price, image, tags'],
+        '0' => ['showitem' => 'name, description, price, image, tags, style'],
     ),
     'palettes' => array(),
     'columns' => array(
@@ -81,7 +81,6 @@ return array(
             ),
         ),
         'tags' => array(
-            'exclude' => true,
             'label' => 'Tags',
             'config' => [
                 'type' => 'group',
@@ -89,6 +88,15 @@ return array(
                 'allowed' => 'tx_paintings_domain_model_tag',
                 'MM' => 'tx_paintings_domain_model_paintings_tag_mm',
                 'foreign_table' => 'tx_paintings_domain_model_tag']
+        ),
+        'style' => array(
+            'label' => 'Styles',
+            'config' => [
+                'type' => 'group',
+                'internal_type' => 'db',
+                'allowed' => 'tx_paintings_domain_model_style',
+                'MM' => 'tx_paintings_domain_model_paintings_style_mm',
+                'foreign_table' => 'tx_paintings_domain_model_style']
         )
     )
 );

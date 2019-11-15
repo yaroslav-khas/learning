@@ -2,9 +2,9 @@
 defined('TYPO3_MODE') or die ('Access denied.');
 return array(
     'ctrl' => array(
-        'title' => 'LLL:EXT:paintings/Resources/Private/Language/locallang_db.xlf:tx_paintings_domain_model_paintings.tag_label',
+        'title' => 'LLL:EXT:paintings/Resources/Private/Language/locallang_db.xlf:tx_paintings_domain_model_paintings.style_label',
         'label' => 'title',
-        'iconfile' => 'EXT:paintings/Resources/Public/Icons/paintings_domain_model_tag.svg'
+        'iconfile' => 'EXT:paintings/Resources/Public/Icons/paintings_domain_model_style.svg'
     ),
     'interface' => array(),
     'types' => array(
@@ -18,7 +18,7 @@ return array(
                 'type' => 'input',
                 'eval' => 'required,unique,trim',
                 ),
-            'label' => 'Tag title'
+            'label' => 'Style title'
         ),
     )
 );
