@@ -1,0 +1,89 @@
+<f:layout name="default"/>
+<f:section name="content">
+    <div class="row">
+        <div class="col-6 image-article">
+            <f:if condition="item.image">
+                <div id="carouselExampleIndicators" class="carousel slide" data-interval="false" data-ride="carousel">
+                    <div class="carousel-inner ">
+                        <f:for each="{item.image}" as="image" key="key" iteration="iter">
+                            <div class="carousel-item {f:if(condition: iter.isFirst, then: 'active')}">
+                                <f:image image="{image}" class="d-block"/>
+                            </div>
+                        </f:for>
+                    </div>
+                    <ol class="carousel-indicators">
+                        <f:for each="{item.image}" as="image" key="key" iteration="iter">
+                            <f:image image="{image}"
+                                     additionalAttributes="{data-target: '#carouselExampleIndicators',data-slide-to:'{key}'}"
+                                     class="{f:if(condition: iter.isFirst, then: 'active')}"/>
+                        </f:for>
+                    </ol>
+
+                </div>
+            </f:if>
+        </div>
+        <div class="col-6 info-article">
+            <div class="row">
+                <div class="col">
+                    <h1>{item.name}</h1>
+                    <hr>
+                    <ul class="list-group">
+
+                        <f:if condition="{item.tags}">
+                            <li class="list-group-item">
+                                <ul class="tags">
+                                    <f:for each="{item.tags}" as="tags" iteration="iter">
+                                        <li>
+                                            <f:link.action pageUid="22" arguments="{tags:{id:tags.uid}}" class="tag">
+                                                {tags.title}
+                                            </f:link.action>
+                                        </li>
+                                    </f:for>
+                                </ul>
+                            </li>
+                        </f:if>
+
+                        <f:if condition="{item.style}">
+                            <li class="list-group-item">
+                                <ul class="tags style">
+                                    <f:for each="{item.style}" as="style">
+                                        <li>
+                                            <f:link.action pageUid="22" arguments="{style:{id:style.uid}}" class="tag">
+                                                {style.title}
+                                            </f:link.action>
+                                        </li>
+                                    </f:for>
+                                </ul>
+                            </li>
+                        </f:if>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h3>{item.price} $</h3>
+                </div>
+            </div>
+            <f:link.action pageUid="22" class="btn btn-primary">Back to Blog list</f:link.action>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                       aria-controls="home" aria-selected="true">Description</a>
+                </li>
+
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <h6>
+                        <f:format.html>{item.description}</f:format.html>
+                    </h6>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</f:section>

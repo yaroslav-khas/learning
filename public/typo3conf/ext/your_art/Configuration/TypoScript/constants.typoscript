@@ -1,0 +1,5 @@
+plugin.tx_yourart {
+    settings {
+        cssFile = EXT:your_art/Resources/Public/Css/main.css
+    }
+}

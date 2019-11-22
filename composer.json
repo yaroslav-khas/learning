@@ -54,7 +54,7 @@
 		"khas/template": "^0.1",
 		"gridelementsteam/gridelements": "^9.3",
 		"typo3-ter/mask": "^4.1",
-		"khas/paintings": "^0.1.0"
+		"khas/your_art": "^0.1.0"
 	},
 	"scripts":{
 		"typo3-cms-scripts": [

@@ -2,13 +2,15 @@
       xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
       xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
       v:schemaLocation="https://fluidtypo3.org/schemas/vhs-master.xsd">
-<div class="container">
+<div class="container-fluid">
     <header>
         <f:render partial="HeaderTop" arguments="{_all}"/>
         <f:render partial="HeaderMenu" arguments="{_all}"/>
         <f:render partial="Breadcrumb" arguments="{_all}"/>
     </header>
-    <f:render section="content"/>
+    <div class="container">
+        <f:render section="content"/>
+    </div>
     <f:render partial="Footer" arguments="{_all}"/>
 </div>
 </html>

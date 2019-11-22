@@ -1,0 +1,61 @@
+<f:layout name="default"/>
+<f:section name="content">
+    <f:debug>{_all}</f:debug>
+    <div class="row">
+        <div class="col">
+            <f:form pageUid="{settings.listPid}">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <div class=" d-flex justify-content-between align-items-center">Author
+                            <span class="pull-right" data-toggle="collapse" data-target="#author"><i
+                                    class="tags_arrow fa fa-arrow-down" aria-hidden="true"></i></span>
+                        </div>
+                        <div class="filter-content collapse" id="author">
+                            <hr>
+                            <f:for each="{author}" as="item" key="{key}">
+                                <div class="custom-control custom-checkbox">
+                                    <f:form.checkbox name="author" multiple="1" id="{item.title}" value="{item.uid}"/>
+                                    {item.title}
+                                </div> <!-- form-check.// -->
+                            </f:for>
+                            <!-- card-body.// -->
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class=" d-flex justify-content-between align-items-center">Style
+                            <span class="pull-right" data-toggle="collapse" data-target="#style"><i
+                                    class="style__arrow fa fa-arrow-down" aria-hidden="true"></i></span>
+                        </div>
+                        <div class="filter-content collapse" id="style">
+                            <hr>
+                            <f:for each="{style}" as="item">
+                                <div class="custom-control custom-checkbox">
+                                    <f:form.checkbox name="style" multiple="1" id="{item.title}"
+                                                     value="{item.uid}"/>
+                                    {item.title}
+                                </div> <!-- form-check.// -->
+                            </f:for>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class=" d-flex justify-content-between align-items-center">Tags
+                            <span class="pull-right" data-toggle="collapse" data-target="#tags"><i
+                                    class="tags_arrow fa fa-arrow-down" aria-hidden="true"></i></span>
+                        </div>
+                        <div class="filter-content collapse" id="tags">
+                            <hr>
+                            <f:for each="{tags}" as="item" key="{key}">
+                                <div class="custom-control custom-checkbox">
+                                    <f:form.checkbox name="tags" multiple="1" id="{item.title}" value="{item.uid}"/>
+                                    {item.title}
+                                </div> <!-- form-check.// -->
+                            </f:for>
+                            <!-- card-body.// -->
+                        </div>
+                    </li>
+                    <f:form.submit value="Filter!" class="btn btn-secondary"/>
+                </ul>
+            </f:form>
+        </div>
+    </div>
+</f:section>

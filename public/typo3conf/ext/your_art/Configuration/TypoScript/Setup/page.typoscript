@@ -1,0 +1,6 @@
+plugin.tx_yourart {
+
+    settings {
+        cssFile = {$plugin.tx_yourart.settings.cssFile}
+    }
+}

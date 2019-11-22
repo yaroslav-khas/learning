@@ -1,15 +1,15 @@
 <v:page.menu>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <f:for each="{menu}" as="item">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+        <div class="container">
+            <ul class="navbar-nav d-flex justify-content-between ">
+                <f:for each="{menu}" as="item" iteration="iter" key="key">
                     <f:if condition="{item.hasSubPages}">
                         <f:then>
-                            <li class="nav-item dropdown ">
-                                <f:link.page class="nav-link dropdown-toggle" id="navbarDropdown"
+                            <li class="nav-item text-muted text-center dropdown ">
+                                <v:page.link class="nav-link {f:if(condition: '{key}=={data.uid}', then: 'active')}  dropdown-toggle" id="navbarDropdown"
                                              additionalAttributes="{role:'button', data-toggle:'dropdown',  aria-haspopup:'true', aria-expanded:'false'}">
                                     {item.linktext}
-                                </f:link.page>
+                                </v:page.link>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <v:page.menu pageUid="{item.uid}">
                                         <f:for each="{menu}" as="subItem">
@@ -23,9 +23,9 @@
                         </f:then>
                         <f:else>
                             <li class="nav-item">
-                                <f:link.page pageUid="{item.uid}" class="nav-link" title="{item.linktext}">
+                                <v:page.link pageUid="{item.uid}" class="nav-link {f:if(condition: '{key}=={data.uid}', then: 'active')}" title="{item.linktext}">
                                     {item.linktext}
-                                </f:link.page>
+                                </v:page.link>
                             </li>
                         </f:else>
                     </f:if>

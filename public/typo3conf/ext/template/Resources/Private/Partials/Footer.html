@@ -1,23 +1,24 @@
 <footer>
-    <div class="row d-flex justify-content-between ">
-        <div class="col-md-4 text-center footer-left">
-            <h6 class="text-uppercase">Company name</h6>
-            <div class="align-content-center">
-                <a class="logo" href="#">
-                    <img src="https://www.ims-education.net/fileadmin/_migrated/pics/TYPO3-Logo-8bit_04.png" alt="">
-                </a>
+    <div class="container">
+        <div class="row d-flex justify-content-between ">
+            <div class="col-md-4 text-center footer-left">
+                <h6 class="text-uppercase">Company name</h6>
+                <div class="align-content-center">
+                    <a class="logo" href="#">
+                        <img src="{f:uri.image(src:'EXT:template/Resources/Public/Images/logo.png')}" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-2  footer-tree-menu footer-center">
+                <h6 class="text-uppercase ">Products</h6>
+                <f:cObject typoscriptObjectPath="lib.footer_menu"/>
+            </div>
+            <div class="col-md-4 text-center footer-right">
+                <h6 class="text-uppercase ">
+                    <v:content.info contentUid="13" field="header"/>
+                </h6>
+                <v:content.info contentUid="13" field="bodytext"/>
             </div>
         </div>
-        <div class="col-md-2  footer-tree-menu footer-center">
-            <h6 class="text-uppercase ">Products</h6>
-            <f:cObject typoscriptObjectPath="lib.footer_menu"/>
-        </div>
-        <div class="col-md-4 text-center footer-right">
-            <h6 class="text-uppercase ">
-                <v:content.info contentUid="13" field="header"/>
-            </h6>
-            <v:content.info contentUid="13" field="bodytext"/>
-        </div>
     </div>
-
 </footer>

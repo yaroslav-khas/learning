@@ -116,11 +116,11 @@ return [
         'template' => [
             'packagePath' => 'typo3conf/ext/template/',
         ],
-        'paintings' => [
-            'packagePath' => 'typo3conf/ext/paintings/',
-        ],
         'vhs' => [
             'packagePath' => 'typo3conf/ext/vhs/',
+        ],
+        'your_art' => [
+            'packagePath' => 'typo3conf/ext/your_art/',
         ],
     ],
     'version' => 5,

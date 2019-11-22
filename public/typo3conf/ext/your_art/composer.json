@@ -1,0 +1,23 @@
+{
+  "name": "khas/your_art",
+  "type": "typo3-cms-extension",
+  "description": "YourArt",
+  "version": "0.1",
+  "keywords": [
+    "YourArt"
+  ],
+  "authors": [
+    {
+      "name": "Yaroslav Khas",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "typo3/cms-core": "^9.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Khas\\YourArt\\": "Classes"
+    }
+  }
+}
