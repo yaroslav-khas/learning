@@ -8,7 +8,7 @@ return array(
     ),
     'interface' => array(),
     'types' => array(
-        '0' => ['showitem' => 'title'],
+        '0' => ['showitem' => 'title,description,image'],
     ),
     'palettes' => array(),
     'columns' => array(
@@ -19,6 +19,40 @@ return array(
                 'eval' => 'required,unique,trim',
                 ),
             'label' => 'Author name'
+        ),
+        'description' => array(
+            'config' => array(
+                'type' => 'text',
+                'enableRichtext' => true,
+            ),
+            'label' => 'Description'
+        ),
+        'image' => array(
+            'label' => 'Image',
+            'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
+                'image',
+                [
+                    'appearance' => [
+                        'createNewRelationLinkTitle' => 'Add Image',
+                        'collapseAll' => 1,
+                        'expandSingle' => 1,
+                    ],
+                    'overrideChildTca' => [
+                        'types' => [
+                            '0' => [
+                                'showitem' => '
+                            --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+                            --palette--;;filePalette'
+                            ],
+                            \TYPO3\CMS\Core\Resource\File::FILETYPE_TEXT => [
+                                'showitem' => '
+                            --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+                            --palette--;;filePalette'
+                            ],
+                        ],
+                    ],
+                ]
+            ),
         ),
     )
 );

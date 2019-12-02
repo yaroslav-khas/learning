@@ -5,7 +5,7 @@
 @import 'EXT:news/Configuration/TypoScript/'
 @import 'EXT:gridelements/Configuration/TypoScript/'
 @import 'EXT:mask/Configuration/TypoScript/'
-@import 'EXT:paintings/Configuration/TypoScript/'
+@import 'EXT:your_art/Configuration/TypoScript/'
 
 @import 'EXT:template/Configuration/TypoScript/Setup/Libraries/'
 @import 'EXT:template/Configuration/TypoScript/Setup/Plugin/'

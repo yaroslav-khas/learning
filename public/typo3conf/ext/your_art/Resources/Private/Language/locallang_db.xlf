@@ -19,6 +19,9 @@
             <trans-unit id="tx_yourart_domain_model_yourart.author_label">
                 <source>Add Author</source>
             </trans-unit>
+            <trans-unit id="tx_yourart_domain_model_yourart.offer_label">
+                <source>Add Offer</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

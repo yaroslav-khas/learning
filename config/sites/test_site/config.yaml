@@ -22,4 +22,76 @@ languages:
     flag: global
     languageId: '0'
 rootPageId: 1
-routes: {  }
+routeEnhancers:
+  News:
+    type: Extbase
+    extension: News
+    plugin: Pi1
+    routes:
+      -
+        routePath: '/{page}'
+        _controller: 'News::list'
+        _arguments:
+          page: '@widget_0/currentPage'
+      -
+        routePath: '/{news_title}'
+        _controller: 'News::detail'
+        _arguments:
+          news_title: news
+      -
+        routePath: '/category/{category_name}'
+        _controller: 'News::list'
+        _arguments:
+          category_name: overwriteDemand/categories
+    defaultController: 'News::list'
+    defaults:
+      page: '0'
+    requirements:
+      news_title: '^[a-zA-Z0-9].*$'
+      page: \d+
+    aspects:
+      news_title:
+        type: PersistedAliasMapper
+        tableName: tx_news_domain_model_news
+        routeFieldName: path_segment
+      page:
+        type: StaticRangeMapper
+        start: '1'
+        end: '100'
+      category_name:
+        type: PersistedAliasMapper
+        tableName: sys_category
+        routeFieldName: title
+  YourArt:
+    type: Extbase
+    extension: YourArt
+    plugin: Arts
+    routes:
+      - routePath: '/page_{art-page}'
+        _controller: 'Auction::list'
+        _arguments:
+          art-page: '@widget_0/currentPage'
+      - routePath: '/{pictures}'
+        _controller: 'Auction::detail'
+        _arguments:
+          pictures: item
+      - routePath: '/{author}'
+        _controller: 'Auction::detailAuthor'
+        _arguments:
+          author: item
+    defaultController: 'Auction::list'
+    defaults:
+      art-page: '0'
+    aspects:
+      pictures:
+        type: PersistedAliasMapper
+        tableName: tx_yourart_domain_model_yourart
+        routeFieldName: slug
+      author:
+        type: PersistedAliasMapper
+        tableName: tx_yourart_domain_model_author
+        routeFieldName: title
+      art-page:
+        type: StaticRangeMapper
+        start: '1'
+        end: '100'

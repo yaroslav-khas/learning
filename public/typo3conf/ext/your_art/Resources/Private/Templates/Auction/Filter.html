@@ -1,9 +1,10 @@
 <f:layout name="default"/>
 <f:section name="content">
-    <f:debug>{_all}</f:debug>
     <div class="row">
+        <f:debug>{_all}</f:debug>
+
         <div class="col">
-            <f:form pageUid="{settings.listPid}">
+            <f:form pageUid="{settings.listPid}" actionUri="/paintings" id="filters" name="filters" object="{filters}">
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
                         <div class=" d-flex justify-content-between align-items-center">Author
@@ -12,9 +13,9 @@
                         </div>
                         <div class="filter-content collapse" id="author">
                             <hr>
-                            <f:for each="{author}" as="item" key="{key}">
+                            <f:for each="{author}" as="item" iteration="iter" key="key">
                                 <div class="custom-control custom-checkbox">
-                                    <f:form.checkbox name="author" multiple="1" id="{item.title}" value="{item.uid}"/>
+                                    <f:form.checkbox name="filters[author]" multiple="1" id="{item.title}" value="{item.uid}"/>
                                     {item.title}
                                 </div> <!-- form-check.// -->
                             </f:for>
@@ -30,7 +31,7 @@
                             <hr>
                             <f:for each="{style}" as="item">
                                 <div class="custom-control custom-checkbox">
-                                    <f:form.checkbox name="style" multiple="1" id="{item.title}"
+                                    <f:form.checkbox name="filters[style]" multiple="1" id="{item.title}"
                                                      value="{item.uid}"/>
                                     {item.title}
                                 </div> <!-- form-check.// -->
@@ -46,7 +47,7 @@
                             <hr>
                             <f:for each="{tags}" as="item" key="{key}">
                                 <div class="custom-control custom-checkbox">
-                                    <f:form.checkbox name="tags" multiple="1" id="{item.title}" value="{item.uid}"/>
+                                    <f:form.checkbox name="filters[tags]" multiple="1" id="{item.title}" value="{item.uid}"/>
                                     {item.title}
                                 </div> <!-- form-check.// -->
                             </f:for>

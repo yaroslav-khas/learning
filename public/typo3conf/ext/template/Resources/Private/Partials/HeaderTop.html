@@ -1,8 +1,17 @@
 <div class="container">
-    <div class=" header-top row flex-nowrap justify-content-between align-items-center" xmlns:f="http://www.w3.org/1999/html">
-        <div class="col-4 ">
+    <div class=" header-top row flex-nowrap justify-content-between" xmlns:f="http://www.w3.org/1999/html">
+        <div class="col-4  align-items-center">
             <a class="logo" href="/">
                 <img src="{f:uri.image(src:'EXT:template/Resources/Public/Images/logo.png')}" alt="">
+            </a>
+        </div>
+        <div class="col-3 d-flex  justify-content-end">
+            <f:link.action pageUid="35"
+                           class="text-muted">
+                Login
+            </f:link.action>
+            <a href="" class="text-muted">
+                Register
             </a>
         </div>
     </div>

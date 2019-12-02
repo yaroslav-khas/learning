@@ -72,3 +72,39 @@
 .tag a:link{
     color: white;
 }
+.info-article{
+    border-left:1px solid rgba(225, 236, 244, 0.76);
+}
+.page-item.active .page-link{
+    background-color: #6C757D;
+    border-color: #6C757D;
+}
+.page-link{
+    color: #6C757D;
+}
+.page-link:hover{
+    color: #4e565e;
+}
+.description-items{
+    height: 350px;
+    overflow-y: auto;
+}
+.description-items::-webkit-scrollbar {
+    display: none;
+}
+.description-items .media{
+    height: 100px;
+}
+.container-img{
+    height: 500px;
+}
+.info-author{
+    height: 500px;
+}
+.author-img{
+    height: 100%;
+}
+.media-img{
+    width: 100%;
+    height: 100px;
+}

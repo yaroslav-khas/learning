@@ -14,7 +14,7 @@ return array(
             'showRecordFieldList' => 'crdate'
     ),
     'types' => array(
-        '0' => ['showitem' => 'name, description, price,author, image, tags, style'],
+        '0' => ['showitem' => 'name, description, price,slug, author, image, tags, style, '],
     ),
     'palettes' => array(),
     'columns' => array(
@@ -69,6 +69,23 @@ return array(
                 ]
             ),
         ),
+        'slug' => [
+            'exclude' => true,
+            'label' => 'Slug',
+            'displayCond' => 'USER:' . \TYPO3\CMS\Core\Compatibility\PseudoSiteTcaDisplayCondition::class . '->isInPseudoSite:pages:false',
+            'config' => [
+                'type' => 'slug',
+                'size' => 50,
+                'generatorOptions' => [
+                    'fields' => ['nav-title'=>'paintings','name'],
+                    'fieldSeparator' => '/',
+                    'prefixParentPageSlug' => true
+                ],
+                'fallbackCharacter' => '-',
+                'eval' => 'uniqueInSite',
+                'default' => ''
+            ]
+        ],
         'tags' => array(
             'label' => 'Tags',
             'config' => [

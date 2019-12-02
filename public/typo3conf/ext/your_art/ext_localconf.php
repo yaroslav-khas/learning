@@ -5,7 +5,7 @@ defined('TYPO3_MODE') || die('Access denied.');
     'Khas.YourArt',
     'Arts',
     [
-        'Auction'=>'list,searchForm,detail,update,delete,filter',
+        'Auction'=>'list,searchForm,detail,update,delete,filter,detailAuthor',
     ],
     [
         'Auction'=>'searchForm',

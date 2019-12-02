@@ -2,6 +2,8 @@
 
 namespace Khas\YourArt\Domain\Repository;
 
+use TYPO3\CMS\Core\Utility\DebugUtility;
+use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 use TYPO3\CMS\Extbase\Persistence\Repository;
 
 /**
@@ -11,80 +13,47 @@ use TYPO3\CMS\Extbase\Persistence\Repository;
  */
 class YourArtRepository extends Repository
 {
+    protected $defaultOrderings = [
+        'name' => QueryInterface::ORDER_ASCENDING,
+    ];
+
     /**
-     * @param string $name
+     * @param array $filters
+     * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
      */
-    public function findByName($name)
+    public function filterForm(array $filters)
     {
         $query = $this->createQuery();
+        $constraints = array();
+        foreach ($filters['filters'] as $key => $filter) {
+            if ($key != "name" && $key != "sorts" && $filter != '') {
+                foreach ($filter as $item) {
+                    $constraints[] = $query->contains(str_replace("'", "", $key), $item);
+                }
+            } elseif ($key == "name") {
+                $constraints[] = $query->like('name', '%' . $filter . '%');
+            }
+        }
         $query->matching(
-            $query->like('name', '%' . $name . '%')
+            $query->logicalAnd($constraints)
         );
         $query = $query->execute();
         return $query;
     }
 
     /**
-     * @param array $yourStyle
-     * @return array|\TYPO3\CMS\Extbase\Persistence\QueryInterface|\TYPO3\CMS\Extbase\Persistence\QueryResultInterface
+     * @param string $uid
      * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
      */
-    public function findByStyle(array $yourStyle)
-    {
+    public function findAuthorsPicture($uid){
         $query = $this->createQuery();
         $constraints = array();
-        foreach ($yourStyle as $item) {
-            $constraints[] = $query->contains('style', $item);
-        }
+        $constraints[] = $query->equals('author', $uid);
         $query->matching(
             $query->logicalOr($constraints)
         );
         $query = $query->execute();
-        \TYPO3\CMS\Core\Utility\DebugUtility::debug($query);
-
         return $query;
     }
 
-    /**
-     * @param array $yourTag
-     * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
-     */
-    public function findByTag(array $yourTag)
-    {
-        $query = $this->createQuery();
-        $constraints = array();
-        foreach ($yourTag as $item) {
-            $constraints[] = $query->contains('tags', $item);
-        }
-        $query->matching(
-        $query->logicalOr($constraints)
-        );
-        $query = $query->execute();
-        \TYPO3\CMS\Core\Utility\DebugUtility::debug($constraints);
-
-        //\TYPO3\CMS\Core\Utility\DebugUtility::debug($query);
-
-        return $query;
-    }
-    /**
-     * @param array $yourAuthor
-     * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
-     */
-    public function findByAuthor(array $yourAuthor)
-    {
-        $query = $this->createQuery();
-        $constraints = array();
-        foreach ($yourAuthor as $item) {
-            $constraints[] = $query->contains('author', $item);
-        }
-        $query->matching(
-            $query->logicalOr($constraints)
-        );
-        $query = $query->execute();
-        \TYPO3\CMS\Core\Utility\DebugUtility::debug($constraints);
-
-        //\TYPO3\CMS\Core\Utility\DebugUtility::debug($query);
-
-        return $query;
-    }
 }

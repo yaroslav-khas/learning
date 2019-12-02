@@ -19,21 +19,12 @@ CREATE TABLE tx_yourart_domain_model_yourart (
     author int(11) DEFAULT '0' NOT NULL,
     tags int(11) DEFAULT '0' NOT NULL,
     image int(11) unsigned DEFAULT '0',
+	slug varchar(2048),
 
 
 
     PRIMARY KEY (uid),
     KEY parent (pid)
-);
-#
-# Table structure for table 'tx_yourart_domain_model_yourart_mm'
-#
-CREATE TABLE tx_yourart_domain_model_yourart_mm (
-    uid_local int(11) DEFAULT '0' NOT NULL,
-	uid_foreign int(11) DEFAULT '0' NOT NULL,
-	sorting int(11) DEFAULT '0' NOT NULL,
-	KEY uid_local (uid_local),
-	KEY uid_foreign (uid_foreign)
 );
 
 #
@@ -47,6 +38,7 @@ CREATE TABLE tx_yourart_domain_model_tag (
     crdate int(11) unsigned DEFAULT 0 NOT NULL,
     deleted tinyint(4) unsigned DEFAULT 0 NOT NULL,
     hidden tinyint(4) unsigned DEFAULT 0 NOT NULL,
+	slug varchar(2048),
 
     title tinytext,
 
@@ -74,6 +66,7 @@ CREATE TABLE tx_yourart_domain_model_style (
     crdate int(11) unsigned DEFAULT 0 NOT NULL,
     deleted tinyint(4) unsigned DEFAULT 0 NOT NULL,
     hidden tinyint(4) unsigned DEFAULT 0 NOT NULL,
+	slug varchar(2048),
 
     title tinytext,
 
@@ -101,17 +94,19 @@ CREATE TABLE tx_yourart_domain_model_author (
     crdate int(11) unsigned DEFAULT 0 NOT NULL,
     deleted tinyint(4) unsigned DEFAULT 0 NOT NULL,
     hidden tinyint(4) unsigned DEFAULT 0 NOT NULL,
+	slug varchar(2048),
 
     title tinytext,
+    description text NOT NULL,
     auctioneer int(11) DEFAULT '0' NOT NULL,
-
+    image int(11) unsigned DEFAULT '0',
     PRIMARY KEY (uid),
     KEY parent (pid)
 );
 #
 # Table structure for table 'tx_yourart_domain_model_yourart_author_mm'
 #
-CREATE TABLE tx_yourart_domain_model_author_mm (
+CREATE TABLE tx_yourart_domain_model_yourart_author_mm (
     uid_local int(11) DEFAULT '0' NOT NULL,
 	uid_foreign int(11) DEFAULT '0' NOT NULL,
 	sorting int(11) DEFAULT '0' NOT NULL,
@@ -129,9 +124,34 @@ CREATE TABLE tx_yourart_domain_model_auctioneer (
     crdate int(11) unsigned DEFAULT 0 NOT NULL,
     deleted tinyint(4) unsigned DEFAULT 0 NOT NULL,
     hidden tinyint(4) unsigned DEFAULT 0 NOT NULL,
+	slug varchar(2048),
 
     title tinytext,
     description text NOT NULL,
+    image int(11) unsigned DEFAULT '0',
+
+    PRIMARY KEY (uid),
+    KEY parent (pid)
+);
+#
+# Table structure for table 'tx_yourart_domain_model_offers'
+#
+CREATE TABLE tx_yourart_domain_model_offers (
+    uid int(11) unsigned NOT NULL auto_increment,
+    pid int(11) unsigned DEFAULT '0' NOT NULL,
+
+    tstamp int(11) unsigned DEFAULT 0 NOT NULL,
+    crdate int(11) unsigned DEFAULT 0 NOT NULL,
+    deleted tinyint(4) unsigned DEFAULT 0 NOT NULL,
+    hidden tinyint(4) unsigned DEFAULT 0 NOT NULL,
+
+    picture_id int(11) DEFAULT '0' NOT NULL,
+    title tinytext,
+    description text NOT NULL,
+    author int(11) DEFAULT '0' NOT NULL,
+    picture_id_def int(11) DEFAULT '0' NOT NULL,
+    all_pic_author int(11) DEFAULT '0' NOT NULL,
+    sum_all_pic int(11) DEFAULT '0' NOT NULL,
 
     PRIMARY KEY (uid),
     KEY parent (pid)

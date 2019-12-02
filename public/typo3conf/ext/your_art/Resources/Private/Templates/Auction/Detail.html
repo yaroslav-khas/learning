@@ -34,7 +34,7 @@
                                 <ul class="tags">
                                     <f:for each="{item.tags}" as="tags" iteration="iter">
                                         <li>
-                                            <f:link.action pageUid="22" arguments="{tags:{id:tags.uid}}" class="tag">
+                                            <f:link.action pageUid="22" arguments="{filters: {tags:{id:tags.uid}}}" class="tag">
                                                 {tags.title}
                                             </f:link.action>
                                         </li>
@@ -48,7 +48,7 @@
                                 <ul class="tags style">
                                     <f:for each="{item.style}" as="style">
                                         <li>
-                                            <f:link.action pageUid="22" arguments="{style:{id:style.uid}}" class="tag">
+                                            <f:link.action pageUid="22" arguments="{filters: {style:{id:style.uid}}}" class="tag">
                                                 {style.title}
                                             </f:link.action>
                                         </li>

@@ -5,6 +5,8 @@ namespace Khas\YourArt\Controller;
 use Khas\YourArt\Controller\YourArtController;
 use Khas\YourArt\Domain\Repository\StyleRepository;
 use TYPO3\CMS\Core\Utility\DebugUtility;
+use TYPO3\CMS\Extbase\Persistence\QueryInterface;
+use function GuzzleHttp\Promise\queue;
 
 class AuctionController extends YourArtController
 {
@@ -40,33 +42,28 @@ class AuctionController extends YourArtController
      */
     private $authorRepository;
 
-
+    /**
+     * @param array $filters
+     * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
+     * @throws \TYPO3\CMS\Extbase\Mvc\Exception\NoSuchArgumentException
+     * @throws  \TYPO3\CMS\Extbase\Persistence\QueryInterface
+     */
     public function listAction()
     {
-        \TYPO3\CMS\Core\Utility\DebugUtility::debug($this->request->getArguments());
-        if ($this->request->hasArgument('search')) {
-            $items = $this->yourartRepository->findByName($this->request->getArgument("search"));
+        if ($this->request->hasArgument('filters')) {
+            $filters['filters'] = $this->request->getArgument('filters');
+            if ($filters['filters']['sorts']) {
+                $this->yourartRepository->setDefaultOrderings(array('name' => QueryInterface::ORDER_DESCENDING));
+            }
+            $items = $this->yourartRepository->filterForm($filters);
             $items = $items->toArray();
-        } elseif ($this->request->hasArgument('style') && $this->request->getArgument('style')) {
-            $items = $this->yourartRepository->findByStyle($this->request->getArgument("style"));
-
-        } elseif ($this->request->hasArgument('tags') && $this->request->getArgument('tags')) {
-            $items = $this->yourartRepository->findByTag($this->request->getArgument("tags"));
-
-        }elseif ($this->request->hasArgument('author') && $this->request->getArgument('author')) {
-            $items = $this->yourartRepository->findByAuthor($this->request->getArgument("author"));
-
         } else {
             $items = $this->yourartRepository->findAll();
             $items = $items->toArray();
         }
-
-        if ($items) {
-            $this->view->assign('items', $items);
-        }
-
-
+        $this->view->assignMultiple(['items' => $items, 'filters' => $filters['filters'], 'arguments' => $this->request->getArguments()]);
     }
+
 
     /**
      * @param \Khas\YourArt\Domain\Model\YourArt $item
@@ -76,27 +73,26 @@ class AuctionController extends YourArtController
         $this->view->assign('item', $item);
     }
 
+    /**
+     * @throws \TYPO3\CMS\Extbase\Mvc\Exception\NoSuchArgumentException
+     */
     public function filterAction()
     {
+        if ($this->request->hasArgument('filters')) {
+            $this->view->assign('filters', $this->request->getArgument('filters'));
+        }
         $styles = $this->styleRepository->findAll();
         $styles = $styles->toArray();
         $tags = $this->tagRepository->findAll();
         $tags = $tags->toArray();
-        $author=$this->authorRepository->findAll();
-        $author=$author->toArray();
-        $this->view->assignMultiple(['style' => $styles, 'tags' => $tags, 'author'=>$author]);
+        $author = $this->authorRepository->findAll();
+        $author = $author->toArray();
+        $this->view->assignMultiple(['style' => $styles, 'tags' => $tags, 'author' => $author, 'arguments' => $this->request->getArguments()]);
     }
 
-    /**
-     * @param string $search
-     */
     public function searchFormAction()
     {
-        //$search = $this->yourartRepository->findSearchForm($search);
-        //$items = $search->toArray();
-        //\TYPO3\CMS\Core\Utility\DebugUtility::debug($items);exit;
 
-        //$this->redirect('list',null,null,$items);
     }
 
     public function updateAction(\Khas\YourArt\Domain\Model\YourArt $item)
@@ -115,6 +111,18 @@ class AuctionController extends YourArtController
     {
         $this->yourartRepository->remove($item);
         $this->redirect('list');
+    }
+
+    /**
+     * @param \Khas\YourArt\Domain\Model\Author $item
+     * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
+     */
+    public function detailAuthorAction(\Khas\YourArt\Domain\Model\Author $item)
+    {
+
+        $items =$this->yourartRepository->findAuthorsPicture($item->getUid());
+
+        $this->view->assignMultiple(['author'=> $item, 'listArts'=>$items]);
     }
 
 

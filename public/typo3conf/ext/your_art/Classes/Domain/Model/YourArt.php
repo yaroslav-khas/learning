@@ -8,9 +8,14 @@ class YourArt extends AbstractEntity
 {
 
 
-    /** @var int */
+    /**
+     * @var \DateTime
+     */
     protected $crdate;
-
+    /**
+     * @var \DateTime
+     */
+    protected $tstamp;
 
     /**
      * @var string
@@ -60,24 +65,6 @@ class YourArt extends AbstractEntity
      */
     protected $style;
 
-
-    /**
-     * Returns the crdate
-     *
-     * @return int
-     */
-    public function getCrdate()
-    {
-        return $this->crdate;
-    }
-
-    /**
-     * @param int $crdate
-     */
-    public function setCrdate($crdate)
-    {
-        $this->crdate = $crdate;
-    }
 
     /**
      * @return string
@@ -190,6 +177,38 @@ class YourArt extends AbstractEntity
     public function setAuthor($author)
     {
         $this->author = $author;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getCrdate()
+    {
+        return $this->crdate;
+    }
+
+    /**
+     * @param \DateTime $crdate
+     */
+    public function setCrdate($crdate)
+    {
+        $this->crdate = $crdate;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getTstamp()
+    {
+        return $this->tstamp;
+    }
+
+    /**
+     * @param \DateTime $tstamp
+     */
+    public function setTstamp($tstamp)
+    {
+        $this->tstamp = $tstamp;
     }
 
 

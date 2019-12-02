@@ -1,6 +1,11 @@
 plugin.tx_yourart {
+    mvc.callDefaultActionIfActionCantBeResolved = 1
 
     settings {
         cssFile = {$plugin.tx_yourart.settings.cssFile}
+    }
+
+    view {
+        widget.TYPO3\CMS\Fluid\ViewHelpers\Widget\PaginateViewHelper.templateRootPaths = EXT:your_art/Resources/Private/Templates/
     }
 }
