@@ -30,15 +30,11 @@ class ItemsProcFunc
             $itemList[] = [$item->getName(),$item->getUid()];
             $all_sum=$all_sum+$item->getPrice();
         }
-        debug($all_sum);
         $config['items'] = $itemList;
-        debug($config);
+        $config['config']['default']= $config['row']['uid'];
         return $config;
     }
 
-    public function countPrice($param){
-debug($param);exit;
-    }
 
 
 }

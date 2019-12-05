@@ -5,7 +5,7 @@ return array(
     'ctrl' => array(
         'title' => 'LLL:EXT:your_art/Resources/Private/Language/locallang_db.xlf:tx_yourart_domain_model_paintings.offer_label',
         'label' => 'title',
-        'iconfile' => 'EXT:your_art/Resources/Public/Icons/yourart_domain_model_yourart.svg',
+        'iconfile' => 'EXT:your_art/Resources/Public/Icons/yourart_domain_model_offer.svg',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',
@@ -71,10 +71,7 @@ return array(
             'config' => [
                 'type'=>'user',
                 'readOnly' => true,
-                'userFunc' => \Khas\YourArt\Hooks\ItemsProcFunc::class .'->countPrice',
-                'parameters' => array(
-                    'lng' => 'lng',
-                ),
+                'renderType' => 'CountField',
                 ],
             'label' => 'Count Pictures'
         )

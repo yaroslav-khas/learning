@@ -12,5 +12,8 @@ defined('TYPO3_MODE') || die('Access denied.');
     ]
 );
 $GLOBALS ['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processDatamapClass']['yourart'] = 'Khas\\YourArt\\Hooks\\DataHandler';
-//$GLOBALS ['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processCmdmapClass']['yourart'] = \Khas\YourArt\Hooks\DataHandler::class .'->processCmdmap_postProcess';
-
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['formEngine']['nodeRegistry'][1575560010] = [
+    'nodeName' => 'CountField',
+    'priority' => 40,
+    'class' => \Khas\YourArt\Form\Element\CountField::class,
+];

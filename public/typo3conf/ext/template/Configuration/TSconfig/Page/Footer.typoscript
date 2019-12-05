@@ -1,4 +1,5 @@
 TCEFORM.tt_content{
+
     CType.disabled = 1
 
     colPos{
