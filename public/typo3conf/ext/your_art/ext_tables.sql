@@ -1,7 +1,7 @@
 #
-# Table structure for table 'tx_yourart_domain_model_yourart'
+# Table structure for table 'tx_yourart_domain_model_paintings'
 #
-CREATE TABLE tx_yourart_domain_model_yourart (
+CREATE TABLE tx_yourart_domain_model_paintings (
     uid int(11) unsigned NOT NULL auto_increment,
     pid int(11) unsigned DEFAULT '0' NOT NULL,
 
@@ -46,9 +46,9 @@ CREATE TABLE tx_yourart_domain_model_tag (
     KEY parent (pid)
 );
 #
-# Table structure for table 'tx_yourart_domain_model_yourart_tag_mm'
+# Table structure for table 'tx_yourart_domain_model_paintings_tag_mm'
 #
-CREATE TABLE tx_yourart_domain_model_yourart_tag_mm (
+CREATE TABLE tx_yourart_domain_model_paintings_tag_mm (
 	uid_local int(11) DEFAULT '0' NOT NULL,
 	uid_foreign int(11) DEFAULT '0' NOT NULL,
 	sorting int(11) DEFAULT '0' NOT NULL,
@@ -74,9 +74,9 @@ CREATE TABLE tx_yourart_domain_model_style (
     KEY parent (pid)
 );
 #
-# Table structure for table 'tx_yourart_domain_model_yourart_style_mm'
+# Table structure for table 'tx_yourart_domain_model_paintings_style_mm'
 #
-CREATE TABLE tx_yourart_domain_model_yourart_style_mm (
+CREATE TABLE tx_yourart_domain_model_paintings_style_mm (
 	uid_local int(11) DEFAULT '0' NOT NULL,
 	uid_foreign int(11) DEFAULT '0' NOT NULL,
 	sorting int(11) DEFAULT '0' NOT NULL,
@@ -104,9 +104,9 @@ CREATE TABLE tx_yourart_domain_model_author (
     KEY parent (pid)
 );
 #
-# Table structure for table 'tx_yourart_domain_model_yourart_author_mm'
+# Table structure for table 'tx_yourart_domain_model_paintings_author_mm'
 #
-CREATE TABLE tx_yourart_domain_model_yourart_author_mm (
+CREATE TABLE tx_yourart_domain_model_paintings_author_mm (
     uid_local int(11) DEFAULT '0' NOT NULL,
 	uid_foreign int(11) DEFAULT '0' NOT NULL,
 	sorting int(11) DEFAULT '0' NOT NULL,
@@ -149,8 +149,7 @@ CREATE TABLE tx_yourart_domain_model_offers (
     title tinytext,
     description text NOT NULL,
     author int(11) DEFAULT '0' NOT NULL,
-    picture_id_def int(11) DEFAULT '0' NOT NULL,
-    all_pic_author int(11) DEFAULT '0' NOT NULL,
+    pictures int(11) DEFAULT '0' NOT NULL,
     sum_all_pic int(11) DEFAULT '0' NOT NULL,
 
     PRIMARY KEY (uid),

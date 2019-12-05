@@ -4,7 +4,7 @@ namespace Khas\YourArt\Domain\Model;
 
 use \TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 
-class YourArt extends AbstractEntity
+class Paintings extends AbstractEntity
 {
 
 
@@ -33,7 +33,7 @@ class YourArt extends AbstractEntity
     /**
      * Author items
      *
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Khas\YourArt\Domain\Model\Author>
+     * @var \Khas\YourArt\Domain\Model\Author
      * @lazy
      *
      */
@@ -46,8 +46,8 @@ class YourArt extends AbstractEntity
      * @lazy
      *
      */
-
     protected $image;
+
     /**
      * Tags items
      *
@@ -56,6 +56,7 @@ class YourArt extends AbstractEntity
      *
      */
     protected $tags;
+
     /**
      * Style items
      *
@@ -64,7 +65,6 @@ class YourArt extends AbstractEntity
      *
      */
     protected $style;
-
 
     /**
      * @return string
@@ -164,22 +164,6 @@ class YourArt extends AbstractEntity
     }
 
     /**
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
-     */
-    public function getAuthor()
-    {
-        return $this->author;
-    }
-
-    /**
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $author
-     */
-    public function setAuthor($author)
-    {
-        $this->author = $author;
-    }
-
-    /**
      * @return \DateTime
      */
     public function getCrdate()
@@ -209,6 +193,22 @@ class YourArt extends AbstractEntity
     public function setTstamp($tstamp)
     {
         $this->tstamp = $tstamp;
+    }
+
+    /**
+     * @return Author
+     */
+    public function getAuthor()
+    {
+        return $this->author;
+    }
+
+    /**
+     * @param Author $author
+     */
+    public function setAuthor($author)
+    {
+        $this->author = $author;
     }
 
 

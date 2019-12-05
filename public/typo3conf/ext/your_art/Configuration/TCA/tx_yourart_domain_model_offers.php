@@ -3,19 +3,19 @@ defined('TYPO3_MODE') or die ('Access denied.');
 
 return array(
     'ctrl' => array(
-        'title' => 'LLL:EXT:your_art/Resources/Private/Language/locallang_db.xlf:tx_yourart_domain_model_yourart.offer_label',
+        'title' => 'LLL:EXT:your_art/Resources/Private/Language/locallang_db.xlf:tx_yourart_domain_model_paintings.offer_label',
         'label' => 'title',
         'iconfile' => 'EXT:your_art/Resources/Public/Icons/yourart_domain_model_yourart.svg',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',
-        'requestUpdate'=> 'picture_id',
+        'requestUpdate' => 'picture_id,author',
     ),
     'interface' => array(
-            'showRecordFieldList' => 'crdate'
+        'showRecordFieldList' => 'crdate'
     ),
     'types' => array(
-        '0' => ['showitem' => 'picture_id, title, description, author,picture_id_def,all_pic_author,sum_all_pic'],
+        '0' => ['showitem' => 'picture_id, title, description, author,pictures,sum_all_pic'],
     ),
     'palettes' => array(),
     'columns' => array(
@@ -30,9 +30,7 @@ return array(
         'title' => array(
             'displayCond' => 'FIELD:picture_id:>:0',
             'config' => array(
-                'type' => 'none',
-                'readOnly'=> true,
-                'userFunc'=> \Khas\YourArt\Hooks\OffersHook::class .'->getTitleWithId'
+                'type' => 'input',
             ),
             'label' => 'Title Pictures'
         ),
@@ -40,47 +38,44 @@ return array(
             'displayCond' => 'FIELD:picture_id:>:0',
             'config' => array(
                 'type' => 'text',
-                'readOnly'=> true,
+                'readOnly' => true,
 
             ),
             'label' => 'Picture Description',
         ),
         'author' => array(
             'displayCond' => 'FIELD:picture_id:>:0',
-            'label' => 'Select author',
+            'label' => 'Author',
+            'onChange' => 'reload',
             'config' => [
                 'type' => 'select',
-                'default'=> 0,
+                'eval' => 'required',
+                'default'=> 1,
                 'renderType' => 'selectSingle',
                 'foreign_table' => 'tx_yourart_domain_model_author',
             ],
         ),
-        'picture_id_def' => array(
+        'pictures' => array(
             'displayCond' => 'FIELD:picture_id:>:0',
-            'config' => array(
-                'size' => 60,
-                'type' => 'input',
-                'readOnly'=> true,
-            ),
-            'label' => 'ID'
-        ),
-        'all_pic_author' => array(
-            'displayCond' => 'FIELD:picture_id:>:0',
-            'label' => 'Select author',
+            'label' => 'Select Pictures',
             'config' => [
                 'type' => 'select',
-                'default'=> 0,
-                'renderType' => 'selectSingle',
-                'foreign_table' => 'tx_yourart_domain_model_author',
+                'eval' => 'required',
+                'default'=> 1,
+                'renderType' => 'selectSingleBox',
+                'itemsProcFunc' => \Khas\YourArt\Hooks\ItemsProcFunc::class .'->findPictures'
             ],
         ),
         'sum_all_pic' => array(
             'displayCond' => 'FIELD:picture_id:>:0',
-            'config' => array(
-                'size' => 60,
-                'type' => 'input',
-                'readOnly'=> true,
-            ),
+            'config' => [
+                'type'=>'user',
+                'readOnly' => true,
+                'userFunc' => \Khas\YourArt\Hooks\ItemsProcFunc::class .'->countPrice',
+                'parameters' => array(
+                    'lng' => 'lng',
+                ),
+                ],
             'label' => 'Count Pictures'
         )
     )

@@ -3,7 +3,7 @@ defined('TYPO3_MODE') or die ('Access denied.');
 
 return array(
     'ctrl' => array(
-        'title' => 'LLL:EXT:your_art/Resources/Private/Language/locallang_db.xlf:tx_yourart_domain_model_yourart',
+        'title' => 'LLL:EXT:your_art/Resources/Private/Language/locallang_db.xlf:tx_yourart_domain_model_paintings',
         'label' => 'name',
         'iconfile' => 'EXT:your_art/Resources/Public/Icons/yourart_domain_model_yourart.svg',
         'tstamp' => 'tstamp',
@@ -92,7 +92,7 @@ return array(
                 'type' => 'group',
                 'internal_type' => 'db',
                 'allowed' => 'tx_yourart_domain_model_tag',
-                'MM' => 'tx_yourart_domain_model_yourart_tag_mm',
+                'MM' => 'tx_yourart_domain_model_paintings_tag_mm',
                 'foreign_table' => 'tx_yourart_domain_model_tag']
         ),
         'style' => array(
@@ -101,7 +101,7 @@ return array(
                 'type' => 'group',
                 'internal_type' => 'db',
                 'allowed' => 'tx_yourart_domain_model_style',
-                'MM' => 'tx_yourart_domain_model_yourart_style_mm',
+                'MM' => 'tx_yourart_domain_model_paintings_style_mm',
                 'foreign_table' => 'tx_yourart_domain_model_style']
         ),
         'author' => array(

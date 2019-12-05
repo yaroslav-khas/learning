@@ -7,15 +7,22 @@ use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 use TYPO3\CMS\Extbase\Persistence\Repository;
 
 /**
- * Class YourArtRepository
+ * Class PaintingsRepository
  *
  * @package Khas\YourArt\Domain\Repository
  */
-class YourArtRepository extends Repository
+class PaintingsRepository extends Repository
 {
+
     protected $defaultOrderings = [
         'name' => QueryInterface::ORDER_ASCENDING,
     ];
+
+    /*public function initializeObject() {
+        $querySettings = $this->objectManager->get(\TYPO3\CMS\Extbase\Persistence\Generic\Typo3QuerySettings::class);
+        $querySettings->setRespectStoragePage(20);
+        $this->setDefaultQuerySettings($querySettings);
+    }*/
 
     /**
      * @param array $filters
@@ -42,10 +49,25 @@ class YourArtRepository extends Repository
     }
 
     /**
+     * @param $uid
+     * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
+     */
+    public function findDetail($uid)
+    {
+
+        /*$query = $this->createQuery();
+        $query->getQuerySettings()->setRespectStoragePage(FALSE);
+        $query=$query->like('uid', $uid . '%');
+        que*/
+        return $this->findByIdentifier($uid);
+    }
+
+    /**
      * @param string $uid
      * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
      */
-    public function findAuthorsPicture($uid){
+    public function findAuthorsPicture($uid)
+    {
         $query = $this->createQuery();
         $constraints = array();
         $constraints[] = $query->equals('author', $uid);
@@ -53,6 +75,22 @@ class YourArtRepository extends Repository
             $query->logicalOr($constraints)
         );
         $query = $query->execute();
+
+        return $query;
+    }
+
+    /**
+     * @param integer $id
+     * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
+     */
+    public function findPictures($id)
+    {
+        $query = $this->createQuery();
+        $query->getQuerySettings()->setRespectStoragePage(FALSE);
+        $query->matching(
+            $query->like('author', $id . '%')
+        );
+        $query=$query->execute();
         return $query;
     }
 

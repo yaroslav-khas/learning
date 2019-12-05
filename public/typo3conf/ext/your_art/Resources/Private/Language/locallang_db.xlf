@@ -7,19 +7,19 @@
             <trans-unit id="extension.title">
                 <source>YourArt</source>
             </trans-unit>
-            <trans-unit id="tx_yourart_domain_model_yourart">
+            <trans-unit id="tx_yourart_domain_model_paintings">
                 <source>Article</source>
             </trans-unit>
-            <trans-unit id="tx_yourart_domain_model_yourart.tag_label">
+            <trans-unit id="tx_yourart_domain_model_paintings.tag_label">
                 <source>Add Tags</source>
             </trans-unit>
-            <trans-unit id="tx_yourart_domain_model_yourart.style_label">
+            <trans-unit id="tx_yourart_domain_model_paintings.style_label">
                 <source>Add Style</source>
             </trans-unit>
-            <trans-unit id="tx_yourart_domain_model_yourart.author_label">
+            <trans-unit id="tx_yourart_domain_model_paintings.author_label">
                 <source>Add Author</source>
             </trans-unit>
-            <trans-unit id="tx_yourart_domain_model_yourart.offer_label">
+            <trans-unit id="tx_yourart_domain_model_paintings.offer_label">
                 <source>Add Offer</source>
             </trans-unit>
         </body>

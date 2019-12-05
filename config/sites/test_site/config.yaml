@@ -85,7 +85,7 @@ routeEnhancers:
     aspects:
       pictures:
         type: PersistedAliasMapper
-        tableName: tx_yourart_domain_model_yourart
+        tableName: tx_yourart_domain_model_paintings
         routeFieldName: slug
       author:
         type: PersistedAliasMapper

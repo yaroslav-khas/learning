@@ -38,12 +38,10 @@
                                             <div class="text-danger">${item.price}</div>
                                             <f:if condition="{item.author}">
                                                 <cite title="Source Title" class="list_author">
-                                                    <f:for each="{item.author}" as="author">
                                                         <f:link.action action="detailAuthor" pageUid="30"
-                                                                       class="text-dark" arguments="{item: author}">
-                                                            <h5 class="card-title">{author.title}</h5>
+                                                                       class="text-dark" arguments="{item: item.author}">
+                                                            <h5 class="card-title">{item.author.title}</h5>
                                                         </f:link.action>
-                                                    </f:for>
                                                 </cite>
                                             </f:if>
                                         </div>

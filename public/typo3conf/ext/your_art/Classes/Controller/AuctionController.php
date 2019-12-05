@@ -20,10 +20,10 @@ class AuctionController extends YourArtController
     }
 
     /**
-     * @var \Khas\YourArt\Domain\Repository\YourArtRepository
+     * @var \Khas\YourArt\Domain\Repository\PaintingsRepository
      * @TYPO3\CMS\Extbase\Annotation\Inject
      */
-    private $yourartRepository;
+    private $paintingsRepository;
 
     /**
      * @var \Khas\YourArt\Domain\Repository\StyleRepository
@@ -53,12 +53,12 @@ class AuctionController extends YourArtController
         if ($this->request->hasArgument('filters')) {
             $filters['filters'] = $this->request->getArgument('filters');
             if ($filters['filters']['sorts']) {
-                $this->yourartRepository->setDefaultOrderings(array('name' => QueryInterface::ORDER_DESCENDING));
+                $this->paintingsRepository->setDefaultOrderings(array('name' => QueryInterface::ORDER_DESCENDING));
             }
-            $items = $this->yourartRepository->filterForm($filters);
+            $items = $this->paintingsRepository->filterForm($filters);
             $items = $items->toArray();
         } else {
-            $items = $this->yourartRepository->findAll();
+            $items = $this->paintingsRepository->findAll();
             $items = $items->toArray();
         }
         $this->view->assignMultiple(['items' => $items, 'filters' => $filters['filters'], 'arguments' => $this->request->getArguments()]);
@@ -66,9 +66,9 @@ class AuctionController extends YourArtController
 
 
     /**
-     * @param \Khas\YourArt\Domain\Model\YourArt $item
+     * @param \Khas\YourArt\Domain\Model\Paintings $item
      */
-    public function detailAction(\Khas\YourArt\Domain\Model\YourArt $item)
+    public function detailAction(\Khas\YourArt\Domain\Model\Paintings $item)
     {
         $this->view->assign('item', $item);
     }
@@ -95,21 +95,21 @@ class AuctionController extends YourArtController
 
     }
 
-    public function updateAction(\Khas\YourArt\Domain\Model\YourArt $item)
+    public function updateAction(\Khas\YourArt\Domain\Model\Paintings $item)
     {
-        $this->yourartRepository->update($item);
+        $this->paintingsRepository->update($item);
         $this->redirect('list');
     }
 
-    public function updateFormAction(\Khas\YourArt\Domain\Model\YourArt $item)
+    public function updateFormAction(\Khas\YourArt\Domain\Model\Paintings $item)
     {
         $this->view->assign('item', $item);
 
     }
 
-    public function deleteAction(\Khas\YourArt\Domain\Model\YourArt $item)
+    public function deleteAction(\Khas\YourArt\Domain\Model\Paintings $item)
     {
-        $this->yourartRepository->remove($item);
+        $this->paintingsRepository->remove($item);
         $this->redirect('list');
     }
 
@@ -120,7 +120,7 @@ class AuctionController extends YourArtController
     public function detailAuthorAction(\Khas\YourArt\Domain\Model\Author $item)
     {
 
-        $items =$this->yourartRepository->findAuthorsPicture($item->getUid());
+        $items =$this->paintingsRepository->findAuthorsPicture($item->getUid());
 
         $this->view->assignMultiple(['author'=> $item, 'listArts'=>$items]);
     }
