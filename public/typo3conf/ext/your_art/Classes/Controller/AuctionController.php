@@ -61,9 +61,11 @@ class AuctionController extends YourArtController
             $items = $this->paintingsRepository->findAll();
             $items = $items->toArray();
         }
+        debug($GLOBALS["TSFE"]->fe_user);
         $this->view->assignMultiple(['items' => $items, 'filters' => $filters['filters'], 'arguments' => $this->request->getArguments()]);
     }
 
+    public function searchFormAction(){}
 
     /**
      * @param \Khas\YourArt\Domain\Model\Paintings $item
@@ -90,15 +92,16 @@ class AuctionController extends YourArtController
         $this->view->assignMultiple(['style' => $styles, 'tags' => $tags, 'author' => $author, 'arguments' => $this->request->getArguments()]);
     }
 
-    public function searchFormAction()
+    /**
+     * @param \Khas\YourArt\Domain\Model\Paintings $item
+     */
+    public function addCartAction(\Khas\YourArt\Domain\Model\Paintings $item)
     {
-
-    }
-
-    public function updateAction(\Khas\YourArt\Domain\Model\Paintings $item)
-    {
-        $this->paintingsRepository->update($item);
-        $this->redirect('list');
+        $cart = array();
+        $cart['name'] = $item->getName();
+        $cart['price'] = $item->getPrice();
+        $GLOBALS['TSFE']->fe_user->setKey("ses", "cart", $cart);
+        debug($GLOBALS['TSFE']->fe_user);
     }
 
     public function updateFormAction(\Khas\YourArt\Domain\Model\Paintings $item)
@@ -120,9 +123,9 @@ class AuctionController extends YourArtController
     public function detailAuthorAction(\Khas\YourArt\Domain\Model\Author $item)
     {
 
-        $items =$this->paintingsRepository->findAuthorsPicture($item->getUid());
+        $items = $this->paintingsRepository->findAuthorsPicture($item->getUid());
 
-        $this->view->assignMultiple(['author'=> $item, 'listArts'=>$items]);
+        $this->view->assignMultiple(['author' => $item, 'listArts' => $items]);
     }
 
 

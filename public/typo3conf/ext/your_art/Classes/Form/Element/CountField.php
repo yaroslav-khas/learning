@@ -52,9 +52,9 @@ class CountField extends AbstractFormElement
         $objectManager = GeneralUtility::makeInstance(ObjectManager::class);
         $paintingsRepository = $objectManager->get(\Khas\YourArt\Domain\Repository\PaintingsRepository::class);
         $paintings = $paintingsRepository->findPictures(current($row['author']));
-        $all_sum=0;
+        $all_sum = 0;
         foreach ($paintings as $item) {
-            $all_sum=$all_sum+$item->getPrice();
+            $all_sum = $all_sum + $item->getPrice();
         }
         if ($all_sum!==$itemValue){
             $itemValue=$all_sum;

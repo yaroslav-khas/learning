@@ -12,6 +12,7 @@ class TemplateController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 
     public function __construct(TemplateRepository $templateRepository)
     {
+
         $this->templateRepository = $templateRepository;
     }
 }

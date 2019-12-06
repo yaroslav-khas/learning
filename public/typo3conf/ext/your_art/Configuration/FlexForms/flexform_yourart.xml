@@ -24,7 +24,7 @@
 									</numIndex>
 									<numIndex index="1" type="array">
 										<numIndex index="0">Detail</numIndex>
-										<numIndex index="1">Auction->detail</numIndex>
+										<numIndex index="1">Auction->detail;Auction->addCart</numIndex>
 									</numIndex>
 									<numIndex index="2" type="array">
 										<numIndex index="0">Filter</numIndex>
