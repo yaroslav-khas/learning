@@ -1,4 +1,5 @@
 <?php
+
 namespace Khas\YourArt\Form\Element;
 
 use TYPO3\CMS\Backend\Form\Element\AbstractFormElement;
@@ -6,6 +7,7 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Utility\MathUtility;
 use TYPO3\CMS\Core\Utility\StringUtility;
 use TYPO3\CMS\Extbase\Object\ObjectManager;
+use Khas\YourArt\Service\OffersService;
 use function GuzzleHttp\Promise\all;
 
 class CountField extends AbstractFormElement
@@ -49,20 +51,15 @@ class CountField extends AbstractFormElement
 
         $resultArray = $this->initializeResultArray();
         $itemValue = $parameterArray['itemFormElValue'];
-        $objectManager = GeneralUtility::makeInstance(ObjectManager::class);
-        $paintingsRepository = $objectManager->get(\Khas\YourArt\Domain\Repository\PaintingsRepository::class);
-        $paintings = $paintingsRepository->findPictures(current($row['author']));
-        $all_sum = 0;
-        foreach ($paintings as $item) {
-            $all_sum = $all_sum + $item->getPrice();
-        }
-        if ($all_sum!==$itemValue){
-            $itemValue=$all_sum;
+        $allSum = OffersService::countOfAllPaintingsByAuthor(current($row['author']));
+
+        if ($allSum !== $itemValue) {
+            $itemValue = $allSum;
         }
         debug($parameterArray['itemFormElValue']);
-        $parameterArray['itemFormElValue']=$itemValue;
+        $parameterArray['itemFormElValue'] = $itemValue;
         $config = $parameterArray['fieldConf']['config'];
-        $config['default']=$itemValue;
+        $config['default'] = $itemValue;
         debug($config);
         $evalList = GeneralUtility::trimExplode(',', $config['eval'], true);
         $size = MathUtility::forceIntegerInRange($config['size'] ?? $this->defaultInputWidth, $this->minimumInputWidth, $this->maxInputWidth);
@@ -80,14 +77,14 @@ class CountField extends AbstractFormElement
 
             $html = [];
             $html[] = '<div class="formengine-field-item t3js-formengine-field-item">';
-            $html[] =   $fieldInformationHtml;
-            $html[] =   '<div class="form-wizards-wrap">';
-            $html[] =       '<div class="form-wizards-element">';
-            $html[] =           '<div class="form-control-wrap" style="max-width: ' . $width . 'px">';
-            $html[] =               '<input class="form-control" value="' . $itemValue . '" type="text" disabled>';
-            $html[] =           '</div>';
-            $html[] =       '</div>';
-            $html[] =   '</div>';
+            $html[] = $fieldInformationHtml;
+            $html[] = '<div class="form-wizards-wrap">';
+            $html[] = '<div class="form-wizards-element">';
+            $html[] = '<div class="form-control-wrap" style="max-width: ' . $width . 'px">';
+            $html[] = '<input class="form-control" value="' . $itemValue . '" type="text" disabled>';
+            $html[] = '</div>';
+            $html[] = '</div>';
+            $html[] = '</div>';
             $html[] = '</div>';
             $resultArray['html'] = implode(LF, $html);
 

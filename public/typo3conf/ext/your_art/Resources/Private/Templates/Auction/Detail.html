@@ -1,6 +1,7 @@
 <f:layout name="default"/>
 <f:section name="content">
     <div class="row">
+
         <div class="col-6 image-article">
             <f:if condition="item.image">
                 <div id="carouselExampleIndicators" class="carousel slide" data-interval="false" data-ride="carousel">
@@ -65,8 +66,11 @@
                 </div>
             </div>
             <f:debug>{_all}</f:debug>
-            <f:link.action action="addCart" arguments="{item: item}" class="btn btn-primary">Add to Cart</f:link.action>
+            <div data-url="{f:uri.action(action: 'ajaxAddCart',arguments: {item: item.uid}, pageType:99)}" data-id="{item.uid}" id="cartsubmit" class="btn btn-primary">Cart</div>
+            <div data-url="{f:uri.action(action: 'ajaxRemoveCart', pageType:99)}" id="cartdelete" class="btn btn-primary">Cart Clear</div>
+
             <f:link.action pageUid="22" class="btn btn-primary">Back to Blog list</f:link.action>
+
         </div>
     </div>
     <div class="row">

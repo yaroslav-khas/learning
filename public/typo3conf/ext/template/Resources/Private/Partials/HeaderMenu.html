@@ -5,25 +5,27 @@
                 <f:for each="{menu}" as="item" iteration="iter" key="key">
                     <f:if condition="{item.hasSubPages}">
                         <f:then>
-                            <li class="nav-item text-muted text-center dropdown ">
-                                <v:page.link class="nav-link {f:if(condition: '{key}=={data.uid}', then: 'active')}  dropdown-toggle" id="navbarDropdown"
-                                             additionalAttributes="{role:'button', data-toggle:'dropdown',  aria-haspopup:'true', aria-expanded:'false'}">
+                            <li class="nav-item">
+                                <v:page.link pageUid="{item.uid}"
+                                             class="nav-link {f:if(condition: '{key}=={data.uid}', then: 'active')}"
+                                             title="{item.linktext}">
                                     {item.linktext}
                                 </v:page.link>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <v:page.menu pageUid="{item.uid}">
-                                        <f:for each="{menu}" as="subItem">
-                                            <f:link.page class="dropdown-item" pageUid="{subItem.uid}"
-                                                         title="{subItem.linktext}">{subItem.linktext}
-                                            </f:link.page>
-                                        </f:for>
-                                    </v:page.menu>
-                                </div>
                             </li>
+                            <v:page.menu pageUid="{item.uid}">
+                                <f:for each="{menu}" as="subItem">
+                                    <f:link.page class="nav-link {f:if(condition: '{key}=={data.uid}', then: 'active')}"
+                                                 pageUid="{subItem.uid}"
+                                                 title="{subItem.linktext}">{subItem.linktext}
+                                    </f:link.page>
+                                </f:for>
+                            </v:page.menu>
                         </f:then>
                         <f:else>
                             <li class="nav-item">
-                                <v:page.link pageUid="{item.uid}" class="nav-link {f:if(condition: '{key}=={data.uid}', then: 'active')}" title="{item.linktext}">
+                                <v:page.link pageUid="{item.uid}"
+                                             class="nav-link {f:if(condition: '{key}=={data.uid}', then: 'active')}"
+                                             title="{item.linktext}">
                                     {item.linktext}
                                 </v:page.link>
                             </li>

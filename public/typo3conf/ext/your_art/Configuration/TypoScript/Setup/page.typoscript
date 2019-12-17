@@ -8,4 +8,25 @@ plugin.tx_yourart {
     view {
         widget.TYPO3\CMS\Fluid\ViewHelpers\Widget\PaginateViewHelper.templateRootPaths = EXT:your_art/Resources/Private/Templates/
     }
+
+
+}
+page.includeCSS.cssYourArt = EXT:your_art/Resources/Public/Css/main.css
+page.includeJSFooter.jsYourArt = EXT:your_art/Resources/Public/Js/main.js
+
+ajaxContent = PAGE
+ajaxContent {
+    typeNum = 99
+
+    # add plugin
+    10 < tt_content.list.20.yourart_arts
+    # disable header code
+    config {
+        disableAllHeaderCode = 1
+        additionalHeaders = Content-type: application/json
+
+        xhtml_cleaning = 0
+        admPanel = 0
+        debug = 0
+    }
 }

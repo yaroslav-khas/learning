@@ -18,12 +18,6 @@ class PaintingsRepository extends Repository
         'name' => QueryInterface::ORDER_ASCENDING,
     ];
 
-    /*public function initializeObject() {
-        $querySettings = $this->objectManager->get(\TYPO3\CMS\Extbase\Persistence\Generic\Typo3QuerySettings::class);
-        $querySettings->setRespectStoragePage(20);
-        $this->setDefaultQuerySettings($querySettings);
-    }*/
-
     /**
      * @param array $filters
      * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
@@ -54,11 +48,6 @@ class PaintingsRepository extends Repository
      */
     public function findDetail($uid)
     {
-
-        /*$query = $this->createQuery();
-        $query->getQuerySettings()->setRespectStoragePage(FALSE);
-        $query=$query->like('uid', $uid . '%');
-        que*/
         return $this->findByIdentifier($uid);
     }
 
@@ -90,7 +79,7 @@ class PaintingsRepository extends Repository
         $query->matching(
             $query->like('author', $id . '%')
         );
-        $query=$query->execute();
+        $query = $query->execute();
         return $query;
     }
 

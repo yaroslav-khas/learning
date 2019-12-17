@@ -1,18 +1,46 @@
-<div class="container">
-    <div class=" header-top row flex-nowrap justify-content-between" xmlns:f="http://www.w3.org/1999/html">
-        <div class="col-4  align-items-center">
-            <a class="logo" href="/">
-                <img src="{f:uri.image(src:'EXT:template/Resources/Public/Images/logo.png')}" alt="">
-            </a>
-        </div>
-        <div class="col-3 d-flex  justify-content-end">
-            <f:link.action pageUid="35"
-                           class="text-muted">
-                Login
-            </f:link.action>
-            <a href="" class="text-muted">
-                Register
-            </a>
+<div class="row" xmlns:f="http://www.w3.org/1999/html">
+    {namespace yourart = Khas\YourArt\ViewHelpers}
+    <div class="col-12 " style="background-color: #919191">
+        <div class="container d-flex justify-content-end h-100">
+            <f:cache.disable>
+                <f:security.ifAuthenticated>
+                    <f:then>
+                        <div class="text-white">Hello <yourart:user /> |</div>
+                        <br>
+                        <f:link.action pageUid="5" class="text-white px-md-1">Profile</f:link.action>
+                        <br>
+                        <f:link.page pageUid="5" class="text-white" additionalParams="{logintype:'logout'}">Logout
+                        </f:link.page>
+                    </f:then>
+                    <f:else>
+                        <f:link.action pageUid="5" class="text-white">Login</f:link.action>
+                    </f:else>
+                </f:security.ifAuthenticated>
+            </f:cache.disable>
         </div>
     </div>
 </div>
+<div class="container">
+    <div class="header-top">
+        <div class="row  justify-content-between">
+            <div class="col-4  align-items-center">
+                <a class="logo" href="/">
+                    <img src="{f:uri.image(src:'EXT:template/Resources/Public/Images/logo.png')}" alt="">
+                </a>
+            </div>
+            <div class="col-1 d-flex align-items-center">
+                <f:link.action action="cart" pageUid="16" class="text-dark"
+                               >
+                <span class="fa-layers fa-fw" style="font-size: 54px">
+                    <i class="fab fa-opencart"></i>
+                    <span class="fa-layers-text badge badge-pill badge-dark fa-inverse" data-url="{f:uri.action(action: 'ajaxGetCart', pageType:99,controller: 'Auction',extensionName:'yourart', pluginName:'arts' )}" id="cartget" data-fa-transform="shrink-12 down-1"
+                                  style="font-weight:800;">
+                    </span>
+                </span>
+                </f:link.action>
+
+            </div>
+        </div>
+    </div>
+</div>
+

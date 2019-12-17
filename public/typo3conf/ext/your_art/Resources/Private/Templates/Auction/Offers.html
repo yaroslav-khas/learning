@@ -1,0 +1,59 @@
+<f:layout name="default"/>
+<f:section name="content">
+    <f:debug>{_all}</f:debug>
+    <div class="row">
+        <f:if condition="{offers}">
+            <f:then>
+                <f:widget.paginate objects="{offers}" as="paginated"
+                                   configuration="{itemsPerPage: 2, insertBelow: 1, addQueryString:1, addQueryStringMethod: 'POST,GET'}">
+                    <f:for each="{paginated}" as="item" key="key">
+                        <div class="col-md-4" style="margin-bottom: 10px">
+                            <div class="ribbon">
+                                <div class="wrap">
+                                    <span class="ribbon6">Hot Offers</span>
+                                </div>
+                                <div class="card" style="">
+                                    <div class="card-footer">
+                                        <f:link.action action="detail" pageUid="{settings.detailPid}"
+                                                       class="text-dark"
+                                                       arguments="{item:item.title}">
+                                            <h5 class="card-title">{item.title}</h5>
+                                        </f:link.action>
+                                        <hr>
+                                        <f:format.html><f:format.crop maxCharacters="100">{item.description}</f:format.crop></f:format.html>
+                                        <hr>
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <f:if condition="{item.author}">
+                                                    <cite title="Source Title" class="list_author">
+                                                        <f:link.action action="detailAuthor"
+                                                                       controller="Auction"
+                                                                       pageUid="{settings.detailPidAuthor}"
+                                                                       class="text-dark"
+                                                                       additionalAttributes="{data-placement:'right',title:'{item.author.description -> f:format.html()}',data-toggle: 'tooltip'}"
+                                                                       arguments="{item: item.author}">
+                                                            {item.author.title}
+                                                        </f:link.action>
+                                                    </cite>
+                                                </f:if>
+                                            </div>
+                                            <div>
+                                               Count: {item.sum}
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </f:for>
+                </f:widget.paginate>
+            </f:then>
+            <f:else>
+                <h4>Sorry!!! Offers not found(((</h4>
+            </f:else>
+        </f:if>
+    </div>
+</f:section>

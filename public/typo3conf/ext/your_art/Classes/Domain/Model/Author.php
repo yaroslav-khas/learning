@@ -8,7 +8,10 @@ class Author extends AbstractEntity{
      * @var string
      */
     protected $title;
-
+    /**
+     * @var integer
+     */
+    protected $uid;
     /**
      * @var string
      */
@@ -70,5 +73,21 @@ class Author extends AbstractEntity{
     public function setImage($image)
     {
         $this->image = $image;
+    }
+
+    /**
+     * @return int
+     */
+    public function getUid()
+    {
+        return $this->uid;
+    }
+
+    /**
+     * @param int $uid
+     */
+    public function setUid($uid)
+    {
+        $this->uid = $uid;
     }
 }

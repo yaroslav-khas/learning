@@ -1,0 +1,54 @@
+<f:layout name="default"/>
+<f:section name="content">
+        <f:debug>{_all}</f:debug>
+        <div class="row">
+            <div class="col-12">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th scope="col"> </th>
+                            <th scope="col">Product</th>
+                            <th scope="col"></th>
+                            <th scope="col" class="text-center">Quantity</th>
+                            <th scope="col" class="text-right">Price</th>
+                            <th> </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <f:for each="{item}" as="item" iteration="key">
+                            <tr>
+                                <td><f:image image="{item.image.0}" class="card-img-top" maxHeight="100"/>
+                                </td>
+                                <td>{item.name}</td>
+                                <td></td>
+                                <td><input class="form-control item_quantity item{key.index}"  type="text" value="{item.quantity}"      data-url="{f:uri.action(action: 'ajaxUpdateCart',arguments:  {itemUid: item.uid} ,pageType:99)}"/></td>
+                                <td class="text-right item_price" id="price{item.uid}" data-price="{item.price}"> {item.price} $</td>
+                                <td class="text-right"><button class="btn btn-sm btn-danger removeCartElement" data-url="{f:uri.action(action: 'ajaxRemoveCart',arguments:  {itemUid: item.uid} ,pageType:99)}"><i class="fa fa-trash"></i> </button> </td>
+                            </tr>
+                        </f:for>
+
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><strong>Total</strong></td>
+                            <td class="text-right" id="calculateText"  ><strong>0 $</strong></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col mb-2">
+                <div class="row">
+                    <div class="col-sm-12  col-md-6">
+                        <button class="btn btn-block btn-light">Continue Shopping</button>
+                    </div>
+                    <div class="col-sm-12 col-md-6 text-right">
+                        <button class="btn btn-lg btn-block btn-success text-uppercase">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+</f:section>

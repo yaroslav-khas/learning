@@ -67,6 +67,12 @@ class Paintings extends AbstractEntity
     protected $style;
 
     /**
+     * @var int
+     */
+    protected $quantity;
+
+
+    /**
      * @return string
      */
     public function getName()
@@ -209,6 +215,22 @@ class Paintings extends AbstractEntity
     public function setAuthor($author)
     {
         $this->author = $author;
+    }
+
+    /**
+     * @return int
+     */
+    public function getQuantity()
+    {
+        return $this->quantity;
+    }
+
+    /**
+     * @param int $quantity
+     */
+    public function setQuantity($quantity)
+    {
+        $this->quantity = $quantity;
     }
 
 

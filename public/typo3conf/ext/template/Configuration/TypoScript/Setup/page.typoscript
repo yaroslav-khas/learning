@@ -1,7 +1,8 @@
 page = PAGE
-    typeNum = 0
 
 page {
+    typeNum = 0
+
     10 = FLUIDTEMPLATE
     10 {
         templateRootPaths{
@@ -47,19 +48,21 @@ page {
     includeCSS {
         bootstrapCss = https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css
         bootstrapCss.external = 1
-        fontAws= https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css
-        mainCss = EXT:template/Resources/Public/Css/main.css
+        fontAwsCss= https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css
+        templateCss = EXT:template/Resources/Public/Css/main.css
     }
 
     includeJSFooter {
-        jquery = https://code.jquery.com/jquery-3.3.1.slim.min.js
+        jquery = https://code.jquery.com/jquery-3.3.1.min.js
         jquery.external = 1
         pooperJS = https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js
         pooperJS.external = 1
         bootstrapJS = https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js
         bootstrapJS.external = 1
+        fontAwsJS = https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js
+        fontAwsJS.external = 1
         mainJs = EXT:template/Resources/Public/Js/main.js
-        bootstrapJS.external = 1
+        mainJS.external = 1
     }
 
 }

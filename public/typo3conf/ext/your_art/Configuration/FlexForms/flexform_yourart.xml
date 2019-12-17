@@ -24,7 +24,7 @@
 									</numIndex>
 									<numIndex index="1" type="array">
 										<numIndex index="0">Detail</numIndex>
-										<numIndex index="1">Auction->detail;Auction->addCart</numIndex>
+										<numIndex index="1">Auction->detail;Auction->ajaxAddCart;Auction->ajaxRemoveCart</numIndex>
 									</numIndex>
 									<numIndex index="2" type="array">
 										<numIndex index="0">Filter</numIndex>
@@ -37,6 +37,14 @@
 									<numIndex index="4" type="array">
 										<numIndex index="0">Author</numIndex>
 										<numIndex index="1">Auction->detailAuthor</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">Cart</numIndex>
+										<numIndex index="1">Auction->cart</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">Cart</numIndex>
+										<numIndex index="1">Auction->offers</numIndex>
 									</numIndex>
 								</items>
 							</config>
