@@ -22,6 +22,9 @@
             <trans-unit id="tx_yourart_domain_model_paintings.offer_label">
                 <source>Add Offer</source>
             </trans-unit>
+            <trans-unit id="tx_yourart_domain_model_paintings.order_label">
+                <source>Orders</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

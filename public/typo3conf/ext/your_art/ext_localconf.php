@@ -5,7 +5,17 @@ defined('TYPO3_MODE') || die('Access denied.');
     'Khas.YourArt',
     'Arts',
     [
-        'Auction'=>'list,searchForm,detail,detailAuthor,ajaxAddCart,ajaxGetCart,ajaxRemoveCart,cart,ajaxUpdateCart,countOfAllPaintingsByAuthor',
+        'Auction'=>'list,
+                    searchForm,
+                    detail,
+                    detailAuthor,
+                    ajaxAddCart,
+                    ajaxGetCart,
+                    ajaxRemoveCart,
+                    cart,
+                    ajaxUpdateCart,
+                    countOfAllPaintingsByAuthor,
+                    addOrder',
     ],
     [
         'Auction'=>'list,searchForm,ajaxAddCart,ajaxRemoveCart,cart,ajaxUpdateCart,ajaxGetCart,countOfAllPaintingsByAuthor',

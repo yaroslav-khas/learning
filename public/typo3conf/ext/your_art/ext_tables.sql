@@ -155,3 +155,47 @@ CREATE TABLE tx_yourart_domain_model_offers (
     PRIMARY KEY (uid),
     KEY parent (pid)
 );
+#
+# Table structure for table 'tx_yourart_domain_model_orders'
+#
+CREATE TABLE tx_yourart_domain_model_orders (
+    uid int(11) unsigned NOT NULL auto_increment,
+    pid int(11) unsigned DEFAULT '0' NOT NULL,
+
+    tstamp int(11) unsigned DEFAULT 0 NOT NULL,
+    crdate int(11) unsigned DEFAULT 0 NOT NULL,
+    deleted tinyint(4) unsigned DEFAULT 0 NOT NULL,
+    hidden tinyint(4) unsigned DEFAULT 0 NOT NULL,
+
+    name tinytext,
+    surname tinytext,
+    user_id int(11) unsigned DEFAULT 0 NOT NULL,
+    auctioneer_id int(11) unsigned DEFAULT 0 NOT NULL,
+    delivery_company tinytext,
+    delivery_street tinytext,
+    total_sum float(11) DEFAULT '0' NOT NULL,
+    order_products int(11) DEFAULT '0' NOT NULL,
+
+    PRIMARY KEY (uid),
+    KEY parent (pid)
+);
+#
+# Table structure for table 'tx_yourart_domain_model_orderproducts'
+#
+CREATE TABLE tx_yourart_domain_model_orderproducts (
+    uid int(11) unsigned NOT NULL auto_increment,
+    pid int(11) unsigned DEFAULT '0' NOT NULL,
+
+    tstamp int(11) unsigned DEFAULT 0 NOT NULL,
+    crdate int(11) unsigned DEFAULT 0 NOT NULL,
+    deleted tinyint(4) unsigned DEFAULT 0 NOT NULL,
+    hidden tinyint(4) unsigned DEFAULT 0 NOT NULL,
+
+    order_id int(11) unsigned DEFAULT 0 NOT NULL,
+    product_id int(11) unsigned DEFAULT 0 NOT NULL,
+    quantity int(11) DEFAULT 1 NOT NULL,
+    price float(11) DEFAULT 0 NOT NULL,
+
+    PRIMARY KEY (uid),
+    KEY parent (pid)
+);

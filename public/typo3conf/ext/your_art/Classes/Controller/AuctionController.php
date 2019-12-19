@@ -52,6 +52,16 @@ class AuctionController extends YourArtController
      * @TYPO3\CMS\Extbase\Annotation\Inject
      */
     private $authorRepository;
+    /**
+     * @var \Khas\YourArt\Domain\Repository\OrdersRepository
+     * @TYPO3\CMS\Extbase\Annotation\Inject
+     */
+    private $ordersRepository;
+    /**
+     * @var \Khas\YourArt\Domain\Repository\OrderproductsRepository
+     * @TYPO3\CMS\Extbase\Annotation\Inject
+     */
+    private $orderproductsRepository;
 
     /**
      * @param array $filters
@@ -104,6 +114,47 @@ class AuctionController extends YourArtController
         $author = $author->toArray();
         $this->view->assignMultiple(['style' => $styles, 'tags' => $tags, 'author' => $author, 'arguments' => $this->request->getArguments()]);
     }
+
+
+    /**
+     * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
+     */
+    public function offersAction()
+    {
+        $offers = $this->offersRepository->findAll()->toArray();
+        foreach ($offers as &$item) {
+            $allSum = OffersService::countOfAllPaintingsByAuthor($item->getAuthor()->getUid());
+            $item->setSum($allSum);
+        }
+        $this->view->assign('offers', $offers);
+    }
+
+    public function updateFormAction(\Khas\YourArt\Domain\Model\Paintings $item)
+    {
+        $this->view->assign('item', $item);
+
+    }
+
+    public function deleteAction(\Khas\YourArt\Domain\Model\Paintings $item)
+    {
+
+        $this->paintingsRepository->remove($item);
+        $this->redirect('list');
+    }
+
+    /**
+     * @param \Khas\YourArt\Domain\Model\Author $item
+     * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
+     */
+    public function detailAuthorAction(\Khas\YourArt\Domain\Model\Author $item)
+    {
+
+        $items = $this->paintingsRepository->findAuthorsPicture($item->getUid());
+
+        $this->view->assignMultiple(['author' => $item, 'listArts' => $items]);
+    }
+
+    //****************Cart Actions
 
     /**
      * @param \Khas\YourArt\Domain\Model\Paintings $item
@@ -163,7 +214,7 @@ class AuctionController extends YourArtController
     {
         $cart = $GLOBALS['TSFE']->fe_user->getKey('ses', 'cart');
         $found = false;
-        foreach ($cart as $key=>&$cartItem) {
+        foreach ($cart as $key => &$cartItem) {
             if ($cartItem['id'] == $itemUid) {
                 unset($cart[$key]);
                 $found = true;
@@ -186,7 +237,6 @@ class AuctionController extends YourArtController
         return json_encode($getCart);
     }
 
-
     public function cartAction()
     {
         $getCart = $GLOBALS['TSFE']->fe_user->getKey('ses', 'cart');
@@ -196,45 +246,49 @@ class AuctionController extends YourArtController
             $items[$key]->setQuantity($item['quantity']);
         }
         debug($items);
-        $this->view->assign('item', $items);
+        $this->view->assign('cartItems', $items);
     }
 
     /**
-     * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
+     * @throws \TYPO3\CMS\Extbase\Persistence\Exception\IllegalObjectTypeException
      */
-    public function offersAction()
+    public function addOrderAction()
     {
-        $offers = $this->offersRepository->findAll()->toArray();
-        foreach ($offers as &$item) {
-            $allSum = OffersService::countOfAllPaintingsByAuthor($item->getAuthor()->getUid());
-            $item->setSum($allSum);
+        $parameters = $this->request->getArguments();
+        debug($parameters);
+
+        $persistenceManager = $this->objectManager->get(\TYPO3\CMS\Extbase\Persistence\Generic\PersistenceManager::class);
+        $recordOrders = GeneralUtility::makeInstance(\Khas\YourArt\Domain\Model\Orders::class);
+        $recordOrders->setName($parameters['name']);
+        $recordOrders->setSurname($parameters['surname']);
+        $recordOrders->setUserId($GLOBALS['TSFE']->fe_user->user['uid']);
+        $recordOrders->setDeliveryCompany($parameters['deliveryCompany']);
+        $recordOrders->setDeliveryStreet($parameters['deliveryStreet']);
+        $recordOrders->setTotalSum($parameters['total']);
+
+        foreach ($parameters['item'] as $item) {
+            $recordOrderProducts = GeneralUtility::makeInstance(\Khas\YourArt\Domain\Model\Orderproducts::class);
+            $recordOrderProducts->setProductId((int)$item['uid']);
+            $recordOrderProducts->setQuantity((int)$item['quantity']);
+            $recordOrderProducts->setPrice((int)$item['price']);
+            $this->orderproductsRepository->add($recordOrderProducts);
         }
-        $this->view->assign('offers', $offers);
-    }
 
-    public function updateFormAction(\Khas\YourArt\Domain\Model\Paintings $item)
-    {
-        $this->view->assign('item', $item);
+        $this->ordersRepository->add($recordOrders);
+        $persistenceManager->persistAll();
 
-    }
+        // debug($recordOrderProducts);
+        /*$name = $this->request->getArgument('name');
+        $surName = $this->request->getArgument('surname');
+        $deliveryCompany = $this->request->getArgument('deliveryCompany');
+        $deliveryStreet = $this->request->getArgument('deliveryStreet');
+        $total = $this->request->getArgument('total');
+        $items = $this->request->getArgument('item');*/
+        //$order=$this->ordersRepository->findAll();
 
-    public function deleteAction(\Khas\YourArt\Domain\Model\Paintings $item)
-    {
+        //debug($this->ordersRepository->orderProducts);
 
-        $this->paintingsRepository->remove($item);
-        $this->redirect('list');
-    }
 
-    /**
-     * @param \Khas\YourArt\Domain\Model\Author $item
-     * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
-     */
-    public function detailAuthorAction(\Khas\YourArt\Domain\Model\Author $item)
-    {
-
-        $items = $this->paintingsRepository->findAuthorsPicture($item->getUid());
-
-        $this->view->assignMultiple(['author' => $item, 'listArts' => $items]);
     }
 
 

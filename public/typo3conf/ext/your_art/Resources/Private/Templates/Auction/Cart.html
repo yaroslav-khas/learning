@@ -1,54 +1,112 @@
 <f:layout name="default"/>
 <f:section name="content">
-        <f:debug>{_all}</f:debug>
-        <div class="row">
-            <div class="col-12">
-                <div class="table-responsive">
-                    <table class="table table-striped">
-                        <thead>
+    <div class="row">
+        <div class="col-12">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Product</th>
+                        <th scope="col"></th>
+                        <th scope="col" class="text-center">Quantity</th>
+                        <th scope="col" class="text-right">Price</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <f:for each="{cartItems}" as="item" iteration="key">
                         <tr>
-                            <th scope="col"> </th>
-                            <th scope="col">Product</th>
-                            <th scope="col"></th>
-                            <th scope="col" class="text-center">Quantity</th>
-                            <th scope="col" class="text-right">Price</th>
-                            <th> </th>
+                            <td>
+                                <f:image image="{item.image.0}" class="card-img-top" maxHeight="100"/>
+                            </td>
+                            <td>{item.name}</td>
+                            <td></td>
+                            <td><input class="form-control item_quantity item{key.index}" type="text"
+                                       value="{item.quantity}"
+                                       data-url="{f:uri.action(action: 'ajaxUpdateCart',arguments:  {itemUid: item.uid} ,pageType:99)}"/>
+                            </td>
+                            <td class="text-right item_price" id="price{item.uid}" data-price="{item.price}">
+                                {item.price} $
+                            </td>
+                            <td class="text-right">
+                                <button class="btn btn-sm btn-danger removeCartElement"
+                                        data-url="{f:uri.action(action: 'ajaxRemoveCart',arguments:  {itemUid: item.uid} ,pageType:99)}">
+                                    <i class="fa fa-trash"></i></button>
+                            </td>
                         </tr>
-                        </thead>
-                        <tbody>
-                        <f:for each="{item}" as="item" iteration="key">
-                            <tr>
-                                <td><f:image image="{item.image.0}" class="card-img-top" maxHeight="100"/>
-                                </td>
-                                <td>{item.name}</td>
-                                <td></td>
-                                <td><input class="form-control item_quantity item{key.index}"  type="text" value="{item.quantity}"      data-url="{f:uri.action(action: 'ajaxUpdateCart',arguments:  {itemUid: item.uid} ,pageType:99)}"/></td>
-                                <td class="text-right item_price" id="price{item.uid}" data-price="{item.price}"> {item.price} $</td>
-                                <td class="text-right"><button class="btn btn-sm btn-danger removeCartElement" data-url="{f:uri.action(action: 'ajaxRemoveCart',arguments:  {itemUid: item.uid} ,pageType:99)}"><i class="fa fa-trash"></i> </button> </td>
-                            </tr>
-                        </f:for>
+                    </f:for>
+                    
+                    
 
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td><strong>Total</strong></td>
-                            <td class="text-right" id="calculateText"  ><strong>0 $</strong></td>
-                        </tr>
-                        </tbody>
-                    </table>
+
+                    <f:debug>{_all}</f:debug>
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><strong>Total</strong></td>
+                        <td class="text-right" id="calculateText"><strong>0 $</strong></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col mb-2">
+            <div class="row">
+                <div class="col-sm-12  col-md-6">
+                    <button class="btn btn-block btn-light">Continue Shopping</button>
+                </div>
+                <div class="col-sm-12 col-md-6 text-right">
+                    <button class="btn btn-lg btn-block btn-success text-uppercase"  id="checkoutSubmit" data-toggle="modal"
+                            data-target="#exampleModal">Checkout
+                    </button>
                 </div>
             </div>
-            <div class="col mb-2">
-                <div class="row">
-                    <div class="col-sm-12  col-md-6">
-                        <button class="btn btn-block btn-light">Continue Shopping</button>
+        </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
-                    <div class="col-sm-12 col-md-6 text-right">
-                        <button class="btn btn-lg btn-block btn-success text-uppercase">Checkout</button>
+                    <div class="modal-body">
+                        <f:form action="addOrder">
+                            <div class="form-group">
+                                <f:form.textfield name="name" class="form-control" value="" required="1" placeholder="Name"/>
+                            </div>
+                            <div class="form-group">
+                                <f:form.textfield name="surname" class="form-control" required="1" value="" placeholder="Surname"/>
+                            </div>
+                            <div class="form-group">
+                                <f:form.select name="deliveryCompany"
+                                               options="{1: 'Nova Poshta', 2: 'Justin'}"/>
+                            </div>
+                            <div class="form-group">
+                                <f:form.textfield name="deliveryStreet" class="form-control" value=""
+                                                  placeholder="Street" required="1"/>
+                            </div>
+                            <div class="form-group">
+                                <f:form.textfield name="total" id="totalForm" readonly="1" class="form-control" value="0"/>
+                            </div>
+                            <f:for each="{cartItems}" as="item" iteration="key">
+                                <f:form.hidden name="item[{key.index}][uid]" value="{item.uid}"/>
+                                <f:form.hidden name="item[{key.index}][quantity]" value="{item.quantity}"/>
+                                <f:form.hidden name="item[{key.index}][price]" value="{item.price}"/>
+                            </f:for>
+                            <div class="form-group">
+                                <f:form.button class="btn btn-lg btn-block btn-success">Buy</f:form.button>
+                            </div>
+                        </f:form>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 </f:section>

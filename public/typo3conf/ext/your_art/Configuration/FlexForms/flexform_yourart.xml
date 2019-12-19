@@ -40,10 +40,10 @@
 									</numIndex>
 									<numIndex index="5" type="array">
 										<numIndex index="0">Cart</numIndex>
-										<numIndex index="1">Auction->cart</numIndex>
+										<numIndex index="1">Auction->cart;Auction->addOrder</numIndex>
 									</numIndex>
 									<numIndex index="6" type="array">
-										<numIndex index="0">Cart</numIndex>
+										<numIndex index="0">Offers</numIndex>
 										<numIndex index="1">Auction->offers</numIndex>
 									</numIndex>
 								</items>
