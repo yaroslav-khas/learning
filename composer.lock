@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8d190f138d3f81df8b5ab514a0fc91ce",
+    "content-hash": "9e096b5951bc2150bb2af2b75026bf65",
     "packages": [
         {
             "name": "algo26-matthias/idna-convert",
@@ -1028,6 +1028,75 @@
                 "typo3 console"
             ],
             "time": "2018-12-09T12:06:13+00:00"
+        },
+        {
+            "name": "in2code/powermail",
+            "version": "7.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/einpraegsam/powermail.git",
+                "reference": "1b80be1ca3ff7722a367cde14a07aebc79055cba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/einpraegsam/powermail/zipball/1b80be1ca3ff7722a367cde14a07aebc79055cba",
+                "reference": "1b80be1ca3ff7722a367cde14a07aebc79055cba",
+                "shasum": ""
+            },
+            "require": {
+                "ext-gd": "*",
+                "ext-json": "*",
+                "typo3/cms-core": ">=8.7.0 <10.0.0"
+            },
+            "replace": {
+                "powermail": "self.version",
+                "typo3-ter/powermail": "self.version"
+            },
+            "require-dev": {
+                "behat/behat": "^3.4",
+                "behat/mink-extension": "^2.1",
+                "behat/mink-goutte-driver": "^1.2",
+                "behat/mink-selenium2-driver": "^1.3",
+                "mikey179/vfsstream": "^1.4",
+                "nimut/testing-framework": "^4.0",
+                "phpmd/phpmd": "@stable",
+                "phpunit/phpunit": "^6.0",
+                "se/selenium-server-standalone": "^2.0",
+                "squizlabs/php_codesniffer": "^3.3",
+                "typo3/cms-core": ">=8.7.0 <=8.7.99"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "cms-package-dir": "{$vendor-dir}/typo3/cms",
+                    "web-dir": ".Build/Web",
+                    "extension-key": "powermail"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "In2code\\Powermail\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Alex Kellner",
+                    "email": "alexander.kellner@in2code.de"
+                }
+            ],
+            "description": "Powermail is a well-known, editor-friendly, powerful and easy to use mailform extension with a lots of features",
+            "homepage": "https://github.com/einpraegsam/powermail",
+            "keywords": [
+                "form",
+                "mailform",
+                "spamprevention",
+                "typo3"
+            ],
+            "time": "2019-08-27T14:34:19+00:00"
         },
         {
             "name": "khas/template",

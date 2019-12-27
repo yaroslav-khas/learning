@@ -18,4 +18,5 @@ class OrdersRepository extends Repository
         $querySettings->setRespectStoragePage(false);
         $this->setDefaultQuerySettings($querySettings);
     }
+
 }

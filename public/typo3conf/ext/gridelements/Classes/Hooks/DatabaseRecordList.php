@@ -48,7 +48,7 @@ class DatabaseRecordList implements RecordListHookInterface, SingletonInterface
     protected $languageService;
 
     /**
-     * DatabaseRecordList constructor.
+     * DatabaseRecordListHook constructor.
      */
     public function __construct()
     {

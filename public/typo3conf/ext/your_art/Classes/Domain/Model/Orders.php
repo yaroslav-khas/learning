@@ -4,6 +4,14 @@ namespace Khas\YourArt\Domain\Model;
 use \TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 class Orders extends AbstractEntity{
     /**
+     * @var \DateTime
+     */
+    protected $crdate;
+    /**
+     * @var \DateTime
+     */
+    protected $tstamp;
+    /**
      * @var string
      */
     protected $name;
@@ -32,9 +40,13 @@ class Orders extends AbstractEntity{
      *
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Khas\YourArt\Domain\Model\Orderproducts>
      * @lazy
-     *
      */
     protected $orderProducts;
+
+    /**
+     * @var integer
+     */
+    protected $status;
 
     /**
      * @return string
@@ -147,5 +159,54 @@ class Orders extends AbstractEntity{
     {
         $this->orderProducts = $orderProducts;
     }
+
+    /**
+     * @return \DateTime
+     */
+    public function getCrdate()
+    {
+        return $this->crdate;
+    }
+
+    /**
+     * @param \DateTime $crdate
+     */
+    public function setCrdate($crdate)
+    {
+        $this->crdate = $crdate;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getTstamp()
+    {
+        return $this->tstamp;
+    }
+
+    /**
+     * @param \DateTime $tstamp
+     */
+    public function setTstamp($tstamp)
+    {
+        $this->tstamp = $tstamp;
+    }
+
+    /**
+     * @return int
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * @param int $status
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+    }
+
 
 }

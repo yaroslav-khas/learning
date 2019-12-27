@@ -170,7 +170,7 @@ CREATE TABLE tx_yourart_domain_model_orders (
     name tinytext,
     surname tinytext,
     user_id int(11) unsigned DEFAULT 0 NOT NULL,
-    auctioneer_id int(11) unsigned DEFAULT 0 NOT NULL,
+    status int(11) unsigned DEFAULT 0 NOT NULL,
     delivery_company tinytext,
     delivery_street tinytext,
     total_sum float(11) DEFAULT '0' NOT NULL,

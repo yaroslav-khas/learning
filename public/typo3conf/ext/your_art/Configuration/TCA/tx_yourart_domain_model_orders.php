@@ -4,11 +4,12 @@ defined('TYPO3_MODE') or die ('Access denied.');
 return array(
     'ctrl' => array(
         'title' => 'LLL:EXT:your_art/Resources/Private/Language/locallang_db.xlf:tx_yourart_domain_model_paintings.order_label',
-        'label' => 'name',
-        'iconfile' => 'EXT:your_art/Resources/Public/Icons/yourart_domain_model_offer.svg',
+        'label' => 'uid',
+        'iconfile' => 'EXT:your_art/Resources/Public/Icons/yourart_domain_model_orders.svg',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',
+
     ),
     'interface' => array(
         'showRecordFieldList' => 'crdate'
@@ -36,12 +37,6 @@ return array(
             ),
             'label' => 'User ID'
         ),
-        /*'auctioneer_id' => array(
-            'config' => array(
-                'type' => 'input',
-            ),
-            'label' => 'User ID'
-        ),*/
         'delivery_company' => array(
             'config' => array(
                 'type' => 'select',
@@ -71,16 +66,36 @@ return array(
                 'type' => 'inline',
                 'foreign_table' => 'tx_yourart_domain_model_orderproducts',
                 'foreign_field' => 'order_id',
-                'maxitems' => 2,
                 'appearance' => array(
                     'collapseAll' => true,
                     'expandSingle' => true,
                     'levelLinksPosition' => 'bottom',
                 )
             )
-        )
-
-
+        ),
+        'status' => array(
+            'exclude' => true,
+            'config' => array(
+                'type' => 'select',
+                'items' => [
+                    ['In process', 0],
+                    ['Complete', 1],
+                ],
+            ),
+            'label' => 'Status'
+        ),
+        'crdate' => [
+            'label' => 'crdate',
+            'config' => [
+                'type' => 'passthrough'
+            ]
+        ],
+        'tstamp' => [
+            'label' => 'tstamp',
+            'config' => [
+                'type' => 'passthrough'
+            ]
+        ],
     )
 );
 

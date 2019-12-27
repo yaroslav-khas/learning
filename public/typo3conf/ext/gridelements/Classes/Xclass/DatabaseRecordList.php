@@ -215,7 +215,7 @@ class DatabaseRecordList extends \TYPO3\CMS\Recordlist\RecordList\DatabaseRecord
      * @var array
      */
     protected $deprecatedPublicProperties = [
-        'newWizards' => 'Using $newWizards of class DatabaseRecordList from outside is discouraged, property will be removed in TYPO3 v10.0.',
+        'newWizards' => 'Using $newWizards of class DatabaseRecordListHook from outside is discouraged, property will be removed in TYPO3 v10.0.',
     ];
     /**
      * Used to accumulate CSV lines for CSV export.

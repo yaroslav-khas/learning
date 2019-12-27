@@ -15,14 +15,6 @@ use function GuzzleHttp\Promise\queue;
 
 class AuctionController extends YourArtController
 {
-    /**
-     * Initializes the current action
-     *
-     * @return void
-     */
-    public function initializeAction()
-    {
-    }
 
 
     /**
@@ -61,7 +53,20 @@ class AuctionController extends YourArtController
      * @var \Khas\YourArt\Domain\Repository\OrderproductsRepository
      * @TYPO3\CMS\Extbase\Annotation\Inject
      */
-    private $orderproductsRepository;
+    protected $orderproductsRepository;
+
+    /**
+     * Initializes the current action
+     *
+     * @return void
+     */
+    public function initializeAction()
+    {
+        /*if($this->request->getControllerActionName()=='order'){
+            exit;
+        };*/
+    }
+
 
     /**
      * @param array $filters
@@ -137,7 +142,6 @@ class AuctionController extends YourArtController
 
     public function deleteAction(\Khas\YourArt\Domain\Model\Paintings $item)
     {
-
         $this->paintingsRepository->remove($item);
         $this->redirect('list');
     }
@@ -250,46 +254,46 @@ class AuctionController extends YourArtController
     }
 
     /**
+     * @throws \TYPO3\CMS\Extbase\Mvc\Exception\StopActionException
+     * @throws \TYPO3\CMS\Extbase\Mvc\Exception\UnsupportedRequestTypeException
      * @throws \TYPO3\CMS\Extbase\Persistence\Exception\IllegalObjectTypeException
+     * @throws \TYPO3\CMS\Extbase\Persistence\Exception\UnknownObjectException
      */
     public function addOrderAction()
     {
         $parameters = $this->request->getArguments();
         debug($parameters);
-
         $persistenceManager = $this->objectManager->get(\TYPO3\CMS\Extbase\Persistence\Generic\PersistenceManager::class);
-        $recordOrders = GeneralUtility::makeInstance(\Khas\YourArt\Domain\Model\Orders::class);
-        $recordOrders->setName($parameters['name']);
-        $recordOrders->setSurname($parameters['surname']);
-        $recordOrders->setUserId($GLOBALS['TSFE']->fe_user->user['uid']);
-        $recordOrders->setDeliveryCompany($parameters['deliveryCompany']);
-        $recordOrders->setDeliveryStreet($parameters['deliveryStreet']);
-        $recordOrders->setTotalSum($parameters['total']);
-
+        $addRecordOrders = GeneralUtility::makeInstance(\Khas\YourArt\Domain\Model\Orders::class);
+        $addRecordOrders->setName($parameters['name']);
+        $addRecordOrders->setSurname($parameters['surname']);
+        $addRecordOrders->setUserId($GLOBALS['TSFE']->fe_user->user['uid']);
+        $addRecordOrders->setDeliveryCompany($parameters['deliveryCompany']);
+        $addRecordOrders->setDeliveryStreet($parameters['deliveryStreet']);
+        $addRecordOrders->setTotalSum($parameters['total']);
+        $this->ordersRepository->add($addRecordOrders);
+        $persistenceManager->persistAll();
         foreach ($parameters['item'] as $item) {
             $recordOrderProducts = GeneralUtility::makeInstance(\Khas\YourArt\Domain\Model\Orderproducts::class);
             $recordOrderProducts->setProductId((int)$item['uid']);
             $recordOrderProducts->setQuantity((int)$item['quantity']);
             $recordOrderProducts->setPrice((int)$item['price']);
+            $recordOrderProducts->setOrderId($addRecordOrders->getUid());
             $this->orderproductsRepository->add($recordOrderProducts);
         }
-
-        $this->ordersRepository->add($recordOrders);
+        $persistenceManager->persistAll();
+        $updRecordOrders = $this->ordersRepository->findByIdentifier($addRecordOrders->getUid());
+        $updRecordOrders->setOrderProducts(count($this->orderproductsRepository->findByOrderId($addRecordOrders->getUid())));
+        $this->ordersRepository->update($updRecordOrders);
         $persistenceManager->persistAll();
 
-        // debug($recordOrderProducts);
-        /*$name = $this->request->getArgument('name');
-        $surName = $this->request->getArgument('surname');
-        $deliveryCompany = $this->request->getArgument('deliveryCompany');
-        $deliveryStreet = $this->request->getArgument('deliveryStreet');
-        $total = $this->request->getArgument('total');
-        $items = $this->request->getArgument('item');*/
-        //$order=$this->ordersRepository->findAll();
-
-        //debug($this->ordersRepository->orderProducts);
-
-
+        $this->redirect('order', 'Auction', 'YourArt');
     }
 
+    public function orderAction()
+    {
+        $items = $this->ordersRepository->findByUserId($GLOBALS['TSFE']->fe_user->user['uid']);
+        $this->view->assign('orderItems', $items);
+    }
 
 }

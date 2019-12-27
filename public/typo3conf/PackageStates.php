@@ -116,6 +116,9 @@ return [
         'template' => [
             'packagePath' => 'typo3conf/ext/template/',
         ],
+        'powermail' => [
+            'packagePath' => 'typo3conf/ext/powermail/',
+        ],
         'vhs' => [
             'packagePath' => 'typo3conf/ext/vhs/',
         ],

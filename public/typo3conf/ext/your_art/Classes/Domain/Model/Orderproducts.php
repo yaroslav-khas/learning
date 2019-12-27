@@ -7,33 +7,31 @@ use \TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 class Orderproducts extends AbstractEntity
 {
     /**
-     * @var string
+     * Paintings items
+     *
+     * @var \Khas\YourArt\Domain\Model\Paintings
+     * @lazy
      */
     protected $productId;
+
     /**
      * @var string
      */
     protected $quantity;
+
     /**
      * @var string
      */
     protected $price;
 
     /**
-     * @return string
+     * Order_id items
+     *
+     * @var int
+     *
      */
-    public function getProductId()
-    {
-        return $this->productId;
-    }
+    protected $orderId;
 
-    /**
-     * @param string $productId
-     */
-    public function setProductId($productId)
-    {
-        $this->productId = $productId;
-    }
 
     /**
      * @return string
@@ -65,6 +63,38 @@ class Orderproducts extends AbstractEntity
     public function setPrice($price)
     {
         $this->price = $price;
+    }
+
+    /**
+     * @return int
+     */
+    public function getOrderId()
+    {
+        return $this->orderId;
+    }
+
+    /**
+     * @param int $orderId
+     */
+    public function setOrderId($orderId)
+    {
+        $this->orderId = $orderId;
+    }
+
+    /**
+     * @return Paintings
+     */
+    public function getProductId()
+    {
+        return $this->productId;
+    }
+
+    /**
+     * @param Paintings $productId
+     */
+    public function setProductId($productId)
+    {
+        $this->productId = $productId;
     }
 
 

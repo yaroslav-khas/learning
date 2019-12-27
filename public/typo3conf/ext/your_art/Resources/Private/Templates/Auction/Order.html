@@ -1,0 +1,62 @@
+<f:layout name="default"/>
+<f:section name="content">
+    <div class="row">
+        <div class="col-12">
+            <f:debug>{_all}</f:debug>
+            <div class="accordion" id="accordionExample">
+
+                <f:for each="{orderItems}" as="item">
+                    <div class="card">
+                        <div class="card-header d-flex justify-content-between align-items-center" id="headingOne">
+                            <h5>№
+                                <button class="btn btn-link" type="button" data-toggle="collapse"
+                                        data-target="#collapse{item.uid}" aria-expanded="false"
+                                        aria-controls="collapse{item.uid}">
+                                    {item.uid}
+                                </button>
+                                <f:if condition="{item.status}=1">
+                                    <f:then>
+                                        <span class="badge badge-success">Complete</span>
+                                    </f:then>
+                                    <f:else>
+                                        <span class="badge badge-warning">In Process</span>
+                                    </f:else>
+                                </f:if>
+                            </h5>
+                            <h6>
+                                <div>{item.name} {item.surname}
+                                    <f:format.date>{item.crdate}</f:format.date>
+                                    <div>{item.deliveryStreet}</div>
+                                </div>
+                            </h6>
+                        </div>
+                        <div id="collapse{item.uid}" class="collapse show" aria-labelledby="headingOne"
+                             data-parent="#accordionExample">
+                            <div class="card-body">
+                                <table class="table">
+                                    <tbody>
+                                    <f:for each="{item.orderProducts}" as="products">
+                                        <tr>
+                                            <th scope="row">{products.productId.uid}</th>
+                                            <td>{products.productId.name}</td>
+                                            <td>{products.quantity}</td>
+                                            <td>{products.productId.price}</td>
+                                        </tr>
+                                    </f:for>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <th>Total sum</th>
+                                        <th scope="row">{item.totalSum}</th>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </f:for>
+            </div>
+
+        </div>
+    </div>
+</f:section>
