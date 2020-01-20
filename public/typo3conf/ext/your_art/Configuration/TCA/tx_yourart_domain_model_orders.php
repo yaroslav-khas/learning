@@ -15,7 +15,7 @@ return array(
         'showRecordFieldList' => 'crdate'
     ),
     'types' => array(
-        '0' => ['showitem' => 'name,surname,user_id,delivery_company,total_sum, order_products'],
+        '0' => ['showitem' => 'name,surname,user_id,delivery_company,delivery_city,delivery_warehouse,total_sum, order_products'],
     ),
     'palettes' => array(),
     'columns' => array(
@@ -47,12 +47,19 @@ return array(
             ),
             'label' => 'Delivery company'
         ),
-        'delivery_street' => array(
+        'delivery_city' => array(
             'config' => array(
                 'type' => 'input',
             ),
-            'label' => 'Delivery street'
+            'label' => 'Delivery city'
         ),
+        'delivery_warehouse' => array(
+            'config' => array(
+                'type' => 'input',
+            ),
+            'label' => 'Delivery warehouse'
+        ),
+
         'total_sum' => array(
             'config' => array(
                 'type' => 'input',

@@ -1,1 +1,7 @@
 @import 'EXT:news/Configuration/TypoScript/constants.txt'
+@import 'EXT:powermail/Configuration/TypoScript/Main/constants.txt'
+@import 'EXT:powermail/Configuration/TypoScript/BootstrapClassesAndLayout/constants.txt'
+
+@import 'EXT:template/Configuration/TypoScript/Setup/config.typoscript'
+
+@import 'EXT:your_art/Configuration/TypoScript/constants.typoscript'

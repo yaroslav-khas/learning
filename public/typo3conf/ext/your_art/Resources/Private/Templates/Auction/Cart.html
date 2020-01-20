@@ -1,5 +1,7 @@
 <f:layout name="default"/>
 <f:section name="content">
+    {namespace yourart = Khas\YourArt\ViewHelpers}
+
     <div class="row">
         <div class="col-12">
             <div class="table-responsive">
@@ -36,8 +38,6 @@
                             </td>
                         </tr>
                     </f:for>
-                    
-                    
 
 
                     <f:debug>{_all}</f:debug>
@@ -60,7 +60,8 @@
                     <button class="btn btn-block btn-light">Continue Shopping</button>
                 </div>
                 <div class="col-sm-12 col-md-6 text-right">
-                    <button class="btn btn-lg btn-block btn-success text-uppercase"  id="checkoutSubmit" data-toggle="modal"
+                    <button class="btn btn-lg btn-block btn-success text-uppercase" id="checkoutSubmit"
+                            data-toggle="modal"
                             data-target="#exampleModal">Checkout
                     </button>
                 </div>
@@ -77,23 +78,32 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <f:form action="addOrder">
+                        <f:render partial="Error" arguments="{object:'order'}"/>
+
+                        <f:form action="addOrder" name="order" object="{order}">
                             <div class="form-group">
-                                <f:form.textfield name="name" class="form-control" value="" required="1" placeholder="Name"/>
+                                <f:form.textfield property="name" value="" errorClass="is-invalid" class="form-control" required="1"
+                                                  placeholder="Name"/>
                             </div>
                             <div class="form-group">
-                                <f:form.textfield name="surname" class="form-control" required="1" value="" placeholder="Surname"/>
+                                <f:form.textfield property="surname" class="form-control" errorClass="is-invalid" required="1" value=""
+                                                  placeholder="Surname"/>
                             </div>
-                            <div class="form-group">
-                                <f:form.select name="deliveryCompany"
-                                               options="{1: 'Nova Poshta', 2: 'Justin'}"/>
+                            <div class="form-inline">
+                                <f:cache.disable>
+                                    <yourart:select property="deliveryCompany" defaultValue="Choose Company..."
+                                                    class="form-control inputDelivery"
+                                                    options="{0:'NovaPoshta',1:'Justin'}"/>
+                                    <yourart:datalist property="deliveryCity"
+                                                      class="form-control inputDeliveryCity invisible"/>
+                                    <yourart:select property="deliveryWarehouse" defaultValue="Choose Warehouse..."
+                                                    class="invisible form-control inputDeliveryWarehouse"/>
+                                </f:cache.disable>
                             </div>
+
                             <div class="form-group">
-                                <f:form.textfield name="deliveryStreet" class="form-control" value=""
-                                                  placeholder="Street" required="1"/>
-                            </div>
-                            <div class="form-group">
-                                <f:form.textfield name="total" id="totalForm" readonly="1" class="form-control" value="0"/>
+                                <f:form.textfield property="totalSum" id="totalForm" readonly="1" class="form-control"
+                                                  value="0"/>
                             </div>
                             <f:for each="{cartItems}" as="item" iteration="key">
                                 <f:form.hidden name="item[{key.index}][uid]" value="{item.uid}"/>

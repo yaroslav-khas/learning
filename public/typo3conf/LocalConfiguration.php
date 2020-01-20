@@ -149,12 +149,12 @@ return [
         'processor_path_lzw' => '/usr/bin/',
     ],
     'MAIL' => [
-        'transport' => 'sendmail',
-        'transport_sendmail_command' => ' -t -i ',
+        'transport' => 'smtp',
+        'transport_sendmail_command' => '',
         'transport_smtp_encrypt' => '',
-        'transport_smtp_password' => '',
-        'transport_smtp_server' => '',
-        'transport_smtp_username' => '',
+        'transport_smtp_password' => 'f95fa7fc89ead0',
+        'transport_smtp_server' => 'smtp.mailtrap.io:2525',
+        'transport_smtp_username' => '18ae41ae17a396',
     ],
     'SYS' => [
         'devIPmask' => '*',

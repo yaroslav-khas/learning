@@ -128,6 +128,7 @@ class SendMailService
 
         $email['send'] = true;
         $signalArguments = [$message, &$email, $this];
+
         $this->signalDispatch(__CLASS__, 'sendTemplateEmailBeforeSend', $signalArguments);
         if (!$email['send']) {
             if ($this->settings['debug']['mail']) {

@@ -1,8 +1,11 @@
 <?php
+
 namespace Khas\YourArt\Domain\Model;
 
 use \TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
-class Orders extends AbstractEntity{
+
+class Orders extends AbstractEntity
+{
     /**
      * @var \DateTime
      */
@@ -13,10 +16,12 @@ class Orders extends AbstractEntity{
     protected $tstamp;
     /**
      * @var string
+     * @TYPO3\CMS\Extbase\Annotation\Validate("StringLength", options={"minimum": 3, "maximum": 50})
      */
     protected $name;
     /**
      * @var string
+     * @TYPO3\CMS\Extbase\Annotation\Validate("StringLength", options={"minimum": 3, "maximum": 50})
      */
     protected $surname;
     /**
@@ -24,13 +29,18 @@ class Orders extends AbstractEntity{
      */
     protected $userId;
     /**
-     * @var integer
+     * @var string
      */
     protected $deliveryCompany;
     /**
      * @var string
      */
-    protected $deliveryStreet;
+    protected $deliveryCity;
+    /**
+     * @var string
+     */
+    protected $deliveryWarehouse;
+
     /**
      * @var float
      */
@@ -48,21 +58,6 @@ class Orders extends AbstractEntity{
      */
     protected $status;
 
-    /**
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    /**
-     * @param string $name
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
-    }
 
     /**
      * @return string
@@ -110,22 +105,6 @@ class Orders extends AbstractEntity{
     public function setDeliveryCompany($deliveryCompany)
     {
         $this->deliveryCompany = $deliveryCompany;
-    }
-
-    /**
-     * @return string
-     */
-    public function getDeliveryStreet()
-    {
-        return $this->deliveryStreet;
-    }
-
-    /**
-     * @param string $deliveryStreet
-     */
-    public function setDeliveryStreet($deliveryStreet)
-    {
-        $this->deliveryStreet = $deliveryStreet;
     }
 
     /**
@@ -206,6 +185,54 @@ class Orders extends AbstractEntity{
     public function setStatus($status)
     {
         $this->status = $status;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDeliveryCity()
+    {
+        return $this->deliveryCity;
+    }
+
+    /**
+     * @param string $deliveryCity
+     */
+    public function setDeliveryCity($deliveryCity)
+    {
+        $this->deliveryCity = $deliveryCity;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDeliveryWarehouse()
+    {
+        return $this->deliveryWarehouse;
+    }
+
+    /**
+     * @param string $deliveryWarehouse
+     */
+    public function setDeliveryWarehouse($deliveryWarehouse)
+    {
+        $this->deliveryWarehouse = $deliveryWarehouse;
+    }
+
+    /**
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param string $name
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
     }
 
 

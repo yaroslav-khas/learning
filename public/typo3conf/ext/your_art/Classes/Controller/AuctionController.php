@@ -3,6 +3,7 @@
 namespace Khas\YourArt\Controller;
 
 use Khas\YourArt\Controller\YourArtController;
+use Khas\YourArt\Domain\Model\Orders;
 use Khas\YourArt\Domain\Repository\StyleRepository;
 use Khas\YourArt\Service\OffersService;
 use Psr\Http\Message\ServerRequestInterface;
@@ -11,6 +12,7 @@ use TYPO3\CMS\Core\Utility\DebugUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Object\ObjectManager;
 use TYPO3\CMS\Extbase\Persistence\QueryInterface;
+use TYPO3\CMS\Extbase\Validation\ValidatorResolver;
 use function GuzzleHttp\Promise\queue;
 
 class AuctionController extends YourArtController
@@ -254,36 +256,30 @@ class AuctionController extends YourArtController
     }
 
     /**
+     * @param Orders $order
      * @throws \TYPO3\CMS\Extbase\Mvc\Exception\StopActionException
      * @throws \TYPO3\CMS\Extbase\Mvc\Exception\UnsupportedRequestTypeException
      * @throws \TYPO3\CMS\Extbase\Persistence\Exception\IllegalObjectTypeException
      * @throws \TYPO3\CMS\Extbase\Persistence\Exception\UnknownObjectException
      */
-    public function addOrderAction()
+    public function addOrderAction(Orders $order)
     {
         $parameters = $this->request->getArguments();
-        debug($parameters);
         $persistenceManager = $this->objectManager->get(\TYPO3\CMS\Extbase\Persistence\Generic\PersistenceManager::class);
-        $addRecordOrders = GeneralUtility::makeInstance(\Khas\YourArt\Domain\Model\Orders::class);
-        $addRecordOrders->setName($parameters['name']);
-        $addRecordOrders->setSurname($parameters['surname']);
-        $addRecordOrders->setUserId($GLOBALS['TSFE']->fe_user->user['uid']);
-        $addRecordOrders->setDeliveryCompany($parameters['deliveryCompany']);
-        $addRecordOrders->setDeliveryStreet($parameters['deliveryStreet']);
-        $addRecordOrders->setTotalSum($parameters['total']);
-        $this->ordersRepository->add($addRecordOrders);
+        $order->setUserId($GLOBALS['TSFE']->fe_user->user['uid']);
+        $this->ordersRepository->add($order);
         $persistenceManager->persistAll();
         foreach ($parameters['item'] as $item) {
             $recordOrderProducts = GeneralUtility::makeInstance(\Khas\YourArt\Domain\Model\Orderproducts::class);
             $recordOrderProducts->setProductId((int)$item['uid']);
             $recordOrderProducts->setQuantity((int)$item['quantity']);
             $recordOrderProducts->setPrice((int)$item['price']);
-            $recordOrderProducts->setOrderId($addRecordOrders->getUid());
+            $recordOrderProducts->setOrderId($order->getUid());
             $this->orderproductsRepository->add($recordOrderProducts);
         }
         $persistenceManager->persistAll();
-        $updRecordOrders = $this->ordersRepository->findByIdentifier($addRecordOrders->getUid());
-        $updRecordOrders->setOrderProducts(count($this->orderproductsRepository->findByOrderId($addRecordOrders->getUid())));
+        $updRecordOrders = $this->ordersRepository->findByIdentifier($order->getUid());
+        $updRecordOrders->setOrderProducts(count($this->orderproductsRepository->findByOrderId($order->getUid())));
         $this->ordersRepository->update($updRecordOrders);
         $persistenceManager->persistAll();
 

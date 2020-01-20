@@ -172,7 +172,8 @@ CREATE TABLE tx_yourart_domain_model_orders (
     user_id int(11) unsigned DEFAULT 0 NOT NULL,
     status int(11) unsigned DEFAULT 0 NOT NULL,
     delivery_company tinytext,
-    delivery_street tinytext,
+    delivery_city tinytext,
+    delivery_warehouse tinytext,
     total_sum float(11) DEFAULT '0' NOT NULL,
     order_products int(11) DEFAULT '0' NOT NULL,
 

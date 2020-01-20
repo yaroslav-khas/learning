@@ -55,8 +55,10 @@
 		"gridelementsteam/gridelements": "^9.3",
 		"typo3-ter/mask": "^4.1",
 		"khas/your_art": "^0.1.0",
-		"in2code/powermail": "^7.4"
-	},
+		"in2code/powermail": "^7.4",
+      	"ext-curl": "*",
+		"ext-json": "*"
+    },
 	"scripts":{
 		"typo3-cms-scripts": [
 			"typo3cms install:fixfolderstructure",

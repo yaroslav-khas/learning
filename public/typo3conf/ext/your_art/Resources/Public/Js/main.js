@@ -72,10 +72,75 @@ $(document).ready(function () {
             console.log(response);
         });
     });
+    $(".inputDelivery").change(function () {
+        $(".inputDeliveryCity").removeClass('invisible');
+        $(".inputDeliveryWarehouse").removeClass('invisible');
+
+    });
+    if($(".inputDelivery :selected").val()>=0){
+        $(".inputDeliveryCity").removeClass('invisible');
+        $(".inputDeliveryWarehouse").removeClass('invisible');
+    }
+    $(".inputDeliveryCity").on('input',function () {
+        if ($('.inputDelivery').children("option:selected").val()==1){
+            var getCity = {
+                "async": true,
+                "crossDomain": true,
+                "url": "https://api.novaposhta.ua/v2.0/json/",
+                "method": "POST",
+                "headers": {
+                    "content-type": "application/json",
+                },
+                "processData": false,
+                "data":
+                    "{\r\n\"apiKey\": \"fddd658c93d0dfef5ec6097b636a2727\",\r\n \"modelName\": \"Address\",\r\n \"calledMethod\": \"searchSettlements\",\r\n \"methodProperties\": {\r\n \"CityName\": \""+$(this).val()+"\"\r\n }\r\n}"
+
+            };
+            //console.log(settings);
+            $.ajax(getCity).done(function (response) {
+                $( "datalist.deliveryCity" ).empty();
+                console.log(response.data["0"]["Addresses"])
+                for (i=0;i<response.data["0"]["Addresses"].length;i++){
+                    console.log(response.data["0"]["Addresses"][i]["Present"]);
+                    $( "datalist.deliveryCity" ).append("<option value='"+response.data['0']['Addresses'][i]['MainDescription']+"'>"+response.data["0"]["Addresses"][i]["Present"]+"</option>");
+                }
+            });
+        }
+
+        if ($('.inputDelivery').children("option:selected").val()==2){
+            console.log("Justin")
+        }
+    })
+    $(".inputDeliveryCity").on('change',function () {
+        var getWarehouse = {
+            "async": true,
+            "crossDomain": true,
+            "url": "https://api.novaposhta.ua/v2.0/json/",
+            "method": "POST",
+            "headers": {
+                "content-type": "application/json",
+            },
+            "processData": false,
+            "data":
+                "{\r\n\"apiKey\": \"fddd658c93d0dfef5ec6097b636a2727\",\r\n \"modelName\": \"AddressGeneral\",\r\n \"calledMethod\": \"getWarehouses\",\r\n \"methodProperties\": {\r\n \"CityName\": \""+$(this).val()+"\"\r\n }\r\n}"
+
+        };
+        $.ajax(getWarehouse).done(function (response) {
+            $( ".inputDeliveryWarehouse" ).empty();
+            console.log(response)
+            for (i=0;i<response.data.length;i++){
+                console.log(response.data[i]["Description"]);
+                $( "select.inputDeliveryWarehouse" ).append("<option value='"+response.data[i]['Description']+"'>"+response.data[i]['Description']+"</option>");
+            }
+        });
+        console.log("test")
+    })
+
     $("#checkoutSubmit").click(function () {
         $('#calculateText').text();
         console.log($('#calculateText').text())
     })
 
 });
+
 

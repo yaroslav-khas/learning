@@ -3,3 +3,23 @@ plugin.tx_yourart {
         cssFile = EXT:your_art/Resources/Public/Css/main.css
     }
 }
+
+plugin.tx_powermail {
+    settings {
+        styles {
+            bootstrap {
+                addBootstrap = 1
+                bootstrapPath = https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css
+                # cat=powermail_styles//0110; type=text; label= Framework classname(s) for overall wrapping container of a field/label pair e.g. "row form-group"
+                fieldAndLabelWrappingClasses = form-group col
+
+                # cat=powermail_styles//0120; type=text; label= Framework classname(s) for wrapping container of a field e.g. "row form-group"
+                fieldWrappingClasses = col
+
+                rowClasses = row d-flex align-content-center
+
+            }
+        }
+        BasicCss = https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css
+    }
+}

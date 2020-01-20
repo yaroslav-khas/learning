@@ -1,0 +1,13 @@
+TCEFORM {
+    tx_powermail_domain_model_form {
+        css {
+            removeItems =  layout2, layout3, layout1, nolabel
+            addItems {
+                default = Full row
+                form2cols = Form with 2 columns
+            }
+        }
+    }
+    tx_powermail_domain_model_page < .tx_powermail_domain_model_form
+    tx_powermail_domain_model_field < .tx_powermail_domain_model_form
+}

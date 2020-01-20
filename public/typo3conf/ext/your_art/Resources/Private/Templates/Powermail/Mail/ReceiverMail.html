@@ -1,0 +1,56 @@
+{namespace vh=In2code\Powermail\ViewHelpers}
+<f:layout name="Mail"/>
+
+Render Powermail Mail to Receiver
+{powermail_rte}                                    Variable is filled with values from RTE in backend
+{powermail_all}                                    Outputs all fields
+{marker1}, {firstname}, etc..                    Outputs a field
+{label_marker1}, {label_firstname}, etc...        Outputs a label to a field
+{mail}                                            Complete Mail Object
+{email}                                            Email Configuration
+{settings}                                        TypoScript Settings
+NOTE: See example section after main section
+
+<f:section name="main">
+    <tr>
+        <td class="innerpadding borderbottom">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td class="bodycopy">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus adipiscing felis, sit amet
+                        blandit ipsum volutpat sed. Morbi porttitor, eget accumsan dictum, nisi libero ultricies ipsum,
+                        in posuere mauris neque at erat.
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td class="innerpadding bodycopy">
+            <f:format.html parseFuncTSPath="lib.parseFunc_powermail">{powermail_all}</f:format.html>
+        </td>
+    </tr>
+</f:section>
+
+
+THIS IS ONLY AN EXAMPLE SECTION
+
+<f:section name="example">
+
+    1. Get values from RTE from Backend:
+    <vh:Misc.Variables mail="{mail}" type="mail" function="receiver">
+        <f:format.html parseFuncTSPath="lib.parseFunc_powermail">{powermail_rte}</f:format.html>
+    </vh:Misc.Variables>
+
+
+    2. Get all Values by using powermail_all
+    <vh:string.escapeLabels>
+        {powermail_all}
+    </vh:string.escapeLabels>
+    <f:format.html parseFuncTSPath="lib.parseFunc_powermail">
+        3. Get some lonely fields
+        Hi {mail.firstname} {lastname}, thank you for your email.<br/>
+        {label_email}: {email}<br/>
+        {label_text}: {text}
+    </f:format.html>
+</f:section>
