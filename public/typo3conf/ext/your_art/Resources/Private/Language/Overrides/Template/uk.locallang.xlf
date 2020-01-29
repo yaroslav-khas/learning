@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2019-11-01T17:38:32Z"
+          product-name="template" target-language="uk">
+        <header/>
+        <body>
+            <trans-unit id="template.hello">
+                <source>Hello </source>
+                <target state="translated">Привіт </target>
+            </trans-unit>
+            <trans-unit id="template.default">
+                <source>Profile</source>
+                <target state="translated">Профіль</target>
+            </trans-unit>
+            <trans-unit id="template.logout">
+                <source>Logout</source>
+                <target state="translated">Вихід</target>
+            </trans-unit>
+            <trans-unit id="template.login">
+                <source>Login</source>
+                <target state="translated">Авторизуватися</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,2 +1,0 @@
-# learning
-Learning TYPO3 

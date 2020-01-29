@@ -1,22 +1,48 @@
-<div class="row" xmlns:f="http://www.w3.org/1999/html">
+<div class="row">
     {namespace yourart = Khas\YourArt\ViewHelpers}
     <div class="col-12 " style="background-color: #919191">
-        <div class="container d-flex justify-content-end h-100">
-            <f:cache.disable>
-                <f:security.ifAuthenticated>
-                    <f:then>
-                        <div class="text-white">Hello <yourart:user /> |</div>
-                        <br>
-                        <f:link.action pageUid="5" class="text-white px-md-1">Profile</f:link.action>
-                        <br>
-                        <f:link.page pageUid="5" class="text-white" additionalParams="{logintype:'logout'}">Logout
-                        </f:link.page>
-                    </f:then>
-                    <f:else>
-                        <f:link.action pageUid="5" class="text-white">Login</f:link.action>
-                    </f:else>
-                </f:security.ifAuthenticated>
-            </f:cache.disable>
+        <div class="container d-flex justify-content-between">
+            <div>
+                <div class="navbar-nav mr-auto dropdown show">
+                    <v:page.languageMenu as="menu">
+                        <div class="dropdown" >
+                            <a class="btn btn-secondary dropdown-toggle btn-sm" role="button"style="background-color: #919191" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <f:for each="{menu}" as="label">
+                                    <f:if condition="{label.current} = 1">
+                                        <f:then>{label.label}</f:then>
+                                    </f:if>
+                                </f:for>
+                            </a>
+                            <div class="dropdown-menu btn-sm" style="position: absolute;
+  z-index: 10;" aria-labelledby="dropdownMenuLink">
+                                <f:for each="{menu}" as="lang">
+                                    <a class="dropdown-item" href="{lang.url}" type="button">{lang.label}</a>
+                                </f:for>
+                            </div>
+                        </div>
+                    </v:page.languageMenu>
+                </div>
+            </div>
+            <div>
+                <f:cache.disable>
+                    <f:security.ifAuthenticated>
+                        <f:then>
+                            <div class="text-white"><f:translate extensionName="template" key="template.hello"/>
+                                <yourart:user/>
+                                |
+                                <f:link.action pageUid="5" class="text-white px-md-1"><f:translate extensionName="template" key="template.default"/></f:link.action>
+                                <f:link.page pageUid="5" class="text-white" additionalParams="{logintype:'logout'}">
+                                    <f:translate extensionName="template" key="template.logout"/>
+                                </f:link.page>
+                            </div>
+                        </f:then>
+                        <f:else>
+                            <f:link.action pageUid="5" class="text-white"><f:translate extensionName="template" key="template.login"/></f:link.action>
+                        </f:else>
+                    </f:security.ifAuthenticated>
+                </f:cache.disable>
+            </div>
+
         </div>
     </div>
 </div>
@@ -30,11 +56,13 @@
             </div>
             <div class="col-1 d-flex align-items-center">
                 <f:link.action action="cart" pageUid="16" class="text-dark"
-                               >
+                >
                 <span class="fa-layers fa-fw" style="font-size: 54px">
                     <i class="fab fa-opencart"></i>
-                    <span class="fa-layers-text badge badge-pill badge-dark fa-inverse" data-url="{f:uri.action(action: 'ajaxGetCart', pageType:99,controller: 'Auction',extensionName:'yourart', pluginName:'arts' )}" id="cartget" data-fa-transform="shrink-12 down-1"
-                                  style="font-weight:800;">
+                    <span class="fa-layers-text badge badge-pill badge-dark fa-inverse"
+                          data-url="{f:uri.action(action: 'ajaxGetCart', pageType:99,controller: 'Auction',extensionName:'yourart', pluginName:'arts' )}"
+                          id="cartget" data-fa-transform="shrink-12 down-1"
+                          style="font-weight:800;">
                     </span>
                 </span>
                 </f:link.action>

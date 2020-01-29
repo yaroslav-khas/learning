@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="uk" datatype="plaintext" original="messages" date="2020-01-27T00:04:35Z" product-name="adminpanel">
+		<header/>
+		<body>
+			<trans-unit id="displayFieldIcons" resname="displayFieldIcons">
+				<source>Display edit icons</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="displayIcons" resname="displayIcons">
+				<source>Display edit panels</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="module.label" resname="module.label">
+				<source>Edit</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="software">
+					<target>Редагувати</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="openAB" resname="openAB">
+				<source>Open TYPO3 Backend</source>
+				<target/>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

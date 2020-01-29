@@ -10,15 +10,75 @@ return array(
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',
         'requestUpdate' => 'picture_id,author',
+        'languageField' => 'sys_language_uid',
+        'transOrigPointerField' => 'l10n_parent',
+        'transOrigDiffSourceField' => 'l10n_diffsource',
+        'translationSource' => 'l10n_source',
     ),
     'interface' => array(
         'showRecordFieldList' => 'crdate'
     ),
     'types' => array(
-        '0' => ['showitem' => 'picture_id, title, description, author,pictures,sum_all_pic'],
+        '0' => ['showitem' => 'picture_id, title, description, author,pictures,sum_all_pic,
+            --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
+                    --palette--;;paletteLanguage,'],
     ),
-    'palettes' => array(),
+    'palettes' => array(
+        'paletteLanguage' => [
+            'showitem' => '
+                sys_language_uid;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:sys_language_uid_formlabel,l10n_parent, l10n_diffsource,
+            ',
+        ],
+    ),
     'columns' => array(
+        'sys_language_uid' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.language',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'special' => 'languages',
+                'items' => [
+                    [
+                        'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.allLanguages',
+                        -1,
+                        'flags-multiple'
+                    ],
+                ],
+                'default' => 0,
+            ]
+        ],
+        'l10n_parent' => [
+            'displayCond' => 'FIELD:sys_language_uid:>:0',
+            'exclude' => true,
+            'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.l18n_parent',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    ['', 0],
+                ],
+                'foreign_table' => 'tx_yourart_domain_model_offers',
+                'foreign_table_where' => 'AND tx_yourart_domain_model_offers.pid=###CURRENT_PID### AND tx_yourart_domain_model_offers.sys_language_uid IN (-1,0)',
+                'fieldWizard' => [
+                    'selectIcons' => [
+                        'disabled' => true,
+                    ],
+                ],
+                'default' => 0,
+            ]
+        ],
+        'l10n_source' => [
+            'config' => [
+                'type' => 'passthrough'
+            ]
+        ],
+        'l10n_diffsource' => [
+            'config' => [
+                'type' => 'passthrough',
+                'default' => ''
+            ]
+        ],
         'picture_id' => array(
             'config' => array(
                 'size' => 10,

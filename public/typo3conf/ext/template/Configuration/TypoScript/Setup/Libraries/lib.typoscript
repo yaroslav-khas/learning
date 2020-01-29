@@ -163,7 +163,39 @@ lib.content_menu {
         }
     }
 }
+lib.language = COA
+lib.language {
+    20 = HMENU
+    20 {
+        special = language
+        special.value = 0,1,2
+        special.normalWhenNoLanguage = 0
+        wrap =
+        1 = TMENU
+        1 {
+            noBlur = 1
+            NO = 1
+            NO {
+                doNotLinkIt = 1
+                linkWrap = <a> |</a>
+                stdWrap.override = English||Ukraine
+                stdWrap {
+                    typolink {
+                        parameter.data = page:uid
+                        additionalParams = &L=0 || &L=1 || &L=2
+                        ATagParams = hreflang="en-GB" || hreflang="ua-UA"
+                        addQueryString = 1
+                        addQueryString.exclude = L,id,no_cache
+                        addQueryString.method = GET
+                        no_cache = 0
+                    }
+                }
+            }
 
+        }
+    }
+    wrap = <div id="language_menu" class="language-menu">|</div>
+}
 #lib.gridelements.defaultGridSetup =< lib.contentElement
 #lib.gridelements.defaultGridSetup {
 #    templateName.field = tx_gridelements_backend_layout

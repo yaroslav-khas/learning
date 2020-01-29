@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3locallangExt>
+  <data type="array">
+    <languageKey index="uk" type="array">
+			<label index="adminModule.title"/>
+			<label index="adminModule.description"/>
+			<label index="adminModule.general.title"/>
+			<label index="adminModule.general.content"/>
+			<label index="adminModule.filter.title"/>
+			<label index="adminModule.filter.content"/>
+			<label index="adminModule.filter2.title"/>
+			<label index="adminModule.filter2.content"/>
+			<label index="adminModule.searchWord.title"/>
+			<label index="adminModule.searchWord.content"/>
+			<label index="adminModule.timeRestriction.title"/>
+			<label index="adminModule.timeRestriction.content"/>
+			<label index="adminModule.topNewsRestriction.title"/>
+			<label index="adminModule.topNewsRestriction.content"/>
+			<label index="adminModule.sortingField.title"/>
+			<label index="adminModule.sortingField.content"/>
+			<label index="adminModule.recursive.title"/>
+			<label index="adminModule.recursive.content"/>
+			<label index="adminModule.categoryTree.title"/>
+			<label index="adminModule.categoryTree.content"/>
+			<label index="adminModule.categoryConjunction.title"/>
+			<label index="adminModule.categoryConjunction.content"/>
+			<label index="adminModule.actionSwitch.title"/>
+			<label index="adminModule.actionSwitch.content"/>
+		</languageKey>
+  </data>
+</T3locallangExt>

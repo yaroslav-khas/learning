@@ -6,7 +6,7 @@
             <f:form pageUid="{settings.listPid}" actionUri="/paintings" id="filters" name="filters" object="{filters}">
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
-                        <div class=" d-flex justify-content-between align-items-center">Author
+                        <div class=" d-flex justify-content-between align-items-center"><f:translate key="filter.author"/>
                             <span class="pull-right" data-toggle="collapse" data-target="#author"><i
                                     class="tags_arrow fa fa-arrow-down" aria-hidden="true"></i></span>
                         </div>
@@ -22,7 +22,7 @@
                         </div>
                     </li>
                     <li class="list-group-item">
-                        <div class=" d-flex justify-content-between align-items-center">Style
+                        <div class=" d-flex justify-content-between align-items-center"><f:translate key="filter.style"/>
                             <span class="pull-right" data-toggle="collapse" data-target="#style"><i
                                     class="style__arrow fa fa-arrow-down" aria-hidden="true"></i></span>
                         </div>
@@ -38,7 +38,7 @@
                         </div>
                     </li>
                     <li class="list-group-item">
-                        <div class=" d-flex justify-content-between align-items-center">Tags
+                        <div class=" d-flex justify-content-between align-items-center"><f:translate key="filter.tags"/>
                             <span class="pull-right" data-toggle="collapse" data-target="#tags"><i
                                     class="tags_arrow fa fa-arrow-down" aria-hidden="true"></i></span>
                         </div>
@@ -53,7 +53,7 @@
                             <!-- card-body.// -->
                         </div>
                     </li>
-                    <f:form.submit value="Filter!" class="btn btn-secondary"/>
+                    <f:form.submit value="{f:translate(key='filter.button')}" class="btn btn-secondary"/>
                 </ul>
             </f:form>
         </div>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="uk" datatype="plaintext" original="messages" date="2020-01-27T00:04:35Z" product-name="adminpanel">
+		<header/>
+		<body>
+			<trans-unit id="module.label" resname="module.label">
+				<source>Preview</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="showFluidDebug" resname="showFluidDebug">
+				<source>Show fluid debug output</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="showHiddenPages" resname="showHiddenPages">
+				<source>Show hidden pages</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="software">
+					<target>Показати приховані сторінки</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="showHiddenRecords" resname="showHiddenRecords">
+				<source>Show hidden records</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="software">
+					<target>Показати приховані записи</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="simulateDate" resname="simulateDate">
+				<source>Simulate time</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="simulateUserGroup" resname="simulateUserGroup">
+				<source>Simulate user group</source>
+				<target/>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

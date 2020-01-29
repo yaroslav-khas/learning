@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2019-11-01T17:38:32Z"
+          product-name="your_art">
+        <header/>
+        <body>
+            <trans-unit id="search.placeholder">
+                <source>Search...</source>
+            </trans-unit>
+            <trans-unit id="search.submit">
+                <source>Search</source>
+            </trans-unit>
+            <trans-unit id="filter.author">
+                <source>Authors</source>
+            </trans-unit>
+            <trans-unit id="filter.style">
+                <source>Styles</source>
+            </trans-unit>
+            <trans-unit id="filter.tags">
+                <source>Tags</source>
+            </trans-unit>
+            <trans-unit id="filter.button">
+                <source>Filtering</source>
+            </trans-unit>
+            <trans-unit id="detail.paintings.description">
+                <source>Description</source>
+            </trans-unit>
+            <trans-unit id="detail.paintings.addToCart">
+                <source>Add to cart</source>
+            </trans-unit>
+            <trans-unit id="detail.author.backToList">
+                <source>Back</source>
+            </trans-unit>
+            <trans-unit id="offers.ribbon">
+                <source>Hot Offers</source>
+            </trans-unit>
+            <trans-unit id="offers.count">
+                <source>Count</source>
+            </trans-unit>
+            <trans-unit id="order.complete">
+                <source>Complete</source>
+            </trans-unit>
+            <trans-unit id="order.inProcess">
+                <source>In Process</source>
+            </trans-unit>
+            <trans-unit id="order.totalSum">
+                <source>Total Sum</source>
+            </trans-unit>
+            <trans-unit id="cart.list.product">
+                <source>Product</source>
+            </trans-unit>
+            <trans-unit id="cart.list.quantity">
+                <source>Quantity</source>
+            </trans-unit>
+            <trans-unit id="cart.list.price">
+                <source>Price</source>
+            </trans-unit>
+            <trans-unit id="cart.list.total">
+                <source>Total</source>
+            </trans-unit>
+            <trans-unit id="cart.list.continuedShop">
+                <source>Continued Shopping</source>
+            </trans-unit>
+            <trans-unit id="cart.list.checkout">
+                <source>To Order</source>
+            </trans-unit>
+            <trans-unit id="cart.form.title">
+                <source>Order</source>
+            </trans-unit>
+            <trans-unit id="cart.form.name">
+                <source>Name</source>
+            </trans-unit>
+            <trans-unit id="cart.form.surname">
+                <source>Surname</source>
+            </trans-unit>
+            <trans-unit id="cart.form.company">
+                <source>Choose Company</source>
+            </trans-unit>
+            <trans-unit id="cart.form.warehouse">
+                <source>Choose Warehouse</source>
+            </trans-unit>
+            <trans-unit id="cart.form.submit">
+                <source>To Order</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

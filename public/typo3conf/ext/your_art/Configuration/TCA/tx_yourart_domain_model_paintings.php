@@ -9,15 +9,79 @@ return array(
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',
+        'languageField' => 'sys_language_uid',
+        'transOrigPointerField' => 'l10n_parent',
+        'transOrigDiffSourceField' => 'l10n_diffsource',
+        'translationSource' => 'l10n_source',
     ),
     'interface' => array(
-            'showRecordFieldList' => 'crdate'
+        'showRecordFieldList' => 'crdate,pid,sys_language_uid,l10n_parent,l10n_diffsource'
     ),
+
     'types' => array(
-        '0' => ['showitem' => 'name, description, price,slug, author, image, tags, style, '],
+        '0' => [
+            'showitem' => '
+            name, description, price,slug, author, image, tags, style,
+            --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
+                    --palette--;;paletteLanguage,
+           '],
     ),
-    'palettes' => array(),
+    'palettes' => array(
+        'paletteLanguage' => [
+            'showitem' => '
+                sys_language_uid;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:sys_language_uid_formlabel,l10n_parent, l10n_diffsource,
+            ',
+        ],
+    ),
     'columns' => array(
+        'sys_language_uid' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.language',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'special' => 'languages',
+                'items' => [
+                    [
+                        'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.allLanguages',
+                        -1,
+                        'flags-multiple'
+                    ],
+                ],
+                'default' => 0,
+            ]
+        ],
+        'l10n_parent' => [
+            'displayCond' => 'FIELD:sys_language_uid:>:0',
+            'exclude' => true,
+            'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.l18n_parent',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    ['', 0],
+                ],
+                'foreign_table' => 'tx_yourart_domain_model_paintings',
+                'foreign_table_where' => 'AND tx_yourart_domain_model_paintings.pid=###CURRENT_PID### AND tx_yourart_domain_model_paintings.sys_language_uid IN (-1,0)',
+                'fieldWizard' => [
+                    'selectIcons' => [
+                        'disabled' => true,
+                    ],
+                ],
+                'default' => 0,
+            ]
+        ],
+        'l10n_source' => [
+            'config' => [
+                'type' => 'passthrough'
+            ]
+        ],
+        'l10n_diffsource' => [
+            'config' => [
+                'type' => 'passthrough',
+                'default' => ''
+            ]
+        ],
         'name' => array(
             'config' => array(
                 'size' => 60,
@@ -77,7 +141,7 @@ return array(
                 'type' => 'slug',
                 'size' => 50,
                 'generatorOptions' => [
-                    'fields' => ['nav-title'=>'paintings','name'],
+                    'fields' => ['nav-title' => 'paintings', 'name'],
                     'fieldSeparator' => '/',
                     'prefixParentPageSlug' => true
                 ],
@@ -109,10 +173,10 @@ return array(
             'config' => [
                 'type' => 'select',
                 'eval' => 'required',
-                'items'=> [
-                    ['Default',0]
+                'items' => [
+                    ['Default', 0]
                 ],
-                'default'=> 0,
+                'default' => 0,
                 'renderType' => 'selectSingle',
                 'foreign_table' => 'tx_yourart_domain_model_author',
             ],

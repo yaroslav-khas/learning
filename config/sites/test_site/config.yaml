@@ -19,8 +19,22 @@ languages:
     navigationTitle: ''
     hreflang: ''
     direction: ''
-    flag: global
+    flag: gb
     languageId: '0'
+  -
+    title: Ukraine
+    enabled: true
+    base: /uk/
+    typo3Language: uk
+    locale: uk_UA
+    iso-639-1: uk
+    navigationTitle: ''
+    hreflang: ''
+    direction: ''
+    fallbackType: strict
+    fallbacks: ''
+    flag: ua
+    languageId: '1'
 rootPageId: 1
 routeEnhancers:
   News:
@@ -67,18 +81,26 @@ routeEnhancers:
     extension: YourArt
     plugin: Arts
     routes:
-      - routePath: '/page_{art-page}'
+      -
+        routePath: '/page_{art-page}'
         _controller: 'Auction::list'
         _arguments:
           art-page: '@widget_0/currentPage'
-      - routePath: '/{pictures}'
+      -
+        routePath: '/{pictures}'
         _controller: 'Auction::detail'
         _arguments:
           pictures: item
-      - routePath: '/{author}'
+      -
+        routePath: '/{author}'
         _controller: 'Auction::detailAuthor'
         _arguments:
           author: item
+      -
+        routePath: '/page_{offer-page}'
+        _controller: 'Auction::offers'
+        _arguments:
+          offer-page: '@widget_0/currentPage'
     defaultController: 'Auction::list'
     defaults:
       art-page: '0'
@@ -95,3 +117,12 @@ routeEnhancers:
         type: StaticRangeMapper
         start: '1'
         end: '100'
+      offer-page:
+        type: StaticRangeMapper
+        start: '1'
+        end: '100'
+routes:
+  -
+    route: sitemap.xml
+    type: uri
+    source: 'test.loc/?type=1533906435'

@@ -17,7 +17,7 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Lang\LanguageService;
 
 /**
- * Hook into DatabaseRecordListHook to hide tt_content elements in list view
+ * Hook into DatabaseRecordList to hide tt_content elements in list view
  *
  */
 class RecordListQueryHook

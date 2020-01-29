@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2019-11-01T17:38:32Z"
+          product-name="your_art" target-language="uk">
+        <header/>
+        <body>
+            <trans-unit id="search.placeholder">
+                <source>Search...</source>
+                <target state="translated">Пошук...</target>
+            </trans-unit>
+            <trans-unit id="search.placeholder">
+                <source>Search...</source>
+                <target state="translated">Пошук...</target>
+            </trans-unit>
+            <trans-unit id="search.submit">
+                <source>Search</source>
+                <target state="translated">Пошук</target>
+            </trans-unit>
+            <trans-unit id="filter.author">
+                <source>Author</source>
+                <target state="translated">Автори</target>
+            </trans-unit>
+            <trans-unit id="filter.style">
+                <source>Style</source>
+                <target state="translated">Стилі</target>
+            </trans-unit>
+            <trans-unit id="filter.tags">
+                <source>Tags</source>
+                <target state="translated">Теги</target>
+            </trans-unit>
+            <trans-unit id="filter.button">
+                <source>Filtering</source>
+                <target state="translated">Фільтрувати</target>
+            </trans-unit>
+            <trans-unit id="detail.paintings.description">
+                <source>Description</source>
+                <target state="translated">Опис</target>
+            </trans-unit>
+            <trans-unit id="detail.paintings.addToCart">
+                <source>Add to cart</source>
+                <target state="translated">Додати в корзину</target>
+            </trans-unit>
+            <trans-unit id="detail.author.backToList">
+                <source>Back</source>
+                <target state="translated">Повернутися</target>
+            </trans-unit>
+            <trans-unit id="offers.ribbon">
+                <source>Hot Offers</source>
+                <target state="translated">Актуальне</target>
+            </trans-unit>
+            <trans-unit id="offers.count">
+                <source>Count</source>
+                <target state="translated">Сума</target>
+            </trans-unit>
+            <trans-unit id="order.complete">
+                <source>Complete</source>
+                <target state="translated">Виконано</target>
+            </trans-unit>
+            <trans-unit id="order.inProcess">
+                <source>In Process</source>
+                <target state="translated">Обробляється</target>
+            </trans-unit>
+            <trans-unit id="order.totalSum">
+                <source>Total Sum</source>
+                <target state="translated">До оплати</target>
+            </trans-unit>
+            <trans-unit id="cart.list.product">
+                <source>Product</source>
+                <target state="translated">Назва</target>
+            </trans-unit>
+            <trans-unit id="cart.list.quantity">
+                <source>Quantity</source>
+                <target state="translated">Кількість</target>
+            </trans-unit>
+            <trans-unit id="cart.list.price">
+                <source>Price</source>
+                <target state="translated">Ціна</target>
+            </trans-unit>
+            <trans-unit id="cart.list.total">
+                <source>Total</source>
+                <target state="translated">До оплати</target>
+            </trans-unit>
+            <trans-unit id="cart.list.continuedShop">
+                <source>Continued Shopping</source>
+                <target state="translated">Продовжити покупки</target>
+            </trans-unit>
+            <trans-unit id="cart.list.checkout">
+                <source>To Order</source>
+                <target state="translated">Оформити</target>
+            </trans-unit>
+            <trans-unit id="cart.form.title">
+                <source>Order</source>
+                <target state="translated">Замовлення</target>
+            </trans-unit>
+            <trans-unit id="cart.form.name">
+                <source>Name</source>
+                <target state="translated">Ім'я</target>
+            </trans-unit>
+            <trans-unit id="cart.form.surname">
+                <source>Surname</source>
+                <target state="translated">Прізвище</target>
+            </trans-unit>
+            <trans-unit id="cart.form.company">
+                <source>Choose Company</source>
+                <target state="translated">Доставка</target>
+            </trans-unit>
+            <trans-unit id="cart.form.warehouse">
+                <source>Choose Warehouse</source>
+                <target state="translated">Відділення</target>
+            </trans-unit>
+            <trans-unit id="cart.form.submit">
+                <source>To Order</source>
+                <target state="translated">Оформити</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

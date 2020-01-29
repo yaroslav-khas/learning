@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="uk" datatype="plaintext" original="messages" date="2020-01-27T02:24:25Z" product-name="felogin">
+		<header/>
+		<body>
+			<trans-unit id="felogin_forgotHash" resname="felogin_forgotHash">
+				<source>Forgot hash</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="Buch">
+					<target>Забув хеш</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="felogin_redirectPid" resname="felogin_redirectPid">
+				<source>Redirect at Login to Page (felogin)</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="Buch">
+					<target>При авторизації перенаправляти на сторінку (felogin)</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.CType_pi1" resname="tt_content.CType_pi1">
+				<source>Website User Login</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="Buch">
+					<target>Авторизація користувачів сайту</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.error_header" resname="tt_content.pi_flexform.error_header">
+				<source>Login Error Header</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="software">
+					<target>Заголовок помилки входу</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.error_message" resname="tt_content.pi_flexform.error_message">
+				<source>Login Error Message</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="software">
+					<target>Повідомлення про помилку входу</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.field_manualOrder" resname="tt_content.pi_flexform.field_manualOrder">
+				<source>Using fieldlists below:</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.field_orderDetails" resname="tt_content.pi_flexform.field_orderDetails">
+				<source>User Fields/details:</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.field_orderList" resname="tt_content.pi_flexform.field_orderList">
+				<source>User Fields/list:</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="software">
+					<target>Поля користувача / список:</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.forgot_header" resname="tt_content.pi_flexform.forgot_header">
+				<source>Forgot Password Header</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.forgot_message" resname="tt_content.pi_flexform.forgot_message">
+				<source>Forgot Password Message</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.general_header" resname="tt_content.pi_flexform.general_header">
+				<source>General Header</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="Buch">
+					<target>Загальний заголовок</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.general_message" resname="tt_content.pi_flexform.general_message">
+				<source>General Message</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="Buch">
+					<target>Загальне повідомлення</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.groupSelection" resname="tt_content.pi_flexform.groupSelection">
+				<source>FE group selection:</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.groupSelection_noGroup" resname="tt_content.pi_flexform.groupSelection_noGroup">
+				<source>no group</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="software">
+					<target>немає групи</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.groupSelectmode" resname="tt_content.pi_flexform.groupSelectmode">
+				<source>FE group select mode:</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.groupSelectmode_DontShowSelected" resname="tt_content.pi_flexform.groupSelectmode_DontShowSelected">
+				<source>Don't show selected</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.groupSelectmode_FromTS" resname="tt_content.pi_flexform.groupSelectmode_FromTS">
+				<source>(from Typoscript)</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.groupSelectmode_showAll" resname="tt_content.pi_flexform.groupSelectmode_showAll">
+				<source>Show all</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="software">
+					<target>Показати все</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.groupSelectmode_showSelected" resname="tt_content.pi_flexform.groupSelectmode_showSelected">
+				<source>Show selected</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="software">
+					<target>Показати вибрані</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.logout_header" resname="tt_content.pi_flexform.logout_header">
+				<source>Logout Header</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.logout_message" resname="tt_content.pi_flexform.logout_message">
+				<source>Logout Message</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.redirectDisable" resname="tt_content.pi_flexform.redirectDisable">
+				<source>Disable Redirect</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="software">
+					<target>Вимкнути перенаправлення</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.redirectFirstMethod" resname="tt_content.pi_flexform.redirectFirstMethod">
+				<source>Use First Supported Mode from Selection</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.redirect_header" resname="tt_content.pi_flexform.redirect_header">
+				<source>Redirect Header</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="Buch">
+					<target>Заголовок повідомлення при переадресації</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.redirect_message" resname="tt_content.pi_flexform.redirect_message">
+				<source>Redirect Message</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="Buch">
+					<target>Повідомлення переадресації</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.redirectMode" resname="tt_content.pi_flexform.redirectMode">
+				<source>Redirect Mode</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="software">
+					<target>Режим перенаправлення</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.redirectMode.I.0" resname="tt_content.pi_flexform.redirectMode.I.0">
+				<source>Defined by Usergroup Record</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.redirectMode.I.1" resname="tt_content.pi_flexform.redirectMode.I.1">
+				<source>Defined by User Record</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.redirectMode.I.2" resname="tt_content.pi_flexform.redirectMode.I.2">
+				<source>After Login (TS or Flexform)</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="software">
+					<target>Після входу (TS або Flexform)</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.redirectMode.I.3" resname="tt_content.pi_flexform.redirectMode.I.3">
+				<source>After Logout (TS or Flexform)</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="software">
+					<target>Після виходу (TS або Flexform)</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.redirectMode.I.4" resname="tt_content.pi_flexform.redirectMode.I.4">
+				<source>After Login Error (TS or Flexform)</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.redirectMode.I.5" resname="tt_content.pi_flexform.redirectMode.I.5">
+				<source>Defined by GET/POST Parameters</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.redirectMode.I.6" resname="tt_content.pi_flexform.redirectMode.I.6">
+				<source>Defined by Referrer</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.redirectMode.I.7" resname="tt_content.pi_flexform.redirectMode.I.7">
+				<source>Defined by Domain Entries</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.redirectPageLogin" resname="tt_content.pi_flexform.redirectPageLogin">
+				<source>After Successful Login Redirect to Page</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="software">
+					<target>Після успішного входу перенаправлення на сторінку</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.redirectPageLoginError" resname="tt_content.pi_flexform.redirectPageLoginError">
+				<source>After Failed Login Redirect to Page</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="software">
+					<target>Після невдалого входу перенаправлення на сторінку</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.redirectPageLogout" resname="tt_content.pi_flexform.redirectPageLogout">
+				<source>After Logout Redirect to Page</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="software">
+					<target>Після виходу перенаправлення на сторінку</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.sheet_general" resname="tt_content.pi_flexform.sheet_general">
+				<source>General</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.sheet_messages" resname="tt_content.pi_flexform.sheet_messages">
+				<source>Messages</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="software">
+					<target>Повідомлення</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.sheet_redirect" resname="tt_content.pi_flexform.sheet_redirect">
+				<source>Redirects</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="software">
+					<target>Переадресації</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.show_forgot_password" resname="tt_content.pi_flexform.show_forgot_password">
+				<source>Display Password Recovery Link</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.show_logoutFormAfterLogin" resname="tt_content.pi_flexform.show_logoutFormAfterLogin">
+				<source>Disable redirect after successful login, but display logout-form</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.show_permalogin" resname="tt_content.pi_flexform.show_permalogin">
+				<source>Display Remember Login Option</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.status_header" resname="tt_content.pi_flexform.status_header">
+				<source>Status Display Header</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.status_message" resname="tt_content.pi_flexform.status_message">
+				<source>Status Display Message</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.success_header" resname="tt_content.pi_flexform.success_header">
+				<source>Login Success Header</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="Buch">
+					<target>Заголовок повідомлення про успішну авторизацію</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.success_message" resname="tt_content.pi_flexform.success_message">
+				<source>Login Success Message</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="software">
+					<target>Повідомлення про успішне вхід</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.template_file" resname="tt_content.pi_flexform.template_file">
+				<source>Template File</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="software">
+					<target>Файл шаблону</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.user_storage" resname="tt_content.pi_flexform.user_storage">
+				<source>User Storage Page</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.welcome_header" resname="tt_content.pi_flexform.welcome_header">
+				<source>Welcome Header</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="Buch">
+					<target>Привітальний заголовок</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.welcome_message" resname="tt_content.pi_flexform.welcome_message">
+				<source>Welcome Message</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="Buch">
+					<target>Привітальне повідомлення</target>
+				</alt-trans>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -41,3 +41,5 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['formEngine']['nodeRegistry'][1575560010] = [
     'priority' => 40,
     'class' => \Khas\YourArt\Form\Element\CountField::class,
 ];
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['locallangXMLOverride']['uk']['EXT:news/Resources/Private/Language/locallang.xlf'][] = 'EXT:your_art/Resources/Private/Language/Overrides/News/uk.locallang.xlf';
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['locallangXMLOverride']['uk']['EXT:template/Resources/Private/Language/locallang.xlf'][] = 'EXT:your_art/Resources/Private/Language/Overrides/Template/uk.locallang.xlf';

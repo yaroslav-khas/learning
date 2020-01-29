@@ -9,10 +9,10 @@
                     <thead>
                     <tr>
                         <th scope="col"></th>
-                        <th scope="col">Product</th>
+                        <th scope="col"><f:translate key="cart.list.product"/></th>
                         <th scope="col"></th>
-                        <th scope="col" class="text-center">Quantity</th>
-                        <th scope="col" class="text-right">Price</th>
+                        <th scope="col" class="text-center"><f:translate key="cart.list.quantity"/></th>
+                        <th scope="col" class="text-right"><f:translate key="cart.list.price"/></th>
                         <th></th>
                     </tr>
                     </thead>
@@ -47,7 +47,7 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td><strong>Total</strong></td>
+                        <td><strong><f:translate key="cart.list.total"/></strong></td>
                         <td class="text-right" id="calculateText"><strong>0 $</strong></td>
                     </tr>
                     </tbody>
@@ -57,12 +57,12 @@
         <div class="col mb-2">
             <div class="row">
                 <div class="col-sm-12  col-md-6">
-                    <button class="btn btn-block btn-light">Continue Shopping</button>
+                    <button class="btn btn-block btn-light"><f:translate key="cart.list.continuedShop"/></button>
                 </div>
                 <div class="col-sm-12 col-md-6 text-right">
                     <button class="btn btn-lg btn-block btn-success text-uppercase" id="checkoutSubmit"
                             data-toggle="modal"
-                            data-target="#exampleModal">Checkout
+                            data-target="#exampleModal"><f:translate key="cart.list.checkout"/>
                     </button>
                 </div>
             </div>
@@ -72,7 +72,7 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <h5 class="modal-title" id="exampleModalLabel"><f:translate key="cart.form.title"/></h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -83,20 +83,20 @@
                         <f:form action="addOrder" name="order" object="{order}">
                             <div class="form-group">
                                 <f:form.textfield property="name" value="" errorClass="is-invalid" class="form-control" required="1"
-                                                  placeholder="Name"/>
+                                                  placeholder="{f:translate(key='cart.form.name')}"/>
                             </div>
                             <div class="form-group">
                                 <f:form.textfield property="surname" class="form-control" errorClass="is-invalid" required="1" value=""
-                                                  placeholder="Surname"/>
+                                                  placeholder="{f:translate(key='cart.form.surname')}"/>
                             </div>
                             <div class="form-inline">
                                 <f:cache.disable>
-                                    <yourart:select property="deliveryCompany" defaultValue="Choose Company..."
+                                    <yourart:select property="deliveryCompany" defaultValue="{f:translate(key='cart.form.company')}"
                                                     class="form-control inputDelivery"
                                                     options="{0:'NovaPoshta',1:'Justin'}"/>
                                     <yourart:datalist property="deliveryCity"
                                                       class="form-control inputDeliveryCity invisible"/>
-                                    <yourart:select property="deliveryWarehouse" defaultValue="Choose Warehouse..."
+                                    <yourart:select property="deliveryWarehouse" defaultValue="{f:translate(key='cart.form.warehouse')}"
                                                     class="invisible form-control inputDeliveryWarehouse"/>
                                 </f:cache.disable>
                             </div>
@@ -111,7 +111,7 @@
                                 <f:form.hidden name="item[{key.index}][price]" value="{item.price}"/>
                             </f:for>
                             <div class="form-group">
-                                <f:form.button class="btn btn-lg btn-block btn-success">Buy</f:form.button>
+                                <f:form.button class="btn btn-lg btn-block btn-success"><f:translate key="cart.form.submit"/></f:form.button>
                             </div>
                         </f:form>
                     </div>

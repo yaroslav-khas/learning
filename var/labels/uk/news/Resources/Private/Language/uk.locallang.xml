@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3locallangExt>
+  <data type="array">
+    <languageKey index="uk" type="array">
+			<label index="search-text">Знайдено %1$s результатів для "%2$s".</label>
+			<label index="search-start">Почати пошук</label>
+			<label index="search-noresult">Новин не знайдено</label>
+			<label index="search-subject">Далі</label>
+			<label index="search-minimumDate"/>
+			<label index="search-maximumDate"/>
+			<label index="more-link">Далі</label>
+			<label index="back-link">Назад</label>
+			<label index="related-news">Новини по темі</label>
+			<label index="related-files">Пов'язані файли</label>
+			<label index="related-links">Посилання по темі</label>
+			<label index="author">Автор: %s</label>
+			<label index="author_simple">Автор: %s</label>
+			<label index="paginate_overall">Сторінка %s із %s.</label>
+			<label index="paginate_next">Далі</label>
+			<label index="paginate_previous">Назад</label>
+			<label index="categories"/>
+			<label index="tags"/>
+			<label index="entry">Стаття</label>
+			<label index="entries">Статей</label>
+			<label index="month.01">Січень</label>
+			<label index="month.02">Лютий</label>
+			<label index="month.03">Березень</label>
+			<label index="month.04">Квітень</label>
+			<label index="month.05">Травень</label>
+			<label index="month.06">Червень</label>
+			<label index="month.07">Липень</label>
+			<label index="month.08">Серпень</label>
+			<label index="month.09">Вересень</label>
+			<label index="month.10">Жовтень</label>
+			<label index="month.11">Листопад</label>
+			<label index="month.12">Грудень</label>
+			<label index="day.1"/>
+			<label index="day.2"/>
+			<label index="day.3"/>
+			<label index="day.4"/>
+			<label index="day.5"/>
+			<label index="day.6"/>
+			<label index="day.7"/>
+			<label index="dateFormat"/>
+			<label index="list_nonewsfound">Новини відсутні.</label>
+			<label index="list_nocategoriesfound"/>
+			<label index="newsNotFound"/>
+		</languageKey>
+  </data>
+</T3locallangExt>

@@ -89,7 +89,6 @@ class AuctionController extends YourArtController
             $items = $this->paintingsRepository->findAll();
             $items = $items->toArray();
         }
-        debug($GLOBALS["TSFE"]->fe_user);
         $this->view->assignMultiple(['items' => $items, 'filters' => $filters['filters'], 'arguments' => $this->request->getArguments()]);
     }
 

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3locallangExt>
+  <data type="array">
+    <languageKey index="uk" type="array">
+			<label index=".description">Запис категорії</label>
+			<label index=".details">Категорія для запису новин.</label>
+			<label index="_.seeAlso">Дивіться також сайт http://www.news.com/</label>
+			<label index="sys_language_uid.description">Мова категорії</label>
+			<label index="hidden.description">Приховані категорії ніколи не будуть показані на сайті.</label>
+			<label index="title.description">Назва категорії</label>
+			<label index="parentcategory.description">Виберіть батьківську категорію для цього запису, щоб створити дерево категорій.</label>
+			<label index="image.description">Зображення для категорії.</label>
+			<label index="description.description">Опис для категорії.</label>
+			<label index="single_pid.description">Виберіть сторінку, яка використовується для виводу повного тексту статей пов'язаних з цією категорією. Цей параметр може бути перевизначений з конфігураційної сторінки в налаштуваннях плагіна.</label>
+			<label index="shortcut.description">Зображення для категорії.</label>
+		</languageKey>
+  </data>
+</T3locallangExt>

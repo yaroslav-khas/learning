@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2019-11-01T17:38:32Z"
+          product-name="template">
+        <header/>
+        <body>
+            <trans-unit id="template.hello" xml:space="preserve">
+                <source>Hello</source>
+            </trans-unit>
+            <trans-unit id="template.default" xml:space="preserve">
+                <source>Profile</source>
+            </trans-unit>
+            <trans-unit id="template.logout" xml:space="preserve">
+                <source>Logout</source>
+            </trans-unit>
+            <trans-unit id="template.login" xml:space="preserve">
+                <source>Login</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

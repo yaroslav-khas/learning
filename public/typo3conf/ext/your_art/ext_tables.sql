@@ -8,7 +8,10 @@ CREATE TABLE tx_yourart_domain_model_paintings (
     tstamp int(11) unsigned DEFAULT 0 NOT NULL,
     crdate int(11) unsigned DEFAULT 0 NOT NULL,
     cruser_id int(11) DEFAULT '0' NOT NULL,
-
+    sys_language_uid int(11) DEFAULT '0' NOT NULL,
+	l10n_parent int(11) DEFAULT '0' NOT NULL,
+	l10n_diffsource mediumtext,
+	l10n_source int(11) DEFAULT '0' NOT NULL,
     deleted tinyint(4) unsigned DEFAULT 0 NOT NULL,
     hidden tinyint(4) unsigned DEFAULT 0 NOT NULL,
 
@@ -24,7 +27,9 @@ CREATE TABLE tx_yourart_domain_model_paintings (
 
 
     PRIMARY KEY (uid),
-    KEY parent (pid)
+    KEY parent (pid),
+   	KEY sys_language_uid_l10n_parent (sys_language_uid,l10n_parent),
+
 );
 
 #
@@ -39,6 +44,10 @@ CREATE TABLE tx_yourart_domain_model_tag (
     deleted tinyint(4) unsigned DEFAULT 0 NOT NULL,
     hidden tinyint(4) unsigned DEFAULT 0 NOT NULL,
 	slug varchar(2048),
+    sys_language_uid int(11) DEFAULT '0' NOT NULL,
+	l10n_parent int(11) DEFAULT '0' NOT NULL,
+	l10n_diffsource mediumtext,
+	l10n_source int(11) DEFAULT '0' NOT NULL,
 
     title tinytext,
 
@@ -67,6 +76,10 @@ CREATE TABLE tx_yourart_domain_model_style (
     deleted tinyint(4) unsigned DEFAULT 0 NOT NULL,
     hidden tinyint(4) unsigned DEFAULT 0 NOT NULL,
 	slug varchar(2048),
+	sys_language_uid int(11) DEFAULT '0' NOT NULL,
+	l10n_parent int(11) DEFAULT '0' NOT NULL,
+	l10n_diffsource mediumtext,
+	l10n_source int(11) DEFAULT '0' NOT NULL,
 
     title tinytext,
 
@@ -95,6 +108,10 @@ CREATE TABLE tx_yourart_domain_model_author (
     deleted tinyint(4) unsigned DEFAULT 0 NOT NULL,
     hidden tinyint(4) unsigned DEFAULT 0 NOT NULL,
 	slug varchar(2048),
+	sys_language_uid int(11) DEFAULT '0' NOT NULL,
+	l10n_parent int(11) DEFAULT '0' NOT NULL,
+	l10n_diffsource mediumtext,
+	l10n_source int(11) DEFAULT '0' NOT NULL,
 
     title tinytext,
     description text NOT NULL,
@@ -125,6 +142,10 @@ CREATE TABLE tx_yourart_domain_model_auctioneer (
     deleted tinyint(4) unsigned DEFAULT 0 NOT NULL,
     hidden tinyint(4) unsigned DEFAULT 0 NOT NULL,
 	slug varchar(2048),
+	sys_language_uid int(11) DEFAULT '0' NOT NULL,
+	l10n_parent int(11) DEFAULT '0' NOT NULL,
+	l10n_diffsource mediumtext,
+	l10n_source int(11) DEFAULT '0' NOT NULL,
 
     title tinytext,
     description text NOT NULL,
@@ -144,6 +165,10 @@ CREATE TABLE tx_yourart_domain_model_offers (
     crdate int(11) unsigned DEFAULT 0 NOT NULL,
     deleted tinyint(4) unsigned DEFAULT 0 NOT NULL,
     hidden tinyint(4) unsigned DEFAULT 0 NOT NULL,
+    sys_language_uid int(11) DEFAULT '0' NOT NULL,
+	l10n_parent int(11) DEFAULT '0' NOT NULL,
+	l10n_diffsource mediumtext,
+	l10n_source int(11) DEFAULT '0' NOT NULL,
 
     picture_id int(11) DEFAULT '0' NOT NULL,
     title tinytext,
@@ -166,6 +191,7 @@ CREATE TABLE tx_yourart_domain_model_orders (
     crdate int(11) unsigned DEFAULT 0 NOT NULL,
     deleted tinyint(4) unsigned DEFAULT 0 NOT NULL,
     hidden tinyint(4) unsigned DEFAULT 0 NOT NULL,
+
 
     name tinytext,
     surname tinytext,

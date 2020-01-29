@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="uk" datatype="plaintext" original="messages" date="2020-01-27T00:04:35Z" product-name="adminpanel">
+		<header/>
+		<body>
+			<trans-unit id="displayContent" resname="displayContent">
+				<source>Display content</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="displayMessages" resname="displayMessages">
+				<source>Display messages</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="displayTimes" resname="displayTimes">
+				<source>Display all times</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="forceTemplateParsing" resname="forceTemplateParsing">
+				<source>Force TS Rendering</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="module.label" resname="module.label">
+				<source>TypoScript</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="software">
+					<target>TypoScript</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="module.shortinfo" resname="module.shortinfo">
+				<source>(%s Messages)</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="sub.waterfall.label" resname="sub.waterfall.label">
+				<source>TS Tree</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="trackContentRendering" resname="trackContentRendering">
+				<source>Track content rendering</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="treeDisplay" resname="treeDisplay">
+				<source>Tree display</source>
+				<target/>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

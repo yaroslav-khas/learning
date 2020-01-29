@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="uk" datatype="plaintext" original="messages" date="2020-01-27T00:04:35Z" product-name="adminpanel">
+		<header/>
+		<body>
+			<trans-unit id="module.label" resname="module.label">
+				<source>Debug</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="module.shortinfo" resname="module.shortinfo">
+				<source>(%s Errors/Warnings)</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="submodule.log.component" resname="submodule.log.component">
+				<source>Component</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="submodule.log.groupByComponent" resname="submodule.log.groupByComponent">
+				<source>Group by Component</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="submodule.log.groupByLevel" resname="submodule.log.groupByLevel">
+				<source>Group by Level</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="submodule.log.label" resname="submodule.log.label">
+				<source>Log</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="submodule.log.level" resname="submodule.log.level">
+				<source>Level</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="submodule.log.message" resname="submodule.log.message">
+				<source>Log Message</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="submodule.log.noEntries" resname="submodule.log.noEntries">
+				<source>No log entries.</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="submodule.log.startLevel" resname="submodule.log.startLevel">
+				<source>Display only levels equal or higher to</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="submodule.queryInformation.backtrace" resname="submodule.queryInformation.backtrace">
+				<source>Backtrace</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="submodule.queryInformation.doctrineDebug" resname="submodule.queryInformation.doctrineDebug">
+				<source>SQL Debug</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="submodule.queryInformation.label" resname="submodule.queryInformation.label">
+				<source>Query Information</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="submodule.queryInformation.queries" resname="submodule.queryInformation.queries">
+				<source>Queries</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="submodule.queryInformation.query" resname="submodule.queryInformation.query">
+				<source>Query</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="submodule.queryInformation.queryCount" resname="submodule.queryInformation.queryCount">
+				<source>Count</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="submodule.queryInformation.queryTime" resname="submodule.queryInformation.queryTime">
+				<source>Total Time [ms]</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="submodule.queryInformation.sqlQuery" resname="submodule.queryInformation.sqlQuery">
+				<source>SQL Query</source>
+				<target/>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

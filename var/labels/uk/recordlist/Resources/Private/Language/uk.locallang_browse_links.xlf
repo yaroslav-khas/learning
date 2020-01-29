@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="uk" datatype="plaintext" original="messages" date="2020-01-27T06:14:56Z" product-name="recordlist">
+		<header/>
+		<body>
+			<trans-unit id="addToList" resname="addToList" approved="yes">
+				<source>Add to list...</source>
+				<target state="translated">Додати до списку...</target>
+			</trans-unit>
+			<trans-unit id="class" resname="class">
+				<source>CSS-Class</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="clickToRedrawFullSize" resname="clickToRedrawFullSize" approved="yes">
+				<source>Image is larger than shown here! Click to redraw page with full sized images.</source>
+				<target state="translated">Зображення більше, ніж показано тут! Клацніть, щоб перемалювати сторінку із зображеннями повного розміру.</target>
+			</trans-unit>
+			<trans-unit id="contentElements" resname="contentElements" approved="yes">
+				<source>Content elements</source>
+				<target state="translated">Елементи вмісту</target>
+			</trans-unit>
+			<trans-unit id="currentLink" resname="currentLink" approved="yes">
+				<source>Current Link</source>
+				<target state="translated">Поточне посилання</target>
+			</trans-unit>
+			<trans-unit id="email" resname="email" approved="yes">
+				<source>Email</source>
+				<target state="translated">Email</target>
+			</trans-unit>
+			<trans-unit id="emailAddress" resname="emailAddress" approved="yes">
+				<source>Email address</source>
+				<target state="translated">Адреса e-mail</target>
+			</trans-unit>
+			<trans-unit id="extUrl" resname="extUrl" approved="yes">
+				<source>External URL</source>
+				<target state="translated">Зовнішній URL</target>
+			</trans-unit>
+			<trans-unit id="file" resname="file" approved="yes">
+				<source>File</source>
+				<target state="translated">Файл</target>
+			</trans-unit>
+			<trans-unit id="files" resname="files" approved="yes">
+				<source>Files</source>
+				<target state="translated">Файли</target>
+			</trans-unit>
+			<trans-unit id="fileSelector" resname="fileSelector">
+				<source>File selector</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="findDragDrop" resname="findDragDrop" approved="yes">
+				<source>Find and click on your image then drag it into the editor in the main window!</source>
+				<target state="translated">Знайдіть потрібне зображення, клацніть по ньому й перетягніть до редактора у головному вікні!</target>
+			</trans-unit>
+			<trans-unit id="folder" resname="folder">
+				<source>Folder</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="folders" resname="folders">
+				<source>Folders</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="folderSelector" resname="folderSelector">
+				<source>Folder selector</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="folderTree" resname="folderTree" approved="yes">
+				<source>Folder Tree</source>
+				<target state="translated">Дерево тек</target>
+			</trans-unit>
+			<trans-unit id="importSelection" resname="importSelection">
+				<source>Import selection</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="info" resname="info" approved="yes">
+				<source>Info</source>
+				<target state="translated">Інформація</target>
+			</trans-unit>
+			<trans-unit id="invalidChar" resname="invalidChar" approved="yes">
+				<source>ERROR: Invalid character found in file path (%s). Cannot add the file!</source>
+				<target state="translated">ПОМИЛКА: у путі файлу знайдено невірний символ (%s). Неможливо додати файл!</target>
+			</trans-unit>
+			<trans-unit id="linkRelationship" resname="linkRelationship">
+				<source>Relationship</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="newWindow" resname="newWindow" approved="yes">
+				<source>New window</source>
+				<target state="translated">Нове вікно</target>
+			</trans-unit>
+			<trans-unit id="none" resname="none" approved="yes">
+				<source>None - new link!</source>
+				<target state="translated">Немає - нове посилання!</target>
+			</trans-unit>
+			<trans-unit id="noWebFolder" resname="noWebFolder" approved="yes">
+				<source>You cannot drag images from this folder (yellow) because it is internal on the server.</source>
+				<target state="translated">Ви не можете перетягнути зображення із цієї (жовтої) теки, тому що вона є внутрішньою для серверу.</target>
+			</trans-unit>
+			<trans-unit id="page" resname="page" approved="yes">
+				<source>Page</source>
+				<target state="translated">Сторінка</target>
+			</trans-unit>
+			<trans-unit id="page_id" resname="page_id">
+				<source>Page ID</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="pageTree" resname="pageTree" approved="yes">
+				<source>Page tree</source>
+				<target state="translated">Дерево сторінок</target>
+			</trans-unit>
+			<trans-unit id="params" resname="params">
+				<source>Additional link parameters</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="path" resname="path" approved="yes">
+				<source>Path</source>
+				<target state="translated">Путь</target>
+			</trans-unit>
+			<trans-unit id="recordSelector" resname="recordSelector">
+				<source>Record selector</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="removeLink" resname="removeLink" approved="yes">
+				<source>Remove link</source>
+				<target state="translated">Видалити посилання</target>
+			</trans-unit>
+			<trans-unit id="selectRecords" resname="selectRecords" approved="yes">
+				<source>Select Records</source>
+				<target state="translated">Обрати записи</target>
+			</trans-unit>
+			<trans-unit id="setLink" resname="setLink" approved="yes">
+				<source>Set Link</source>
+				<target state="translated">Встановити посилання</target>
+			</trans-unit>
+			<trans-unit id="special" resname="special" approved="yes">
+				<source>Special</source>
+				<target state="translated">Спеціальний</target>
+			</trans-unit>
+			<trans-unit id="target" resname="target" approved="yes">
+				<source>Target</source>
+				<target state="translated">Ціль</target>
+			</trans-unit>
+			<trans-unit id="title" resname="title" approved="yes">
+				<source>Title</source>
+				<target state="translated">Назва</target>
+			</trans-unit>
+			<trans-unit id="toggleSelection" resname="toggleSelection">
+				<source>Toggle selection</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="top" resname="top" approved="yes">
+				<source>Top</source>
+				<target state="translated">Угорі</target>
+			</trans-unit>
+			<trans-unit id="update" resname="update" approved="yes">
+				<source>Update</source>
+				<target state="translated">Поновити</target>
+			</trans-unit>
+			<trans-unit id="uploadImage" resname="uploadImage" approved="yes">
+				<source>Upload Image</source>
+				<target state="translated">Додати зображення</target>
+			</trans-unit>
+			<trans-unit id="urlPlaceholder" resname="urlPlaceholder">
+				<source>https://...</source>
+				<target/>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

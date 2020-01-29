@@ -1,0 +1,3 @@
+mysqld, Version: 10.1.43-MariaDB-1~bionic (mariadb.org binary distribution). started with:
+Tcp port: 3306  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument

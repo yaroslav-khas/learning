@@ -1,3 +1,4 @@
+#Settings vars for this plugin
 plugin.tx_yourart {
     mvc.callDefaultActionIfActionCantBeResolved = 1
 
@@ -10,23 +11,8 @@ plugin.tx_yourart {
 
     }
 
-
 }
-plugin.tx_powermail{
-    view{
-        templateRootPaths {
-            1 = EXT:your_art/Resources/Private/Templates/Powermail/
 
-        }
-        partialRootPaths{
-            1 = EXT:your_art/Resources/Private/Partials/Powermail/
-        }
-        layoutRootPaths {
-            1 = EXT:your_art/Resources/Private/Layouts/Powermail/
-
-        }
-    }
-}
 page.includeCSS.cssYourArt = EXT:your_art/Resources/Public/Css/main.css
 page.includeJSFooter.jsYourArt = EXT:your_art/Resources/Public/Js/main.js
 
@@ -46,3 +32,126 @@ ajaxContent {
         debug = 0
     }
 }
+
+#Custom settings view for PowerMail
+plugin.tx_powermail {
+    view {
+        templateRootPaths {
+            1 = EXT:your_art/Resources/Private/Templates/Powermail/
+
+        }
+
+        partialRootPaths {
+            1 = EXT:your_art/Resources/Private/Partials/Powermail/
+        }
+
+        layoutRootPaths {
+            1 = EXT:your_art/Resources/Private/Layouts/Powermail/
+
+        }
+    }
+}
+
+#Custom localization fields for News
+#plugin.tx_news._LOCAL_LANG.uk.list_nonewsfound = Немає новин!
+
+
+#Seo configuration or sitemap configuration
+plugin.tx_seo {
+    config {
+        xmlSitemap {
+            sitemaps {
+                456 {
+                    provider = TYPO3\CMS\Seo\XmlSitemap\RecordsXmlSitemapDataProvider
+                    config {
+                        table = tx_yourart_domain_model_paintings
+                        sortField = uid
+                        pid = 7
+                        recursive = 0
+                        url {
+                            pageId = 11
+                            fieldToParameterMap {
+                                uid = tx_yourart_arts[item]
+                            }
+
+                            additionalGetParameters {
+                                tx_yourart_arts.controller = Auction
+                                tx_yourart_arts.action = detail
+                            }
+
+                            useCacheHash = 1
+                        }
+                    }
+                }
+
+                457 {
+                    provider = TYPO3\CMS\Seo\XmlSitemap\RecordsXmlSitemapDataProvider
+                    config {
+                        table = tx_yourart_domain_model_author
+                        sortField = uid
+                        pid = 7
+                        recursive = 0
+                        url {
+                            pageId = 12
+                            fieldToParameterMap {
+                                uid = tx_yourart_arts[item]
+                            }
+
+                            additionalGetParameters {
+                                tx_yourart_arts.controller = Auction
+                                tx_yourart_arts.action = detailAuthor
+                            }
+
+                            useCacheHash = 1
+                        }
+                    }
+                }
+
+                #                458 {
+                #                    provider = TYPO3\CMS\Seo\XmlSitemap\RecordsXmlSitemapDataProvider
+                #                    config {
+                #                        table = tx_yourart_domain_model_offers
+                #                        sortField = uid
+                #                        pid = 7
+                #                        recursive = 0
+                #                        url {
+                #                            pageId = 17
+                #                            useCacheHash = 1
+                #                        }
+                #                    }
+                #                }
+                news_default {
+                    provider = GeorgRinger\News\Seo\NewsXmlSitemapDataProvider
+                    config {
+                        excludedTypes = 1,2
+                        additionalWhere =
+                        ## enable these two lines to generate a Google News sitemap
+                        # template = EXT:news/Resources/Private/Templates/News/GoogleNews.xml
+                        # googleNews = 1
+
+                        sortField = datetime
+                        lastModifiedField = tstamp
+                        pid = 8
+                        recursive = 2
+                        url {
+                            pageId = 13
+                            useCategorySinglePid = 1
+
+                            fieldToParameterMap {
+                                uid = tx_news_pi1[news]
+                            }
+
+                            additionalGetParameters {
+                                tx_news_pi1.controller = News
+                                tx_news_pi1.action = detail
+                            }
+
+                            useCacheHash = 1
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

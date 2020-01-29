@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="uk" datatype="plaintext" original="messages" date="2020-01-27T00:04:35Z" product-name="adminpanel">
+		<header/>
+		<body>
+			<trans-unit id="button.close" resname="button.close">
+				<source>Close</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="software">
+					<target>Закрити</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="button.view" resname="button.view">
+				<source>View</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="deprecatedModuleLabel" resname="deprecatedModuleLabel">
+				<source>General</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="settings.label" resname="settings.label">
+				<source>Settings</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="software">
+					<target>Налаштування</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="settings.updateButtonLabel" resname="settings.updateButtonLabel">
+				<source>Update Settings</source>
+				<target/>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

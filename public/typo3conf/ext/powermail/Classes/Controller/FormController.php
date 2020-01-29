@@ -52,7 +52,6 @@ class FormController extends AbstractController
      */
     public function formAction()
     {
-        debug($this->settings);
         $form = $this->formRepository->findByUid($this->settings['main']['form']);
         $this->signalDispatch(__CLASS__, __FUNCTION__ . 'BeforeRenderView', [$form, $this]);
         SessionUtility::saveFormStartInSession($this->settings, $form);

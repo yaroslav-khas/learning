@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="uk" datatype="plaintext" original="messages" date="2020-01-27T00:04:35Z" product-name="adminpanel">
+		<header/>
+		<body>
+			<trans-unit id="cache.clear_current" resname="cache.clear_current">
+				<source>Clear cache of current page</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="software">
+					<target>Очистити кеш поточної сторінки</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="cache.clear_pages" resname="cache.clear_pages">
+				<source>Clear frontend cache</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="cache.no_cache" resname="cache.no_cache">
+				<source>No caching</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="software">
+					<target>Немає кешування</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="module.label" resname="module.label">
+				<source>Cache</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="software">
+					<target>Кеш</target>
+				</alt-trans>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

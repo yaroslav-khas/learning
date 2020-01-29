@@ -66,11 +66,7 @@
                 </div>
             </div>
             <f:debug>{_all}</f:debug>
-            <div data-url="{f:uri.action(action: 'ajaxAddCart',arguments: {item: item.uid}, pageType:99)}" data-id="{item.uid}" id="cartsubmit" class="btn btn-primary">Cart</div>
-            <div data-url="{f:uri.action(action: 'ajaxRemoveCart', pageType:99)}" id="cartdelete" class="btn btn-primary">Cart Clear</div>
-
-            <f:link.action pageUid="22" class="btn btn-primary">Back to Blog list</f:link.action>
-
+            <div data-url="{f:uri.action(action: 'ajaxAddCart',arguments: {item: item.uid}, pageType:99)}" data-id="{item.uid}" id="cartsubmit" class="btn btn-primary"><f:translate key="detail.paintings.addToCart"/></div>
         </div>
     </div>
     <div class="row">
@@ -78,7 +74,7 @@
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item">
                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
-                       aria-controls="home" aria-selected="true">Description</a>
+                       aria-controls="home" aria-selected="true"><f:translate key="detail.paintings.description"/></a>
                 </li>
 
             </ul>

@@ -13,6 +13,7 @@ plugin.tx_powermail {
 				# cat=powermail_styles//0020; type=int+; label= Number of columns
 				numberOfColumns = 2
 
+
 				# cat=powermail_styles//0100; type=text; label= Framework classname(s) for row containers
 				rowClasses = row
 

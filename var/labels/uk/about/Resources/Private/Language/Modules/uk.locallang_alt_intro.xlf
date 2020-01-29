@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="uk" datatype="plaintext" original="messages" date="2020-01-27T00:00:48Z" product-name="about">
+		<header/>
+		<body>
+			<trans-unit id="endText" resname="endText" approved="yes">
+				<source>Features may vary depending on your website and permissions</source>
+				<target state="translated">Список модулів залежить від веб-сайту та прав доступу</target>
+			</trans-unit>
+			<trans-unit id="introtext" resname="introtext" approved="yes">
+				<source>Web Content Management System</source>
+				<target state="translated">Система керування веб-контентом</target>
+			</trans-unit>
+			<trans-unit id="introtext2" resname="introtext2" approved="yes">
+				<source>This is a brief description of the available modules.</source>
+				<target state="translated">Стислий опис модулів:</target>
+			</trans-unit>
+			<trans-unit id="userInfo" resname="userInfo" approved="no">
+				<source>You're logged in as user</source>
+				<target state="needs-translation">Ви зареєстровані як:</target>
+				<alt-trans xml:space="preserve" origin="software">
+					<target>Ви увійшли як користувач:</target>
+				</alt-trans>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

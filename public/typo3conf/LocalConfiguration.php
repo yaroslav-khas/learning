@@ -33,11 +33,18 @@ return [
             'extensionmanager' => 'a:2:{s:21:"automaticInstallation";s:1:"1";s:11:"offlineMode";s:1:"0";}',
             'gridelements' => 'a:6:{s:20:"additionalStylesheet";s:0:"";s:19:"nestingInListModule";s:1:"0";s:26:"overlayShortcutTranslation";s:1:"0";s:19:"disableDragInWizard";s:1:"0";s:25:"disableCopyFromPageButton";s:1:"0";s:38:"disableAutomaticUnusedColumnCorrection";s:1:"0";}',
             'indexed_search' => 'a:20:{s:8:"pdftools";s:9:"/usr/bin/";s:8:"pdf_mode";s:2:"20";s:5:"unzip";s:9:"/usr/bin/";s:6:"catdoc";s:9:"/usr/bin/";s:6:"xlhtml";s:9:"/usr/bin/";s:7:"ppthtml";s:9:"/usr/bin/";s:5:"unrtf";s:9:"/usr/bin/";s:18:"trackIpInStatistic";s:1:"2";s:9:"debugMode";s:1:"0";s:18:"fullTextDataLength";s:1:"0";s:23:"disableFrontendIndexing";s:1:"0";s:21:"enableMetaphoneSearch";s:1:"1";s:6:"minAge";s:2:"24";s:6:"maxAge";s:1:"0";s:16:"maxExternalFiles";s:1:"5";s:26:"useCrawlerForExternalFiles";s:1:"0";s:11:"flagBitMask";s:3:"192";s:16:"ignoreExtensions";s:0:"";s:17:"indexExternalURLs";s:1:"0";s:16:"useMysqlFulltext";s:1:"0";}',
-            'mask' => 'a:9:{s:4:"json";s:47:"typo3conf/ext/template/Resources/Mask/mask.json";s:18:"backendlayout_pids";s:3:"0,1";s:7:"content";s:65:"typo3conf/ext/template/Resources/Private/Mask/Frontend/Templates/";s:7:"layouts";s:63:"typo3conf/ext/template/Resources/Private/Mask/Frontend/Layouts/";s:8:"partials";s:64:"typo3conf/ext/template/Resources/Private/Mask/Frontend/Partials/";s:7:"backend";s:64:"typo3conf/ext/template/Resources/Private/Mask/Backend/Templates/";s:15:"layouts_backend";s:62:"typo3conf/ext/template/Resources/Private/Mask/Backend/Layouts/";s:16:"partials_backend";s:63:"typo3conf/ext/template/Resources/Private/Mask/Backend/Partials/";s:7:"preview";s:45:"typo3conf/ext/template/Resources/Public/Mask/";}',
+            'mask' => 'a:9:{s:4:"json";s:59:"typo3conf/ext/mask_project/Resources/Private/Mask/mask.json";s:18:"backendlayout_pids";s:3:"0,1";s:7:"content";s:69:"typo3conf/ext/mask_project/Resources/Private/Mask/Frontend/Templates/";s:7:"layouts";s:67:"typo3conf/ext/mask_project/Resources/Private/Mask/Frontend/Layouts/";s:8:"partials";s:68:"typo3conf/ext/mask_project/Resources/Private/Mask/Frontend/Partials/";s:7:"backend";s:68:"typo3conf/ext/mask_project/Resources/Private/Mask/Backend/Templates/";s:15:"layouts_backend";s:66:"typo3conf/ext/mask_project/Resources/Private/Mask/Backend/Layouts/";s:16:"partials_backend";s:67:"typo3conf/ext/mask_project/Resources/Private/Mask/Backend/Partials/";s:7:"preview";s:49:"typo3conf/ext/mask_project/Resources/Public/Mask/";}',
             'news' => 'a:17:{s:13:"prependAtCopy";s:1:"1";s:6:"tagPid";s:1:"1";s:12:"rteForTeaser";s:1:"0";s:22:"contentElementRelation";s:1:"1";s:21:"contentElementPreview";s:1:"1";s:13:"manualSorting";s:1:"0";s:19:"categoryRestriction";s:0:"";s:34:"categoryBeGroupTceFormsRestriction";s:1:"0";s:19:"dateTimeNotRequired";s:1:"0";s:11:"archiveDate";s:4:"date";s:12:"mediaPreview";s:5:"false";s:20:"advancedMediaPreview";s:1:"1";s:24:"showAdministrationModule";s:1:"1";s:35:"hidePageTreeForAdministrationModule";s:1:"0";s:12:"showImporter";s:1:"0";s:18:"storageUidImporter";s:1:"1";s:22:"resourceFolderImporter";s:12:"/news_import";}',
             'powermail' => 'a:8:{s:12:"disableIpLog";s:1:"1";s:27:"disableMarketingInformation";s:1:"0";s:20:"disableBackendModule";s:1:"0";s:24:"disablePluginInformation";s:1:"0";s:35:"disablePluginInformationMailPreview";s:1:"0";s:13:"enableCaching";s:1:"0";s:15:"l10n_mode_merge";s:1:"0";s:29:"replaceIrreWithElementBrowser";s:1:"0";}',
             'scheduler' => 'a:2:{s:11:"maxLifetime";s:4:"1440";s:15:"showSampleTasks";s:1:"1";}',
             'vhs' => 'a:1:{s:20:"disableAssetHandling";s:1:"0";}',
+        ],
+    ],
+    'EXTCONF' => [
+        'lang' => [
+            'availableLanguages' => [
+                'uk',
+            ],
         ],
     ],
     'EXTENSIONS' => [
@@ -84,15 +91,15 @@ return [
             'xlhtml' => '/usr/bin/',
         ],
         'mask' => [
-            'backend' => 'typo3conf/ext/template/Resources/Private/Mask/Backend/Templates/',
+            'backend' => 'typo3conf/ext/mask_project/Resources/Private/Mask/Backend/Templates/',
             'backendlayout_pids' => '0,1',
-            'content' => 'typo3conf/ext/template/Resources/Private/Mask/Frontend/Templates/',
-            'json' => 'typo3conf/ext/template/Resources/Mask/mask.json',
-            'layouts' => 'typo3conf/ext/template/Resources/Private/Mask/Frontend/Layouts/',
-            'layouts_backend' => 'typo3conf/ext/template/Resources/Private/Mask/Backend/Layouts/',
-            'partials' => 'typo3conf/ext/template/Resources/Private/Mask/Frontend/Partials/',
-            'partials_backend' => 'typo3conf/ext/template/Resources/Private/Mask/Backend/Partials/',
-            'preview' => 'typo3conf/ext/template/Resources/Public/Mask/',
+            'content' => 'typo3conf/ext/mask_project/Resources/Private/Mask/Frontend/Templates/',
+            'json' => 'typo3conf/ext/mask_project/Resources/Private/Mask/mask.json',
+            'layouts' => 'typo3conf/ext/mask_project/Resources/Private/Mask/Frontend/Layouts/',
+            'layouts_backend' => 'typo3conf/ext/mask_project/Resources/Private/Mask/Backend/Layouts/',
+            'partials' => 'typo3conf/ext/mask_project/Resources/Private/Mask/Frontend/Partials/',
+            'partials_backend' => 'typo3conf/ext/mask_project/Resources/Private/Mask/Backend/Partials/',
+            'preview' => 'typo3conf/ext/mask_project/Resources/Public/Mask/',
         ],
         'news' => [
             'advancedMediaPreview' => '1',

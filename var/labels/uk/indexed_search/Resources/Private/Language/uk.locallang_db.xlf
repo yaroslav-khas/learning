@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="uk" datatype="plaintext" original="messages" date="2020-01-27T03:50:01Z" product-name="indexed_search">
+		<header/>
+		<body>
+			<trans-unit id="index_config" resname="index_config" approved="yes">
+				<source>Indexing Configuration</source>
+				<target state="translated">Конфігурація індексування.</target>
+			</trans-unit>
+			<trans-unit id="index_config.alternative_source_pid" resname="index_config.alternative_source_pid" approved="no">
+				<source>Alternative Source Page</source>
+				<target state="needs-translation">Альтернативна вихідна сторінка</target>
+			</trans-unit>
+			<trans-unit id="index_config.chashcalc" resname="index_config.chashcalc" approved="yes">
+				<source>Calculate cHash (force caching)?</source>
+				<target state="translated">Вирахувати cHash (навмисне кешування)?</target>
+				<note from="developer">This label is deprecated (not used anymore) since TYPO3v10</note>
+				<note>This label is deprecated (not used anymore) since TYPO3v10
+This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v9</note>
+			</trans-unit>
+			<trans-unit id="index_config.depth" resname="index_config.depth" approved="no">
+				<source>Depth</source>
+				<target state="needs-translation">Глибина:</target>
+			</trans-unit>
+			<trans-unit id="index_config.description" resname="index_config.description" approved="no">
+				<source>Description</source>
+				<target state="needs-translation">Опис:</target>
+			</trans-unit>
+			<trans-unit id="index_config.extensions" resname="index_config.extensions" approved="no">
+				<source>Limit to extensions (commalist)</source>
+				<target state="needs-translation">Обмежити до додатків (список через кому):</target>
+			</trans-unit>
+			<trans-unit id="index_config.externalUrl" resname="index_config.externalUrl" approved="no">
+				<source>External URL (eg. "http://www.domain.org/")</source>
+				<target state="needs-translation">Зовнішній URL:</target>
+			</trans-unit>
+			<trans-unit id="index_config.fields" resname="index_config.fields" approved="no">
+				<source>Fields (first is title)</source>
+				<target state="needs-translation">Поля (перше - назва):</target>
+			</trans-unit>
+			<trans-unit id="index_config.filepath" resname="index_config.filepath" approved="no">
+				<source>Filepath</source>
+				<target state="needs-translation">Шлях до файлу:</target>
+			</trans-unit>
+			<trans-unit id="index_config.get_params" resname="index_config.get_params" approved="no">
+				<source>GET parameter string (with ###UID### substitution)</source>
+				<target state="needs-translation">Рядок запиту GET (з підстановкою ###UID###):</target>
+			</trans-unit>
+			<trans-unit id="index_config.indexcfgs" resname="index_config.indexcfgs" approved="no">
+				<source>Indexing configurations</source>
+				<target state="needs-translation">Конфігурація індексування.</target>
+				<note>87%</note>
+			</trans-unit>
+			<trans-unit id="index_config.parameterCfgs" resname="index_config.parameterCfgs">
+				<source>Parameter combination configuration ([tablename]:&amp;[param]=###UID###)</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="index_config.recordsbatch" resname="index_config.recordsbatch">
+				<source>How many records to index a minute (default is 100)</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="index_config.records_indexonchange" resname="index_config.records_indexonchange">
+				<source>Index Records immediately when saved?</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="index_config.rootpage" resname="index_config.rootpage">
+				<source>Root page</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="index_config.set_id" resname="index_config.set_id">
+				<source>Session ID (if &gt; zero, then indexing job is running)</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="index_config.table2index" resname="index_config.table2index" approved="no">
+				<source>Table to index</source>
+				<target state="needs-translation">Таблиця індексування:</target>
+			</trans-unit>
+			<trans-unit id="index_config.table2index.I.0" resname="index_config.table2index.I.0">
+				<source>-</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="index_config.timer_frequency" resname="index_config.timer_frequency">
+				<source>How often would you like a re-index?</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="index_config.timer_frequency.I.0" resname="index_config.timer_frequency.I.0">
+				<source>Every hour</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="index_config.timer_frequency.I.1" resname="index_config.timer_frequency.I.1">
+				<source>Every day (24 hours)</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="index_config.timer_frequency.I.2" resname="index_config.timer_frequency.I.2">
+				<source>Every week</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="index_config.timer_next_indexing" resname="index_config.timer_next_indexing">
+				<source>Next indexing is scheduled (if empty, then immediately)</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="index_config.timer_offset" resname="index_config.timer_offset">
+				<source>Timing offset from midnight</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="index_config.title" resname="index_config.title" approved="no">
+				<source>Title</source>
+				<target state="needs-translation">Назва:</target>
+			</trans-unit>
+			<trans-unit id="index_config.type" resname="index_config.type" approved="no">
+				<source>Type</source>
+				<target state="needs-translation">Тип:</target>
+			</trans-unit>
+			<trans-unit id="index_config.type.I.0" resname="index_config.type.I.0">
+				<source>-</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="index_config.type.I.1" resname="index_config.type.I.1" approved="yes">
+				<source>Database Records</source>
+				<target state="translated">Записи бази даних</target>
+			</trans-unit>
+			<trans-unit id="index_config.type.I.2" resname="index_config.type.I.2" approved="yes">
+				<source>Filepath on server</source>
+				<target state="translated">Шлях до файлу на сервері</target>
+			</trans-unit>
+			<trans-unit id="index_config.type.I.3" resname="index_config.type.I.3" approved="yes">
+				<source>External URL</source>
+				<target state="translated">Зовнішній URL</target>
+			</trans-unit>
+			<trans-unit id="index_config.type.I.4" resname="index_config.type.I.4">
+				<source>Page tree</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="index_config.type.I.5" resname="index_config.type.I.5">
+				<source>Meta configuration</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="index_config.url_deny" resname="index_config.url_deny">
+				<source>Enter sub-URLs in which not to decend</source>
+				<target/>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

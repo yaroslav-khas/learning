@@ -2,10 +2,10 @@
 <f:section name="content">
     <div class="row">
         <div class=" input-group col-md-12">
-            <f:form.textfield name="tx_yourart_arts[filters][name]"   additionalAttributes="{form:'filters'}" placeholder="Search"
+            <f:form.textfield name="tx_yourart_arts[filters][name]"   additionalAttributes="{form:'filters'}" placeholder="{f:translate(key='search.placeholder')}"
                               class="form-control"/>
             <div class="input-group-append">
-                <f:form.submit value="Search" additionalAttributes="{form:'filters'}" class="input-group-text"/>
+                <f:form.submit value="{f:translate(key='search.submit')}" additionalAttributes="{form:'filters'}" class="input-group-text"/>
             </div>
         </div>
     </div>

@@ -12,23 +12,23 @@ Render Powermail Mail to Receiver
 NOTE: See example section after main section
 
 <f:section name="main">
+    <f:debug>{settings.receiver.name}</f:debug>
+    <f:debug>{email}</f:debug>
+
     <tr>
         <td class="innerpadding borderbottom">
             <table width="100%" border="0" cellspacing="0" cellpadding="0">
                 <tr>
                     <td class="bodycopy">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus adipiscing felis, sit amet
-                        blandit ipsum volutpat sed. Morbi porttitor, eget accumsan dictum, nisi libero ultricies ipsum,
-                        in posuere mauris neque at erat.
+                        <h3>Dear, {settings.receiver.name}</h3>
+                        <p>{description}</p>
                     </td>
                 </tr>
             </table>
         </td>
     </tr>
     <tr>
-        <td class="innerpadding bodycopy">
-            <f:format.html parseFuncTSPath="lib.parseFunc_powermail">{powermail_all}</f:format.html>
-        </td>
+
     </tr>
 </f:section>
 

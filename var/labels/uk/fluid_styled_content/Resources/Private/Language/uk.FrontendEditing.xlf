@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="uk" datatype="plaintext" original="messages" date="2020-01-27T02:39:30Z" product-name="fluid_styled_content">
+		<header/>
+		<body>
+			<trans-unit id="editIcon.bullets" resname="editIcon.bullets">
+				<source>Edit bullet list</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="editIcon.header" resname="editIcon.header">
+				<source>Edit header</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="editIcon.html" resname="editIcon.html">
+				<source>Edit pure HTML content</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="editIcon.image" resname="editIcon.image">
+				<source>Edit image</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="editIcon.list" resname="editIcon.list">
+				<source>Change/configure plugin</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="editIcon.menu" resname="editIcon.menu">
+				<source>Edit menu/sitemap</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="editIcon.shortcut" resname="editIcon.shortcut">
+				<source>Edit record list</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="editIcon.table" resname="editIcon.table">
+				<source>Edit table</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="editIcon.textmedia" resname="editIcon.textmedia">
+				<source>Edit text &amp; media</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="editIcon.textpic" resname="editIcon.textpic">
+				<source>Edit text &amp; images</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="editIcon.uploads" resname="editIcon.uploads">
+				<source>Edit file list</source>
+				<target/>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

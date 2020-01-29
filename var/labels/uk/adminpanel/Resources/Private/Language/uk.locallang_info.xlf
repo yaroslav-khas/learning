@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="uk" datatype="plaintext" original="messages" date="2020-01-27T00:04:35Z" product-name="adminpanel">
+		<header/>
+		<body>
+			<trans-unit id="countUserInt" resname="countUserInt">
+				<source>Count of USER_INT objects</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="DocumentSize" resname="DocumentSize">
+				<source>Document size</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="software">
+					<target>Розмір документа</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="feuserId" resname="feuserId">
+				<source>Id of logged in FE-User</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="feuserName" resname="feuserName">
+				<source>Name of logged in FE-User</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="groupList" resname="groupList">
+				<source>Frontenduser group combination</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="imagesOnPage" resname="imagesOnPage">
+				<source>Images on this page</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="software">
+					<target>Зображення на цій сторінці</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="imagesSize" resname="imagesSize">
+				<source>Total image file sizes</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="software">
+					<target>Загальний розмір файлу зображення</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="key" resname="key">
+				<source>Key</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="software">
+					<target>Ключ</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="module.label" resname="module.label">
+				<source>Info</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="module.shortinfo" resname="module.shortinfo">
+				<source>(Load Time: %s ms)</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="noCache" resname="noCache">
+				<source>Page cached</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="software">
+					<target>Сторінка кешована</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="noCache_no" resname="noCache_no">
+				<source>No</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="software">
+					<target>Ні</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="noCache_yes" resname="noCache_yes">
+				<source>Yes</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="software">
+					<target>Так</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="pageType" resname="pageType">
+				<source>Page type</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="software">
+					<target>Тип сторінки</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="pageUid" resname="pageUid">
+				<source>Page Uid</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="software">
+					<target>Ідентифікатор сторінки</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="sub.general.label" resname="sub.general.label">
+				<source>General</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="sub.php.label" resname="sub.php.label">
+				<source>PHP</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="software">
+					<target>PHP</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="sub.request.label" resname="sub.request.label">
+				<source>REQUEST</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="totalParsetime" resname="totalParsetime">
+				<source>Total parsetime</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="value" resname="value">
+				<source>Value</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="software">
+					<target>Значення</target>
+				</alt-trans>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

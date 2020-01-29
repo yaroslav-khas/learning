@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3locallangExt>
+  <data type="array">
+    <languageKey index="uk" type="array">
+			<label index=".description">Запис файлу</label>
+			<label index=".details">Пов'язані файли</label>
+			<label index="_.seeAlso">Дивіться також сайт http://www.news.com/</label>
+			<label index="hidden.description">Приховані елементи ніколи не будуть показані на сайті.</label>
+			<label index="title.description">Додаткова назва для обраного файлу.</label>
+			<label index="description.description">Додатковий опис для обраного файлу.</label>
+			<label index="file.description">Будь-який (дозволений) файл.</label>
+		</languageKey>
+  </data>
+</T3locallangExt>

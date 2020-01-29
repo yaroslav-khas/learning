@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="uk" datatype="plaintext" original="messages" date="2020-01-27T01:23:24Z" product-name="core">
+		<header/>
+		<body>
+			<trans-unit id="label1" resname="label1" approved="yes">
+				<source>This is my 1st label</source>
+				<target state="translated">Це моя перша позначка</target>
+			</trans-unit>
+			<trans-unit id="label2" resname="label2" approved="yes">
+				<source>This is my 2nd label</source>
+				<target state="translated">Це моя друга позначка</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="uk" datatype="plaintext" original="messages" date="2020-01-27T01:23:25Z" product-name="core">
+		<header/>
+		<body>
+			<trans-unit id="adminOptions" resname="adminOptions" approved="yes">
+				<source>ADMIN PANEL</source>
+				<target state="translated">ПАНЕЛЬ АДМІНА</target>
+			</trans-unit>
+			<trans-unit id="adminPanelTitle" resname="adminPanelTitle">
+				<source>TYPO3 ADMIN PANEL</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="edit" resname="edit" approved="yes">
+				<source>Editing</source>
+				<target state="translated">Редагування</target>
+				<note from="developer">This label is deprecated (not used anymore) since TYPO3v10</note>
+				<note>This label is deprecated (not used anymore) since TYPO3v10</note>
+			</trans-unit>
+			<trans-unit id="edit_db_list" resname="edit_db_list" approved="yes">
+				<source>Web&gt;List module</source>
+				<target state="translated">Модуль Веб&gt;Список</target>
+				<note from="developer">This label is deprecated (not used anymore) since TYPO3v10</note>
+				<note>This label is deprecated (not used anymore) since TYPO3v10</note>
+			</trans-unit>
+			<trans-unit id="edit_editFormsOnPage" resname="edit_editFormsOnPage" approved="yes">
+				<source>Editforms on page</source>
+				<target state="translated">Форми редагування на сторінці:</target>
+				<note from="developer">This label is deprecated (not used anymore) since TYPO3v10</note>
+				<note>This label is deprecated (not used anymore) since TYPO3v10</note>
+			</trans-unit>
+			<trans-unit id="edit_editNoPopup" resname="edit_editNoPopup" approved="yes">
+				<source>No popup window</source>
+				<target state="translated">Без спливаючого вікна:</target>
+				<note from="developer">This label is deprecated (not used anymore) since TYPO3v10</note>
+				<note>This label is deprecated (not used anymore) since TYPO3v10</note>
+			</trans-unit>
+			<trans-unit id="edit_editPageOverlay" resname="edit_editPageOverlay">
+				<source>Edit properties of translated page</source>
+				<target/>
+				<note from="developer">This label is deprecated (not used anymore) since TYPO3v10</note>
+			</trans-unit>
+			<trans-unit id="edit_editPageProperties" resname="edit_editPageProperties">
+				<source>Edit page properties</source>
+				<target/>
+				<note from="developer">This label is deprecated (not used anymore) since TYPO3v10</note>
+			</trans-unit>
+			<trans-unit id="edit_move_page" resname="edit_move_page" approved="yes">
+				<source>Move page</source>
+				<target state="translated">Пересунути сторінку</target>
+				<note from="developer">This label is deprecated (not used anymore) since TYPO3v10</note>
+				<note>This label is deprecated (not used anymore) since TYPO3v10</note>
+			</trans-unit>
+			<trans-unit id="edit_newContentElement" resname="edit_newContentElement" approved="yes">
+				<source>Create new content element</source>
+				<target state="translated">Створити новий елемент вмісту</target>
+				<note from="developer">This label is deprecated (not used anymore) since TYPO3v10</note>
+				<note>This label is deprecated (not used anymore) since TYPO3v10</note>
+			</trans-unit>
+			<trans-unit id="edit_newPage" resname="edit_newPage" approved="yes">
+				<source>Create new page</source>
+				<target state="translated">Створити нову сторінку</target>
+				<note from="developer">This label is deprecated (not used anymore) since TYPO3v10</note>
+				<note>This label is deprecated (not used anymore) since TYPO3v10</note>
+			</trans-unit>
+			<trans-unit id="edit_recordHistory" resname="edit_recordHistory" approved="yes">
+				<source>View record change history</source>
+				<target state="translated">Переглянути історію змін запису</target>
+				<note from="developer">This label is deprecated (not used anymore) since TYPO3v10</note>
+				<note>This label is deprecated (not used anymore) since TYPO3v10</note>
+			</trans-unit>
+			<trans-unit id="p_delete" resname="p_delete" approved="yes">
+				<source>Delete</source>
+				<target state="translated">Видалити</target>
+			</trans-unit>
+			<trans-unit id="p_deleteConfirm" resname="p_deleteConfirm" approved="yes">
+				<source>Are you sure you want to delete this record?</source>
+				<target state="translated">Ви впевнені, що хочете видалити цей запис?</target>
+			</trans-unit>
+			<trans-unit id="p_editRecord" resname="p_editRecord" approved="yes">
+				<source>Edit record</source>
+				<target state="translated">Редагувати запис</target>
+			</trans-unit>
+			<trans-unit id="p_hide" resname="p_hide" approved="yes">
+				<source>Hide</source>
+				<target state="translated">Сховати</target>
+			</trans-unit>
+			<trans-unit id="p_hideConfirm" resname="p_hideConfirm" xml:space="preserve" approved="yes">
+				<source>Hiding a record will make it invisible on the webpage.  To edit the hidden record enter the backend or enable the frontend preview.
+Continue?</source>
+			<target state="translated">Схований запис не буде видно на сайті. Для того, щоб його редагувати, увійдйть до backend чи увімкніть попередній перегляд у frontend. Продовжити?</target></trans-unit>
+			<trans-unit id="p_moveDown" resname="p_moveDown" approved="yes">
+				<source>Move down</source>
+				<target state="translated">Пересунути вниз</target>
+			</trans-unit>
+			<trans-unit id="p_moveUp" resname="p_moveUp" approved="yes">
+				<source>Move up</source>
+				<target state="translated">Пересунути вгору</target>
+			</trans-unit>
+			<trans-unit id="p_newRecordAfter" resname="p_newRecordAfter" approved="yes">
+				<source>New record after</source>
+				<target state="translated">Новий запис після</target>
+			</trans-unit>
+			<trans-unit id="p_newSubpage" resname="p_newSubpage" approved="yes">
+				<source>New subpage</source>
+				<target state="translated">Нова підсторінка</target>
+			</trans-unit>
+			<trans-unit id="preview" resname="preview" approved="yes">
+				<source>Preview</source>
+				<target state="translated">Поперегляд</target>
+			</trans-unit>
+			<trans-unit id="publish" resname="publish" approved="yes">
+				<source>Publish</source>
+				<target state="translated">Опублікувати</target>
+			</trans-unit>
+			<trans-unit id="publish_doit" resname="publish_doit" approved="yes">
+				<source>Publish now!</source>
+				<target state="translated">Опублікувати зараз!</target>
+			</trans-unit>
+			<trans-unit id="publish_levels" resname="publish_levels" approved="yes">
+				<source>Publish levels</source>
+				<target state="translated">Опублікувати рівнів:</target>
+			</trans-unit>
+			<trans-unit id="publish_tree" resname="publish_tree" approved="yes">
+				<source>Publish pages</source>
+				<target state="translated">Опублікувати сторінок:</target>
+			</trans-unit>
+			<trans-unit id="p_unhide" resname="p_unhide" approved="yes">
+				<source>Un-Hide</source>
+				<target state="translated">Не ховати</target>
+			</trans-unit>
+			<trans-unit id="tsdebug" resname="tsdebug" approved="yes">
+				<source>TypoScript</source>
+				<target state="translated">TypoScript</target>
+			</trans-unit>
+			<trans-unit id="tsdebug_displayContent" resname="tsdebug_displayContent" approved="yes">
+				<source>Display content</source>
+				<target state="translated">Показувати вміст:</target>
+			</trans-unit>
+			<trans-unit id="tsdebug_displayMessages" resname="tsdebug_displayMessages" approved="yes">
+				<source>Display messages</source>
+				<target state="translated">Показувати повідомлення:</target>
+			</trans-unit>
+			<trans-unit id="tsdebug_displayTimes" resname="tsdebug_displayTimes" approved="yes">
+				<source>Display all times</source>
+				<target state="translated">Показувати усі часи:</target>
+			</trans-unit>
+			<trans-unit id="tsdebug_forceTemplateParsing" resname="tsdebug_forceTemplateParsing" approved="yes">
+				<source>Force TS Rendering</source>
+				<target state="translated">Примусовий рендеринг TS:</target>
+			</trans-unit>
+			<trans-unit id="tsdebug_LR" resname="tsdebug_LR" approved="yes">
+				<source>Track content rendering</source>
+				<target state="translated">Відслідковувати рендеринг вмісту:</target>
+			</trans-unit>
+			<trans-unit id="tsdebug_tree" resname="tsdebug_tree" approved="yes">
+				<source>Tree display</source>
+				<target state="translated">Відображення дерева:</target>
+			</trans-unit>
+			<trans-unit id="update" resname="update" approved="yes">
+				<source>Update</source>
+				<target state="translated">Поновити</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,1 +1,19 @@
 config.contentObjectExceptionHandler = 0
+#config {
+#    linkVars = L(int)
+#    sys_language_uid = 0
+#    sys_language_overlay = 1
+#    # fall back to language 'da', then to 'de' and as last resort use 'en'
+#    sys_language_mode = content_fallback;2,1,0
+#    language = en
+#    locale_all = en_US.UTF-8
+#    htmlTag_setParams = lang="en" dir="ltr" class="no-js"
+#}
+#[globalVar = GP:L = 1]
+#    config {
+#        sys_language_uid = 1
+#        language = uk
+#        locale_all = uk_UK.UTF-8
+#        htmlTag_setParams = lang="uk" dir="ltr" class="no-js"
+#    }
+#[global]

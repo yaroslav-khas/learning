@@ -16,10 +16,10 @@
                                 </button>
                                 <f:if condition="{item.status}=1">
                                     <f:then>
-                                        <span class="badge badge-success">Complete</span>
+                                        <span class="badge badge-success"><f:translate key="order.complete"/></span>
                                     </f:then>
                                     <f:else>
-                                        <span class="badge badge-warning">In Process</span>
+                                        <span class="badge badge-warning"><f:translate key="order.inProcess"/></span>
                                     </f:else>
                                 </f:if>
                             </h5>
@@ -46,7 +46,7 @@
                                     <tr>
                                         <td></td>
                                         <td></td>
-                                        <th>Total sum</th>
+                                        <th><f:translate key="order.totalSum"/></th>
                                         <th scope="row">{item.totalSum}</th>
                                     </tr>
                                     </tbody>

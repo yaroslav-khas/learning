@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="uk" datatype="plaintext" original="messages" date="2020-01-27T07:10:04Z" product-name="scheduler">
+		<header/>
+		<body>
+			<trans-unit id="scheduler.config.maxLifetime" resname="scheduler.config.maxLifetime">
+				<source>Maximum lifetime: Enter the maximum lifetime (in minutes) of a scheduler task. If a task is still running after that time, it will be dropped from the execution list (but not stopped).</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="scheduler.config.showSampleTasks" resname="scheduler.config.showSampleTasks">
+				<source>Enable sample tasks: When turned on, you can use the sample, test tasks provided by the scheduler. Before turning this off, make sure you don't have any of those sample tasks currently scheduled. You will also need to clear the configuration cache.</source>
+				<target/>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

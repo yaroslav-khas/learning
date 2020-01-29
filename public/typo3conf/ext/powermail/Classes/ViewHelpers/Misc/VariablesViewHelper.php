@@ -64,7 +64,6 @@ class VariablesViewHelper extends AbstractViewHelper
         $parseObject->assignMultiple(
             ArrayUtility::htmlspecialcharsOnArray($mailRepository->getLabelsWithMarkersFromMail($mail))
         );
-
         $parseObject->assign('powermail_all', TemplateUtility::powermailAll($mail, $type, $this->settings, $function));
         return html_entity_decode($parseObject->render(), ENT_QUOTES, 'UTF-8');
     }

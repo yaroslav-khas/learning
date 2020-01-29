@@ -1,0 +1,296 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2011-10-17T20:22:32Z" product-name="belog" target-language="uk">
+    <header/>
+    <body>
+      <trans-unit id="adminLog" xml:space="preserve" approved="yes">
+        <source>Administration log</source>
+      <target state="translated">Журнал адміністрування</target></trans-unit>
+      <trans-unit id="allUsers" xml:space="preserve" approved="yes">
+        <source>[All users]</source>
+      <target state="translated">[Всі користувачі]</target></trans-unit>
+      <trans-unit id="any" xml:space="preserve" approved="yes">
+        <source>[Any]</source>
+      <target state="translated">[Будь-хто]</target></trans-unit>
+      <trans-unit id="live" xml:space="preserve" approved="yes">
+        <source>LIVE</source>
+      <target state="translated">ОПЕРАТИВНА</target></trans-unit>
+      <trans-unit id="draft" xml:space="preserve" approved="yes">
+        <source>Draft</source>
+      <target state="translated">Чорновик</target></trans-unit>
+      <trans-unit id="self" xml:space="preserve" approved="yes">
+        <source>Self</source>
+      <target state="translated">Свій</target></trans-unit>
+      <trans-unit id="userGroup" xml:space="preserve" approved="yes">
+        <source>Group:</source>
+      <target state="translated">Група</target></trans-unit>
+      <trans-unit id="thisWeek" xml:space="preserve" approved="yes">
+        <source>This week</source>
+      <target state="translated">Цей тиждень</target></trans-unit>
+      <trans-unit id="lastWeek" xml:space="preserve" approved="yes">
+        <source>Last week</source>
+      <target state="translated">Останній тиждень</target></trans-unit>
+      <trans-unit id="last7Days" xml:space="preserve" approved="yes">
+        <source>Last 7 days</source>
+      <target state="translated">Попередні 7 днів</target></trans-unit>
+      <trans-unit id="thisMonth" xml:space="preserve" approved="yes">
+        <source>This month</source>
+      <target state="translated">Цей місяць</target></trans-unit>
+      <trans-unit id="lastMonth" xml:space="preserve" approved="yes">
+        <source>Last month</source>
+      <target state="translated">Останній місяць</target></trans-unit>
+      <trans-unit id="last31Days" xml:space="preserve" approved="yes">
+        <source>Last 31 days</source>
+      <target state="translated">Останні 31 днів</target></trans-unit>
+      <trans-unit id="noLimit" xml:space="preserve" approved="yes">
+        <source>No limit</source>
+      <target state="translated">Без обмежень</target></trans-unit>
+      <trans-unit id="userdefined" xml:space="preserve" approved="yes">
+        <source>User defined</source>
+      <target state="translated">Визначається користувачем</target></trans-unit>
+      <trans-unit id="set" xml:space="preserve" approved="yes">
+        <source>Set</source>
+      <target state="translated">Встановити</target></trans-unit>
+      <trans-unit id="20" xml:space="preserve" approved="yes">
+        <source>20</source>
+      <target state="translated">20</target></trans-unit>
+      <trans-unit id="50" xml:space="preserve" approved="yes">
+        <source>50</source>
+      <target state="translated">50</target></trans-unit>
+      <trans-unit id="100" xml:space="preserve" approved="yes">
+        <source>100</source>
+      <target state="translated">100</target></trans-unit>
+      <trans-unit id="200" xml:space="preserve" approved="yes">
+        <source>200</source>
+      <target state="translated">200</target></trans-unit>
+      <trans-unit id="500" xml:space="preserve" approved="yes">
+        <source>500</source>
+      <target state="translated">500</target></trans-unit>
+      <trans-unit id="1000" xml:space="preserve" approved="yes">
+        <source>1000</source>
+      <target state="translated">1000</target></trans-unit>
+      <trans-unit id="actionAll" xml:space="preserve" approved="yes">
+        <source>All</source>
+      <target state="translated">Всі</target></trans-unit>
+      <trans-unit id="actionDatabase" xml:space="preserve" approved="yes">
+        <source>Database</source>
+      <target state="translated">База даних</target></trans-unit>
+      <trans-unit id="actionFile" xml:space="preserve" approved="yes">
+        <source>File</source>
+      <target state="translated">Файл</target></trans-unit>
+      <trans-unit id="actionCache" xml:space="preserve" approved="yes">
+        <source>Cache</source>
+      <target state="translated">Кеш</target></trans-unit>
+      <trans-unit id="actionSettings" xml:space="preserve" approved="yes">
+        <source>Settings</source>
+      <target state="translated">Параметри</target></trans-unit>
+      <trans-unit id="actionLogin" xml:space="preserve" approved="yes">
+        <source>Login</source>
+      <target state="translated">Вхід</target></trans-unit>
+      <trans-unit id="actionErrors" xml:space="preserve" approved="yes">
+        <source>Errors</source>
+      <target state="translated">Помилки</target></trans-unit>
+      <trans-unit id="group" xml:space="preserve" approved="yes">
+        <source>Group:</source>
+      <target state="translated">Група:</target></trans-unit>
+      <trans-unit id="user" xml:space="preserve" approved="yes">
+        <source>User:</source>
+      <target state="translated">Користувач:</target></trans-unit>
+      <trans-unit id="users" xml:space="preserve" approved="yes">
+        <source>Users:</source>
+      <target state="translated">Користувачі:</target></trans-unit>
+      <trans-unit id="time" xml:space="preserve" approved="yes">
+        <source>Time:</source>
+      <target state="translated">Час:</target></trans-unit>
+      <trans-unit id="max" xml:space="preserve" approved="yes">
+        <source>Max:</source>
+      <target state="translated">Макс.:</target></trans-unit>
+      <trans-unit id="changesInFields" xml:space="preserve" approved="yes">
+        <source>Changes in fields: %s.</source>
+      <target state="translated">Переінакшення в полях: %s.</target></trans-unit>
+      <trans-unit id="showHistory" xml:space="preserve" approved="yes">
+        <source>Show History</source>
+      <target state="translated">Показати історію</target></trans-unit>
+      <trans-unit id="action" xml:space="preserve" approved="yes">
+        <source>Action:</source>
+      <target state="translated">Дія:</target></trans-unit>
+      <trans-unit id="workspace" xml:space="preserve" approved="yes">
+        <source>Workspace:</source>
+      <target state="translated">Робоча область:</target></trans-unit>
+      <trans-unit id="groupByPage" xml:space="preserve" approved="yes">
+        <source>Group by page:</source>
+      <target state="translated">Групування по сторінках:</target></trans-unit>
+      <trans-unit id="pagenameWithUID" xml:space="preserve" approved="yes">
+        <source>%s" [UID: %s]</source>
+      <target state="translated">%s" [UID: %s]</target></trans-unit>
+      <trans-unit id="overview" xml:space="preserve" approved="yes">
+        <source>Overview</source>
+      <target state="translated">Огляд</target></trans-unit>
+      <trans-unit id="timeInfo" xml:space="preserve" approved="yes">
+        <source>These pages have log messages from %s to %s</source>
+      <target state="translated">На цих сторінках є повідомлення з журналу з %s по %s</target></trans-unit>
+      <trans-unit id="forNonPageRelatedActions" xml:space="preserve" approved="yes">
+        <source>for NON-PAGE related actions</source>
+      <target state="translated">для дій, які НЕ стосуються СТОРІНОК</target></trans-unit>
+      <trans-unit id="forRootLevel" xml:space="preserve" approved="yes">
+        <source>for ROOT LEVEL</source>
+      <target state="translated">для РІВНЯ КОРЕНЯ</target></trans-unit>
+      <trans-unit id="forPage" xml:space="preserve" approved="yes">
+        <source>for PAGE "%s" (UID: %s)</source>
+      <target state="translated">для СТОРІНКИ "%s" (UID: %s)</target></trans-unit>
+      <trans-unit id="logForNonPageRelatedActionsOrRootLevelOrPage" xml:space="preserve" approved="yes">
+        <source>Log %s from %s to %s</source>
+      <target state="translated">Журнал %s з %s по %s</target></trans-unit>
+      <trans-unit id="type_1" xml:space="preserve" approved="yes">
+        <source>DB</source>
+      <target state="translated">БД</target></trans-unit>
+      <trans-unit id="action_1_1" xml:space="preserve" approved="yes">
+        <source>Insert</source>
+      <target state="translated">Вставити</target></trans-unit>
+      <trans-unit id="action_1_2" xml:space="preserve" approved="yes">
+        <source>Update</source>
+      <target state="translated">Оновити</target></trans-unit>
+      <trans-unit id="action_1_3" xml:space="preserve" approved="yes">
+        <source>Delete</source>
+      <target state="translated">Викинути</target></trans-unit>
+      <trans-unit id="action_1_4" xml:space="preserve" approved="yes">
+        <source>Check</source>
+      <target state="translated">Перевірити</target></trans-unit>
+      <trans-unit id="msg_1_0_1" xml:space="preserve" approved="yes">
+        <source>Referer host '%s' and server host '%s' did not match!</source>
+      <target state="translated">Спрямовуючий сервер '%s' та поточний сервер '%s' не співпадають!</target></trans-unit>
+      <trans-unit id="msg_1_1_11" xml:space="preserve" approved="yes">
+        <source>Attempt to insert record on page '%s' (%s) where this table, %s, is not allowed</source>
+      <target state="translated">Спроба додати запис на сторінці '%s' (%s), в таблиці %s не дозволена</target></trans-unit>
+      <trans-unit id="msg_1_1_12" xml:space="preserve" approved="yes">
+        <source>Attempt to insert a record on page '%s' (%s) from table '%s' without permissions. Or non-existing page.</source>
+      <target state="translated">Спроба додати запис на сторінці '%s' (%s) з таблиці '%s' не дозволена або сторінка не існує.</target></trans-unit>
+      <trans-unit id="msg_1_2_1" xml:space="preserve" approved="yes">
+        <source>Attempt to modify table '%s' without permission</source>
+      <target state="translated">Спроба редагувати таблицю '%s' не дозволена</target></trans-unit>
+      <trans-unit id="msg_1_2_2" xml:space="preserve" approved="yes">
+        <source>Attempt to modify record '%s' (%s) without permission. Or non-existing page.</source>
+      <target state="translated">Спроба змінити запис '%s' (%s) не дозволена або ж сторінка не існує.</target></trans-unit>
+      <trans-unit id="msg_1_2_10" xml:space="preserve" approved="yes">
+        <source>Record '%s' (%s) was updated.</source>
+      <target state="translated">Запис '%s' (%s) поновлено.</target></trans-unit>
+      <trans-unit id="msg_1_2_12" xml:space="preserve" approved="yes">
+        <source>MySQL error: '%s' (%s)</source>
+      <target state="translated">Помилка MySQL: '%s' (%s)</target></trans-unit>
+      <trans-unit id="msg_1_4_1" xml:space="preserve" approved="yes">
+        <source>Attempt to move record '%s' (%s) to after a non-existing record (uid=%s)</source>
+      <target state="translated">Спроба помістити запис '%s' (%s) після неіснуючого запису (uid=%s)</target></trans-unit>
+      <trans-unit id="msg_1_4_2" xml:space="preserve" approved="yes">
+        <source>Moved record '%s' (%s) to page '%s' (%s)</source>
+      <target state="translated">Запис '%s' (%s) переміщено на сторінку '%s' (%s)</target></trans-unit>
+      <trans-unit id="msg_1_4_3" xml:space="preserve" approved="yes">
+        <source>Moved record '%s' (%s) from page '%s' (%s)</source>
+      <target state="translated">Запис '%s' (%s) переміщено зі сторінки '%s' (%s)</target></trans-unit>
+      <trans-unit id="msg_1_4_4" xml:space="preserve" approved="yes">
+        <source>Moved record '%s' (%s) on page '%s' (%s)</source>
+      <target state="translated">Запис '%s' (%s) пересунуто на сторінці '%s' (%s)</target></trans-unit>
+      <trans-unit id="msg_1_4_10" xml:space="preserve" approved="yes">
+        <source>Attempt to move page '%s' (%s) to inside of its own rootline (at page '%s' (%s))</source>
+      <target state="translated">Спроба пересунути сторінку '%s' (%s) всередину її власного rootline (на сторінці '%s' (%s))</target></trans-unit>
+      <trans-unit id="msg_1_4_11" xml:space="preserve" approved="yes">
+        <source>Attempt to insert record on page '%s' (%s) where this table, %s, is not allowed</source>
+      <target state="translated">Спроба додати запис на сторінці '%s' (%s), де ця таблиця, %s, не дозволена</target></trans-unit>
+      <trans-unit id="msg_1_4_12" xml:space="preserve" approved="yes">
+        <source>Attempt to insert a record on page '%s' (%s) from table '%s' without permissions. Or non-existing page.</source>
+      <target state="translated">Спроба додати запис на сторінці '%s' (%s) з таблиці '%s' без дозволу. Чи сторінка не існує.</target></trans-unit>
+      <trans-unit id="msg_1_4_13" xml:space="preserve" approved="yes">
+        <source>Attempt to move record '%s' (%s) to after another record, although the table has no sorting row.</source>
+      <target state="translated">Спроба пересунути запис '%s' (%s) після іншого, хоч таблиця не має рядка сортування.</target></trans-unit>
+      <trans-unit id="msg_1_4_14" xml:space="preserve" approved="yes">
+        <source>Attempt to move record '%s' (%s) without having permissions to do so</source>
+      <target state="translated">Спроба пересунути запис '%s' (%s) без дозволу на те</target></trans-unit>
+      <trans-unit id="msg_1_5_1" xml:space="preserve" approved="yes">
+        <source>You cannot change the 'doktype' of page '%s' to the desired value.</source>
+      <target state="translated">Ви не можете змінити 'doktype' сторінки '%s' на це значення.</target></trans-unit>
+      <trans-unit id="msg_1_5_2" xml:space="preserve" approved="yes">
+        <source>'doktype' of page '%s' could not be changed because the page contains records from disallowed tables; %s</source>
+      <target state="translated">'doktype' сторінки '%s' не змінено тому, що сторінка містить записи із таблиць, які не дозволено; %s</target></trans-unit>
+      <trans-unit id="msg_1_5_3" xml:space="preserve" approved="yes">
+        <source>Too few items in the list of values. (%s)</source>
+      <target state="translated">Занадто мало пунктів у списку значень. (%s)</target></trans-unit>
+      <trans-unit id="msg_1_5_10" xml:space="preserve" approved="yes">
+        <source>Could not delete file '%s' (does not exist). (%s)</source>
+      <target state="translated">Не видалено файл '%s' (не існує). (%s)</target></trans-unit>
+      <trans-unit id="msg_1_5_11" xml:space="preserve" approved="yes">
+        <source>Copying file '%s' failed!: No destination file (%s) possible!. (%s)</source>
+      <target state="translated">Копіювання файлу '%s' не вдалося: файл призначення (%s) неможливий! (%s)</target></trans-unit>
+      <trans-unit id="msg_1_5_12" xml:space="preserve" approved="yes">
+        <source>File extension '%s' is not allowed. (%s)</source>
+      <target state="translated">Розширення файлу '%s' не дозволене. (%s)</target></trans-unit>
+      <trans-unit id="msg_1_5_13" xml:space="preserve" approved="yes">
+        <source>File size (%s) of file '%s' exceeds limit (%s). (%s)</source>
+      <target state="translated">Розмір файлу '%s' (%s) перевищує ліміт (%s). (%s)</target></trans-unit>
+      <trans-unit id="msg_1_5_14" xml:space="preserve" approved="yes">
+        <source>The destination (%s) or the source file (%s) does not exist. (%s)</source>
+      <target state="translated">Файл призначення (%s) чи вихідний (%s) не існує. (%s)</target></trans-unit>
+      <trans-unit id="msg_1_5_15" xml:space="preserve" approved="yes">
+        <source>Copying to file '%s' failed! (%s)</source>
+      <target state="translated">Копіювання до файлу '%s' не вдалося! (%s)</target></trans-unit>
+      <trans-unit id="msg_1_5_16" xml:space="preserve" approved="yes">
+        <source>Copying file '%s' failed!: The destination path (%s) may be write protected. Please make it write enabled!. (%s)</source>
+      <target state="translated">Копіювання до файлу '%s' не вдалося: шлях призначення (%s) може бути захищеним від запису. Бідь ласка, дозвольте запис! (%s)</target></trans-unit>
+      <trans-unit id="type_2" xml:space="preserve" approved="yes">
+        <source>FILE</source>
+      <target state="translated">ФАЙЛ</target></trans-unit>
+      <trans-unit id="action_2_1" xml:space="preserve" approved="yes">
+        <source>Upload</source>
+      <target state="translated">Завантажити (upload)</target></trans-unit>
+      <trans-unit id="action_2_2" xml:space="preserve" approved="yes">
+        <source>Copy</source>
+      <target state="translated">Скопіювати</target></trans-unit>
+      <trans-unit id="action_2_3" xml:space="preserve" approved="yes">
+        <source>Move</source>
+      <target state="translated">Пересунути</target></trans-unit>
+      <trans-unit id="action_2_4" xml:space="preserve" approved="yes">
+        <source>Delete</source>
+      <target state="translated">Видалити</target></trans-unit>
+      <trans-unit id="action_2_5" xml:space="preserve" approved="yes">
+        <source>Rename</source>
+      <target state="translated">Перейменувати</target></trans-unit>
+      <trans-unit id="action_2_6" xml:space="preserve" approved="yes">
+        <source>New</source>
+      <target state="translated">Новий</target></trans-unit>
+      <trans-unit id="action_2_7" xml:space="preserve" approved="yes">
+        <source>Unzip</source>
+      <target state="translated">Розпакувати (unzip)</target></trans-unit>
+      <trans-unit id="action_2_8" xml:space="preserve" approved="yes">
+        <source>New file</source>
+      <target state="translated">новий файл</target></trans-unit>
+      <trans-unit id="action_2_9" xml:space="preserve" approved="yes">
+        <source>Edit</source>
+      <target state="translated">Редагувати</target></trans-unit>
+      <trans-unit id="msg_2_9_1" xml:space="preserve" approved="yes">
+        <source>File saved to '%s', bytes: %s, MD5: %s </source>
+      <target state="translated">Файл збережено до '%s', байт: %s, MD5: %s</target></trans-unit>
+      <trans-unit id="type_3" xml:space="preserve" approved="yes">
+        <source>CACHE</source>
+      <target state="translated">КЕШ</target></trans-unit>
+      <trans-unit id="action_3_1" xml:space="preserve" approved="yes">
+        <source>Clear Cache</source>
+      <target state="translated">Видалити кеш</target></trans-unit>
+      <trans-unit id="type_254" xml:space="preserve" approved="yes">
+        <source>SETTING</source>
+      <target state="translated">ПАРАМЕТР</target></trans-unit>
+      <trans-unit id="action_254_1" xml:space="preserve" approved="yes">
+        <source>Change</source>
+      <target state="translated">Зміна</target></trans-unit>
+      <trans-unit id="type_255" xml:space="preserve" approved="yes">
+        <source>LOGIN</source>
+      <target state="translated">ВХІД</target></trans-unit>
+      <trans-unit id="action_255_1" xml:space="preserve" approved="yes">
+        <source>LOGIN</source>
+      <target state="translated">ВХОДУ</target></trans-unit>
+      <trans-unit id="action_255_2" xml:space="preserve" approved="yes">
+        <source>LOGOUT</source>
+      <target state="translated">ВИХОДУ</target></trans-unit>
+      <trans-unit id="action_255_3" xml:space="preserve" approved="yes">
+        <source>ATTEMPT</source>
+      <target state="translated">СПРОБА</target></trans-unit>
+    </body>
+  </file>
+</xliff>
